@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "encoder.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +35,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ENCODER_CPR 4096U
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,17 +51,7 @@ volatile uint16_t encoder_z_offset = 0;
 volatile uint16_t encoder_z_last_capture = 0;
 volatile uint32_t encoder_z_events = 0;
 
-/* 方便在调试器中观察 */
-volatile uint16_t encoder_raw_count = 0;
-volatile uint16_t encoder_position = 0;
-volatile float   encoder_angle_deg = 0.0f;
-/*encoder_z_found：是否已经找到第一次 Z。
-encoder_z_offset：第一次 Z 对应的原始计数，作为零点。
-encoder_z_last_capture：最近一次 Z 对应的原始计数。
-encoder_z_events：Z 边沿触发次数。
-encoder_position：换算后的单圈位置。
-encoder_angle_deg：机械角度，单位为度。
-*/
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -131,68 +121,7 @@ if (HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3) != HAL_OK)
 
     /* USER CODE BEGIN 3 */
     LED_B_Toggle();
-    char tx_buf[128];
-
-/*
- * 短暂关闭中断，取得一组一致的数据。
- * 完成读取后立即恢复，串口发送期间不关闭中断。
- */
-uint32_t saved_primask = __get_PRIMASK();
-__disable_irq();
-
-uint8_t referenced = encoder_z_found;
-uint16_t offset = referenced ? encoder_z_offset : 0U;
-uint16_t raw = (uint16_t)__HAL_TIM_GET_COUNTER(&htim3);
-uint16_t z_capture = encoder_z_last_capture;
-uint32_t z_events = encoder_z_events;
-
-__set_PRIMASK(saved_primask);
-
-/* 相对零点的单圈位置，范围 0～4095 */
-int32_t position = (int32_t)raw - (int32_t)offset;
-
-if (position < 0)
-{
-    position += (int32_t)ENCODER_CPR;
-}
-
-/* 更新调试器中可观察的变量 */
-encoder_raw_count = raw;
-encoder_position = (uint16_t)position;
-encoder_angle_deg =
-    (float)position * 360.0f / (float)ENCODER_CPR;
-
-/*
- * 用整数格式输出两位小数。
- * 避免依赖 printf 的浮点输出支持。
- */
-uint32_t angle_x100 =
-    (uint32_t)position * 36000U / ENCODER_CPR;
-
-int len = snprintf(
-    tx_buf,
-    sizeof(tx_buf),
-    "REF=%u CNT=%u POS=%u ANG=%lu.%02lu Z=%lu ZCAP=%u\r\n",
-    (unsigned int)referenced,
-    (unsigned int)raw,
-    (unsigned int)position,
-    (unsigned long)(angle_x100 / 100U),
-    (unsigned long)(angle_x100 % 100U),
-    (unsigned long)z_events,
-    (unsigned int)z_capture
-);
-
-if ((len > 0) && ((size_t)len < sizeof(tx_buf)))
-{
-    HAL_UART_Transmit(
-        &huart3,
-        (uint8_t *)tx_buf,
-        (uint16_t)len,
-        100
-    );
-}
-
-HAL_Delay(200);
+    App_EncoderReport();
   }
   /* USER CODE END 3 */
 }
@@ -243,27 +172,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
-    if ((htim->Instance == TIM3) &&
-        (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3))
-    {
-        /* CCR3 保存的是 Z 边沿到来时的编码器计数 */
-        uint16_t captured = (uint16_t)
-            HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3);
 
-        encoder_z_last_capture = captured;
-
-        /* 第一次经过 Z 时记录零点，之后保持该零点 */
-        if (encoder_z_found == 0U)
-        {
-            encoder_z_offset = captured;
-            encoder_z_found = 1U;
-        }
-
-        encoder_z_events++;
-    }
-}
 /* USER CODE END 4 */
 
 /**

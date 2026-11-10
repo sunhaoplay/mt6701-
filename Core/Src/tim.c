@@ -21,7 +21,7 @@
 #include "tim.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "main.h"
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim3;
@@ -155,6 +155,24 @@ void HAL_TIM_IC_MspDeInit(TIM_HandleTypeDef* tim_icHandle)
 }
 
 /* USER CODE BEGIN 1 */
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+    if ((htim->Instance == TIM3) &&
+        (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3))
+    {
+        /* CCR3 保存的是 Z 边沿到来时的编码器计数 */
+        uint16_t captured = (uint16_t) HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3);
+        
+        encoder_z_last_capture = captured;
+        /* 第一次经过 Z 时记录零点，之后保持该零点 */
+        if (encoder_z_found == 0U)
+        {
+            encoder_z_offset = captured;
+            encoder_z_found = 1U;
+        }
 
+        encoder_z_events++;
+    }
+}
 /* USER CODE END 1 */
 

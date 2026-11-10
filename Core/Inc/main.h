@@ -36,7 +36,13 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern volatile uint8_t  encoder_z_found ;
+extern volatile uint16_t encoder_z_offset ;
+extern volatile uint16_t encoder_z_last_capture ;
+extern volatile uint32_t encoder_z_events ;
+extern volatile uint16_t encoder_raw_count ;
+extern volatile uint16_t encoder_position ;
+extern volatile float   encoder_angle_deg ;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
