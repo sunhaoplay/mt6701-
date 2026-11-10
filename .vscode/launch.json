@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "J-Link Debug (STM32F407)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/ENCODE_TEST.elf",
+            "device": "STM32F407ZGT6",
+            "interface": "swd",
+            "serverpath": "D:/JLINK/JLink_V976a/JLinkGDBServerCL.exe",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "both",
+            "svdFile": "${workspaceFolder}/STM32F407xx.svd",
+            
+        }
+    ]
+}
