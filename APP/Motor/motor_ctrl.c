@@ -42,4 +42,7 @@ void MotorRun(void)
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+	TIM1->CCR1 = (uint16_t)(TIM1_PERIOD_HALF);
+	TIM1->CCR2 = (uint16_t)(TIM1_PERIOD_HALF);
+	TIM1->CCR3 = (uint16_t)(TIM1_PERIOD_HALF);
 }
