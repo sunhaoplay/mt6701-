@@ -116,6 +116,11 @@ if (HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3) != HAL_OK)
     Error_Handler();
 }
   MotorRun(); // 启动电机
+  __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
+if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
+{
+    Error_Handler();
+}
   /* USER CODE END 2 */
 
   /* Infinite loop */
