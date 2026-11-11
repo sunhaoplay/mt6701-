@@ -1,0 +1,2290 @@
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"motor_para.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "APP/Motor/motor_para.c"
+  20              		.section	.text.my_atan2,"ax",%progbits
+  21              		.align	1
+  22              		.global	my_atan2
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	my_atan2:
+  28              	.LVL0:
+  29              	.LFB139:
+   1:APP/Motor/motor_para.c **** #include "foc.h"
+   2:APP/Motor/motor_para.c **** #include "motor_para.h"
+   3:APP/Motor/motor_para.c **** 
+   4:APP/Motor/motor_para.c **** /*cos(0-360)*/
+   5:APP/Motor/motor_para.c **** const float ualpha_tab[360] = {
+   6:APP/Motor/motor_para.c **** 	0.500000f, 0.499924f, 0.499695f, 0.499315f, 0.498782f, 0.498097f, 0.497261f, 0.496273f, 0.495134f,
+   7:APP/Motor/motor_para.c **** 	0.492404f, 0.490814f, 0.489074f, 0.487185f, 0.485148f, 0.482963f, 0.480631f, 0.478152f, 0.475528f,
+   8:APP/Motor/motor_para.c **** 	0.469846f, 0.466790f, 0.463592f, 0.460252f, 0.456773f, 0.453154f, 0.449397f, 0.445503f, 0.441474f,
+   9:APP/Motor/motor_para.c **** 	0.433013f, 0.428584f, 0.424024f, 0.419335f, 0.414519f, 0.409576f, 0.404509f, 0.399318f, 0.394005f,
+  10:APP/Motor/motor_para.c **** 	0.383022f, 0.377355f, 0.371572f, 0.365677f, 0.359670f, 0.353553f, 0.347329f, 0.340999f, 0.334565f,
+  11:APP/Motor/motor_para.c **** 	0.321394f, 0.314660f, 0.307831f, 0.300908f, 0.293893f, 0.286788f, 0.279596f, 0.272320f, 0.264960f,
+  12:APP/Motor/motor_para.c **** 	0.250000f, 0.242405f, 0.234736f, 0.226995f, 0.219186f, 0.211309f, 0.203368f, 0.195366f, 0.187303f,
+  13:APP/Motor/motor_para.c **** 	0.171010f, 0.162784f, 0.154509f, 0.146186f, 0.137819f, 0.129410f, 0.120961f, 0.112476f, 0.103956f,
+  14:APP/Motor/motor_para.c **** 	0.086824f, 0.078217f, 0.069587f, 0.060935f, 0.052264f, 0.043578f, 0.034878f, 0.026168f, 0.017450f,
+  15:APP/Motor/motor_para.c **** 	-0.000000f, -0.008726f, -0.017450f, -0.026168f, -0.034878f, -0.043578f, -0.052264f, -0.060935f, -0
+  16:APP/Motor/motor_para.c **** 	-0.086824f, -0.095404f, -0.103956f, -0.112476f, -0.120961f, -0.129410f, -0.137819f, -0.146186f, -0
+  17:APP/Motor/motor_para.c **** 	-0.171010f, -0.179184f, -0.187303f, -0.195366f, -0.203368f, -0.211309f, -0.219186f, -0.226995f, -0
+  18:APP/Motor/motor_para.c **** 	-0.250000f, -0.257519f, -0.264960f, -0.272320f, -0.279596f, -0.286788f, -0.293893f, -0.300908f, -0
+  19:APP/Motor/motor_para.c **** 	-0.321394f, -0.328030f, -0.334565f, -0.340999f, -0.347329f, -0.353553f, -0.359670f, -0.365677f, -0
+  20:APP/Motor/motor_para.c **** 	-0.383022f, -0.388573f, -0.394005f, -0.399318f, -0.404509f, -0.409576f, -0.414519f, -0.419335f, -0
+  21:APP/Motor/motor_para.c **** 	-0.433013f, -0.437310f, -0.441474f, -0.445503f, -0.449397f, -0.453154f, -0.456773f, -0.460252f, -0
+  22:APP/Motor/motor_para.c **** 	-0.469846f, -0.472759f, -0.475528f, -0.478152f, -0.480631f, -0.482963f, -0.485148f, -0.487185f, -0
+  23:APP/Motor/motor_para.c **** 	-0.492404f, -0.493844f, -0.495134f, -0.496273f, -0.497261f, -0.498097f, -0.498782f, -0.499315f, -0
+  24:APP/Motor/motor_para.c **** 	-0.500000f, -0.499924f, -0.499695f, -0.499315f, -0.498782f, -0.498097f, -0.497261f, -0.496273f, -0
+  25:APP/Motor/motor_para.c **** 	-0.492404f, -0.490814f, -0.489074f, -0.487185f, -0.485148f, -0.482963f, -0.480631f, -0.478152f, -0
+  26:APP/Motor/motor_para.c **** 	-0.469846f, -0.466790f, -0.463592f, -0.460252f, -0.456773f, -0.453154f, -0.449397f, -0.445503f, -0
+  27:APP/Motor/motor_para.c **** 	-0.433013f, -0.428584f, -0.424024f, -0.419335f, -0.414519f, -0.409576f, -0.404509f, -0.399318f, -0
+  28:APP/Motor/motor_para.c **** 	-0.383022f, -0.377355f, -0.371572f, -0.365677f, -0.359670f, -0.353553f, -0.347329f, -0.340999f, -0
+  29:APP/Motor/motor_para.c **** 	-0.321394f, -0.314660f, -0.307831f, -0.300908f, -0.293893f, -0.286788f, -0.279596f, -0.272320f, -0
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 2
+
+
+  30:APP/Motor/motor_para.c **** 	-0.250000f, -0.242405f, -0.234736f, -0.226995f, -0.219186f, -0.211309f, -0.203368f, -0.195366f, -0
+  31:APP/Motor/motor_para.c **** 	-0.171010f, -0.162784f, -0.154509f, -0.146186f, -0.137819f, -0.129410f, -0.120961f, -0.112476f, -0
+  32:APP/Motor/motor_para.c **** 	-0.086824f, -0.078217f, -0.069587f, -0.060935f, -0.052264f, -0.043578f, -0.034878f, -0.026168f, -0
+  33:APP/Motor/motor_para.c **** 	0.000000f, 0.008726f, 0.017450f, 0.026168f, 0.034878f, 0.043578f, 0.052264f, 0.060935f, 0.069587f,
+  34:APP/Motor/motor_para.c **** 	0.086824f, 0.095404f, 0.103956f, 0.112476f, 0.120961f, 0.129410f, 0.137819f, 0.146186f, 0.154509f,
+  35:APP/Motor/motor_para.c **** 	0.171010f, 0.179184f, 0.187303f, 0.195366f, 0.203368f, 0.211309f, 0.219186f, 0.226995f, 0.234736f,
+  36:APP/Motor/motor_para.c **** 	0.250000f, 0.257519f, 0.264960f, 0.272320f, 0.279596f, 0.286788f, 0.293893f, 0.300908f, 0.307831f,
+  37:APP/Motor/motor_para.c **** 	0.321394f, 0.328030f, 0.334565f, 0.340999f, 0.347329f, 0.353553f, 0.359670f, 0.365677f, 0.371572f,
+  38:APP/Motor/motor_para.c **** 	0.383022f, 0.388573f, 0.394005f, 0.399318f, 0.404509f, 0.409576f, 0.414519f, 0.419335f, 0.424024f,
+  39:APP/Motor/motor_para.c **** 	0.433013f, 0.437310f, 0.441474f, 0.445503f, 0.449397f, 0.453154f, 0.456773f, 0.460252f, 0.463592f,
+  40:APP/Motor/motor_para.c **** 	0.469846f, 0.472759f, 0.475528f, 0.478152f, 0.480631f, 0.482963f, 0.485148f, 0.487185f, 0.489074f,
+  41:APP/Motor/motor_para.c **** 	0.492404f, 0.493844f, 0.495134f, 0.496273f, 0.497261f, 0.498097f, 0.498782f, 0.499315f, 0.499695f,
+  42:APP/Motor/motor_para.c **** 
+  43:APP/Motor/motor_para.c **** /*sin(0-360)*/
+  44:APP/Motor/motor_para.c **** const float ubeta_tab[360] = {
+  45:APP/Motor/motor_para.c **** 	0.000000f, 0.008726f, 0.017450f, 0.026168f, 0.034878f, 0.043578f, 0.052264f, 0.060935f, 0.069587f,
+  46:APP/Motor/motor_para.c **** 	0.086824f, 0.095404f, 0.103956f, 0.112476f, 0.120961f, 0.129410f, 0.137819f, 0.146186f, 0.154509f,
+  47:APP/Motor/motor_para.c **** 	0.171010f, 0.179184f, 0.187303f, 0.195366f, 0.203368f, 0.211309f, 0.219186f, 0.226995f, 0.234736f,
+  48:APP/Motor/motor_para.c **** 	0.250000f, 0.257519f, 0.264960f, 0.272320f, 0.279596f, 0.286788f, 0.293893f, 0.300908f, 0.307831f,
+  49:APP/Motor/motor_para.c **** 	0.321394f, 0.328030f, 0.334565f, 0.340999f, 0.347329f, 0.353553f, 0.359670f, 0.365677f, 0.371572f,
+  50:APP/Motor/motor_para.c **** 	0.383022f, 0.388573f, 0.394005f, 0.399318f, 0.404509f, 0.409576f, 0.414519f, 0.419335f, 0.424024f,
+  51:APP/Motor/motor_para.c **** 	0.433013f, 0.437310f, 0.441474f, 0.445503f, 0.449397f, 0.453154f, 0.456773f, 0.460252f, 0.463592f,
+  52:APP/Motor/motor_para.c **** 	0.469846f, 0.472759f, 0.475528f, 0.478152f, 0.480631f, 0.482963f, 0.485148f, 0.487185f, 0.489074f,
+  53:APP/Motor/motor_para.c **** 	0.492404f, 0.493844f, 0.495134f, 0.496273f, 0.497261f, 0.498097f, 0.498782f, 0.499315f, 0.499695f,
+  54:APP/Motor/motor_para.c **** 	0.500000f, 0.499924f, 0.499695f, 0.499315f, 0.498782f, 0.498097f, 0.497261f, 0.496273f, 0.495134f,
+  55:APP/Motor/motor_para.c **** 	0.492404f, 0.490814f, 0.489074f, 0.487185f, 0.485148f, 0.482963f, 0.480631f, 0.478152f, 0.475528f,
+  56:APP/Motor/motor_para.c **** 	0.469846f, 0.466790f, 0.463592f, 0.460252f, 0.456773f, 0.453154f, 0.449397f, 0.445503f, 0.441474f,
+  57:APP/Motor/motor_para.c **** 	0.433013f, 0.428584f, 0.424024f, 0.419335f, 0.414519f, 0.409576f, 0.404509f, 0.399318f, 0.394005f,
+  58:APP/Motor/motor_para.c **** 	0.383022f, 0.377355f, 0.371572f, 0.365677f, 0.359670f, 0.353553f, 0.347329f, 0.340999f, 0.334565f,
+  59:APP/Motor/motor_para.c **** 	0.321394f, 0.314660f, 0.307831f, 0.300908f, 0.293893f, 0.286788f, 0.279596f, 0.272320f, 0.264960f,
+  60:APP/Motor/motor_para.c **** 	0.250000f, 0.242405f, 0.234736f, 0.226995f, 0.219186f, 0.211309f, 0.203368f, 0.195366f, 0.187303f,
+  61:APP/Motor/motor_para.c **** 	0.171010f, 0.162784f, 0.154509f, 0.146186f, 0.137819f, 0.129410f, 0.120961f, 0.112476f, 0.103956f,
+  62:APP/Motor/motor_para.c **** 	0.086824f, 0.078217f, 0.069587f, 0.060935f, 0.052264f, 0.043578f, 0.034878f, 0.026168f, 0.017450f,
+  63:APP/Motor/motor_para.c **** 	-0.000000f, -0.008726f, -0.017450f, -0.026168f, -0.034878f, -0.043578f, -0.052264f, -0.060935f, -0
+  64:APP/Motor/motor_para.c **** 	-0.086824f, -0.095404f, -0.103956f, -0.112476f, -0.120961f, -0.129410f, -0.137819f, -0.146186f, -0
+  65:APP/Motor/motor_para.c **** 	-0.171010f, -0.179184f, -0.187303f, -0.195366f, -0.203368f, -0.211309f, -0.219186f, -0.226995f, -0
+  66:APP/Motor/motor_para.c **** 	-0.250000f, -0.257519f, -0.264960f, -0.272320f, -0.279596f, -0.286788f, -0.293893f, -0.300908f, -0
+  67:APP/Motor/motor_para.c **** 	-0.321394f, -0.328030f, -0.334565f, -0.340999f, -0.347329f, -0.353553f, -0.359670f, -0.365677f, -0
+  68:APP/Motor/motor_para.c **** 	-0.383022f, -0.388573f, -0.394005f, -0.399318f, -0.404509f, -0.409576f, -0.414519f, -0.419335f, -0
+  69:APP/Motor/motor_para.c **** 	-0.433013f, -0.437310f, -0.441474f, -0.445503f, -0.449397f, -0.453154f, -0.456773f, -0.460252f, -0
+  70:APP/Motor/motor_para.c **** 	-0.469846f, -0.472759f, -0.475528f, -0.478152f, -0.480631f, -0.482963f, -0.485148f, -0.487185f, -0
+  71:APP/Motor/motor_para.c **** 	-0.492404f, -0.493844f, -0.495134f, -0.496273f, -0.497261f, -0.498097f, -0.498782f, -0.499315f, -0
+  72:APP/Motor/motor_para.c **** 	-0.500000f, -0.499924f, -0.499695f, -0.499315f, -0.498782f, -0.498097f, -0.497261f, -0.496273f, -0
+  73:APP/Motor/motor_para.c **** 	-0.492404f, -0.490814f, -0.489074f, -0.487185f, -0.485148f, -0.482963f, -0.480631f, -0.478152f, -0
+  74:APP/Motor/motor_para.c **** 	-0.469846f, -0.466790f, -0.463592f, -0.460252f, -0.456773f, -0.453154f, -0.449397f, -0.445503f, -0
+  75:APP/Motor/motor_para.c **** 	-0.433013f, -0.428584f, -0.424024f, -0.419335f, -0.414519f, -0.409576f, -0.404509f, -0.399318f, -0
+  76:APP/Motor/motor_para.c **** 	-0.383022f, -0.377355f, -0.371572f, -0.365677f, -0.359670f, -0.353553f, -0.347329f, -0.340999f, -0
+  77:APP/Motor/motor_para.c **** 	-0.321394f, -0.314660f, -0.307831f, -0.300908f, -0.293893f, -0.286788f, -0.279596f, -0.272320f, -0
+  78:APP/Motor/motor_para.c **** 	-0.250000f, -0.242405f, -0.234736f, -0.226995f, -0.219186f, -0.211309f, -0.203368f, -0.195366f, -0
+  79:APP/Motor/motor_para.c **** 	-0.171010f, -0.162784f, -0.154509f, -0.146186f, -0.137819f, -0.129410f, -0.120961f, -0.112476f, -0
+  80:APP/Motor/motor_para.c **** 	-0.086824f, -0.078217f, -0.069587f, -0.060935f, -0.052264f, -0.043578f, -0.034878f, -0.026168f, -0
+  81:APP/Motor/motor_para.c **** 
+  82:APP/Motor/motor_para.c **** const float atanTab[512] = {
+  83:APP/Motor/motor_para.c **** 	0.000000f, 0.001957f, 0.003914f, 0.005871f, 0.007828f, 0.009784f, 0.011741f, 0.013698f, 0.015654f,
+  84:APP/Motor/motor_para.c **** 	0.019567f, 0.021523f, 0.023479f, 0.025435f, 0.027390f, 0.029346f, 0.031301f, 0.033256f, 0.035210f,
+  85:APP/Motor/motor_para.c **** 	0.039119f, 0.041073f, 0.043026f, 0.044979f, 0.046932f, 0.048885f, 0.050837f, 0.052788f, 0.054740f,
+  86:APP/Motor/motor_para.c **** 	0.058641f, 0.060591f, 0.062541f, 0.064490f, 0.066438f, 0.068386f, 0.070334f, 0.072281f, 0.074227f,
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 3
+
+
+  87:APP/Motor/motor_para.c **** 	0.078119f, 0.080063f, 0.082007f, 0.083951f, 0.085894f, 0.087836f, 0.089778f, 0.091718f, 0.093659f,
+  88:APP/Motor/motor_para.c **** 	0.097537f, 0.099475f, 0.101412f, 0.103349f, 0.105284f, 0.107219f, 0.109153f, 0.111087f, 0.113019f,
+  89:APP/Motor/motor_para.c **** 	0.116882f, 0.118812f, 0.120741f, 0.122669f, 0.124596f, 0.126522f, 0.128447f, 0.130372f, 0.132295f,
+  90:APP/Motor/motor_para.c **** 	0.136139f, 0.138059f, 0.139979f, 0.141897f, 0.143814f, 0.145731f, 0.147646f, 0.149560f, 0.151473f,
+  91:APP/Motor/motor_para.c **** 	0.155295f, 0.157205f, 0.159113f, 0.161020f, 0.162926f, 0.164831f, 0.166735f, 0.168637f, 0.170539f,
+  92:APP/Motor/motor_para.c **** 	0.174337f, 0.176235f, 0.178131f, 0.180026f, 0.181919f, 0.183811f, 0.185702f, 0.187592f, 0.189480f,
+  93:APP/Motor/motor_para.c **** 	0.193252f, 0.195137f, 0.197019f, 0.198900f, 0.200780f, 0.202659f, 0.204536f, 0.206411f, 0.208285f,
+  94:APP/Motor/motor_para.c **** 	0.212029f, 0.213898f, 0.215766f, 0.217633f, 0.219498f, 0.221361f, 0.223223f, 0.225083f, 0.226942f,
+  95:APP/Motor/motor_para.c **** 	0.230654f, 0.232508f, 0.234360f, 0.236211f, 0.238060f, 0.239907f, 0.241753f, 0.243597f, 0.245439f,
+  96:APP/Motor/motor_para.c **** 	0.249118f, 0.250956f, 0.252791f, 0.254625f, 0.256457f, 0.258287f, 0.260115f, 0.261942f, 0.263767f,
+  97:APP/Motor/motor_para.c **** 	0.267411f, 0.269230f, 0.271048f, 0.272864f, 0.274677f, 0.276489f, 0.278300f, 0.280108f, 0.281914f,
+  98:APP/Motor/motor_para.c **** 	0.285522f, 0.287322f, 0.289121f, 0.290918f, 0.292713f, 0.294506f, 0.296297f, 0.298086f, 0.299874f,
+  99:APP/Motor/motor_para.c **** 	0.303442f, 0.305223f, 0.307002f, 0.308780f, 0.310555f, 0.312328f, 0.314099f, 0.315868f, 0.317635f,
+ 100:APP/Motor/motor_para.c **** 	0.321163f, 0.322924f, 0.324683f, 0.326440f, 0.328195f, 0.329947f, 0.331698f, 0.333446f, 0.335192f,
+ 101:APP/Motor/motor_para.c **** 	0.338678f, 0.340418f, 0.342156f, 0.343891f, 0.345625f, 0.347356f, 0.349085f, 0.350812f, 0.352537f,
+ 102:APP/Motor/motor_para.c **** 	0.355980f, 0.357698f, 0.359414f, 0.361128f, 0.362839f, 0.364548f, 0.366256f, 0.367960f, 0.369663f,
+ 103:APP/Motor/motor_para.c **** 	0.373062f, 0.374757f, 0.376451f, 0.378142f, 0.379831f, 0.381518f, 0.383203f, 0.384885f, 0.386565f,
+ 104:APP/Motor/motor_para.c **** 	0.389918f, 0.391591f, 0.393262f, 0.394930f, 0.396596f, 0.398260f, 0.399921f, 0.401581f, 0.403237f,
+ 105:APP/Motor/motor_para.c **** 	0.406544f, 0.408194f, 0.409841f, 0.411486f, 0.413129f, 0.414769f, 0.416407f, 0.418043f, 0.419676f,
+ 106:APP/Motor/motor_para.c **** 	0.422935f, 0.424561f, 0.426185f, 0.427806f, 0.429425f, 0.431042f, 0.432656f, 0.434268f, 0.435877f,
+ 107:APP/Motor/motor_para.c **** 	0.439088f, 0.440690f, 0.442290f, 0.443887f, 0.445482f, 0.447075f, 0.448665f, 0.450252f, 0.451837f,
+ 108:APP/Motor/motor_para.c **** 	0.455000f, 0.456578f, 0.458153f, 0.459726f, 0.461297f, 0.462865f, 0.464430f, 0.465993f, 0.467554f,
+ 109:APP/Motor/motor_para.c **** 	0.470668f, 0.472221f, 0.473772f, 0.475320f, 0.476866f, 0.478410f, 0.479951f, 0.481489f, 0.483025f,
+ 110:APP/Motor/motor_para.c **** 	0.486090f, 0.487618f, 0.489144f, 0.490668f, 0.492189f, 0.493708f, 0.495224f, 0.496738f, 0.498249f,
+ 111:APP/Motor/motor_para.c **** 	0.501264f, 0.502768f, 0.504269f, 0.505768f, 0.507265f, 0.508759f, 0.510250f, 0.511739f, 0.513225f,
+ 112:APP/Motor/motor_para.c **** 	0.516191f, 0.517670f, 0.519146f, 0.520620f, 0.522092f, 0.523561f, 0.525027f, 0.526491f, 0.527953f,
+ 113:APP/Motor/motor_para.c **** 	0.530868f, 0.532323f, 0.533774f, 0.535223f, 0.536670f, 0.538114f, 0.539556f, 0.540995f, 0.542432f,
+ 114:APP/Motor/motor_para.c **** 	0.545298f, 0.546727f, 0.548154f, 0.549578f, 0.551000f, 0.552419f, 0.553836f, 0.555250f, 0.556662f,
+ 115:APP/Motor/motor_para.c **** 	0.559478f, 0.560883f, 0.562285f, 0.563684f, 0.565081f, 0.566476f, 0.567868f, 0.569258f, 0.570645f,
+ 116:APP/Motor/motor_para.c **** 	0.573412f, 0.574792f, 0.576169f, 0.577544f, 0.578916f, 0.580286f, 0.581653f, 0.583019f, 0.584381f,
+ 117:APP/Motor/motor_para.c **** 	0.587099f, 0.588454f, 0.589807f, 0.591157f, 0.592505f, 0.593850f, 0.595193f, 0.596534f, 0.597872f,
+ 118:APP/Motor/motor_para.c **** 	0.600541f, 0.601872f, 0.603200f, 0.604526f, 0.605850f, 0.607171f, 0.608490f, 0.609806f, 0.611120f,
+ 119:APP/Motor/motor_para.c **** 	0.613740f, 0.615047f, 0.616351f, 0.617653f, 0.618952f, 0.620249f, 0.621544f, 0.622836f, 0.624126f,
+ 120:APP/Motor/motor_para.c **** 	0.626699f, 0.627981f, 0.629262f, 0.630539f, 0.631815f, 0.633088f, 0.634359f, 0.635627f, 0.636893f,
+ 121:APP/Motor/motor_para.c **** 	0.639418f, 0.640677f, 0.641934f, 0.643188f, 0.644440f, 0.645689f, 0.646936f, 0.648181f, 0.649424f,
+ 122:APP/Motor/motor_para.c **** 	0.651902f, 0.653137f, 0.654370f, 0.655601f, 0.656830f, 0.658056f, 0.659280f, 0.660501f, 0.661720f,
+ 123:APP/Motor/motor_para.c **** 	0.664152f, 0.665364f, 0.666574f, 0.667782f, 0.668987f, 0.670190f, 0.671391f, 0.672589f, 0.673786f,
+ 124:APP/Motor/motor_para.c **** 	0.676171f, 0.677361f, 0.678548f, 0.679733f, 0.680915f, 0.682095f, 0.683274f, 0.684449f, 0.685623f,
+ 125:APP/Motor/motor_para.c **** 	0.687963f, 0.689130f, 0.690295f, 0.691457f, 0.692617f, 0.693775f, 0.694931f, 0.696084f, 0.697235f,
+ 126:APP/Motor/motor_para.c **** 	0.699531f, 0.700676f, 0.701818f, 0.702958f, 0.704096f, 0.705232f, 0.706366f, 0.707497f, 0.708626f,
+ 127:APP/Motor/motor_para.c **** 	0.710878f, 0.712001f, 0.713121f, 0.714240f, 0.715356f, 0.716470f, 0.717582f, 0.718691f, 0.719799f,
+ 128:APP/Motor/motor_para.c **** 	0.722008f, 0.723109f, 0.724208f, 0.725305f, 0.726399f, 0.727492f, 0.728582f, 0.729671f, 0.730757f,
+ 129:APP/Motor/motor_para.c **** 	0.732923f, 0.734003f, 0.735081f, 0.736157f, 0.737230f, 0.738302f, 0.739371f, 0.740439f, 0.741504f,
+ 130:APP/Motor/motor_para.c **** 	0.743628f, 0.744687f, 0.745744f, 0.746799f, 0.747852f, 0.748903f, 0.749952f, 0.750999f, 0.752044f,
+ 131:APP/Motor/motor_para.c **** 	0.754127f, 0.755165f, 0.756202f, 0.757237f, 0.758269f, 0.759300f, 0.760328f, 0.761355f, 0.762379f,
+ 132:APP/Motor/motor_para.c **** 	0.764422f, 0.765441f, 0.766457f, 0.767472f, 0.768484f, 0.769495f, 0.770504f, 0.771510f, 0.772515f,
+ 133:APP/Motor/motor_para.c **** 	0.774518f, 0.775517f, 0.776514f, 0.777509f, 0.778502f, 0.779493f, 0.780482f, 0.781469f, 0.782454f,
+ 134:APP/Motor/motor_para.c **** 	0.784419f, 0.785398f};
+ 135:APP/Motor/motor_para.c **** 
+ 136:APP/Motor/motor_para.c **** float my_atan2(float x, float y)
+ 137:APP/Motor/motor_para.c **** {
+  30              		.loc 1 137 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              		.loc 1 137 1 is_stmt 0 view .LVU1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 4
+
+
+  36 0000 B0EE407A 		vmov.f32	s14, s0
+ 138:APP/Motor/motor_para.c **** 	unsigned short idx;
+  37              		.loc 1 138 2 is_stmt 1 view .LVU2
+ 139:APP/Motor/motor_para.c **** 	float k = y / x;
+  38              		.loc 1 139 2 view .LVU3
+  39              		.loc 1 139 8 is_stmt 0 view .LVU4
+  40 0004 C0EE807A 		vdiv.f32	s15, s1, s0
+  41              	.LVL1:
+ 140:APP/Motor/motor_para.c **** 	float atan_val;
+  42              		.loc 1 140 2 is_stmt 1 view .LVU5
+ 141:APP/Motor/motor_para.c **** 
+ 142:APP/Motor/motor_para.c **** 	if (k > 1)
+  43              		.loc 1 142 2 view .LVU6
+  44              		.loc 1 142 5 is_stmt 0 view .LVU7
+  45 0008 F7EE006A 		vmov.f32	s13, #1.0e+0
+  46 000c F4EEE67A 		vcmpe.f32	s15, s13
+  47 0010 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  48 0014 22DD     		ble	.L20
+ 143:APP/Motor/motor_para.c **** 	{
+ 144:APP/Motor/motor_para.c **** 		idx = 512 * (k - 1) / (k + 1);
+  49              		.loc 1 144 3 is_stmt 1 view .LVU8
+  50              		.loc 1 144 18 is_stmt 0 view .LVU9
+  51 0016 37EEE66A 		vsub.f32	s12, s15, s13
+  52              		.loc 1 144 13 view .LVU10
+  53 001a DFED415A 		vldr.32	s11, .L26
+  54 001e 26EE256A 		vmul.f32	s12, s12, s11
+  55              		.loc 1 144 28 view .LVU11
+  56 0022 77EEA67A 		vadd.f32	s15, s15, s13
+  57              	.LVL2:
+  58              		.loc 1 144 23 view .LVU12
+  59 0026 C6EE276A 		vdiv.f32	s13, s12, s15
+  60              		.loc 1 144 7 view .LVU13
+  61 002a FCEEE67A 		vcvt.u32.f32	s15, s13
+  62 002e 17EE903A 		vmov	r3, s15	@ int
+  63 0032 9BB2     		uxth	r3, r3
+  64              	.LVL3:
+ 145:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx] + 0.785398f;
+  65              		.loc 1 145 3 is_stmt 1 view .LVU14
+  66              		.loc 1 145 21 is_stmt 0 view .LVU15
+  67 0034 3B4A     		ldr	r2, .L26+4
+  68 0036 02EB8303 		add	r3, r2, r3, lsl #2
+  69              	.LVL4:
+  70              		.loc 1 145 21 view .LVU16
+  71 003a D3ED007A 		vldr.32	s15, [r3]
+  72              	.LVL5:
+  73              		.loc 1 145 12 view .LVU17
+  74 003e DFED3A6A 		vldr.32	s13, .L26+8
+  75              	.LVL6:
+  76              		.loc 1 145 12 view .LVU18
+  77 0042 37EEA60A 		vadd.f32	s0, s15, s13
+  78              	.LVL7:
+  79              	.L4:
+ 146:APP/Motor/motor_para.c **** 	}
+ 147:APP/Motor/motor_para.c **** 	else if (k >= 0 && k <= 1)
+ 148:APP/Motor/motor_para.c **** 	{
+ 149:APP/Motor/motor_para.c **** 		idx = 512 * k;
+ 150:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 5
+
+
+ 151:APP/Motor/motor_para.c **** 	}
+ 152:APP/Motor/motor_para.c **** 	else if (k >= -1 && k < 0)
+ 153:APP/Motor/motor_para.c **** 	{
+ 154:APP/Motor/motor_para.c **** 		idx = 512 * (-k);
+ 155:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 156:APP/Motor/motor_para.c **** 	}
+ 157:APP/Motor/motor_para.c **** 	else
+ 158:APP/Motor/motor_para.c **** 	{
+ 159:APP/Motor/motor_para.c **** 		idx = 512 * (-k - 1) / (-k + 1);
+ 160:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 161:APP/Motor/motor_para.c **** 	}
+ 162:APP/Motor/motor_para.c **** 
+ 163:APP/Motor/motor_para.c **** 	if (x < 0) 
+  80              		.loc 1 163 2 is_stmt 1 view .LVU19
+  81              		.loc 1 163 5 is_stmt 0 view .LVU20
+  82 0046 B5EEC07A 		vcmpe.f32	s14, #0
+  83 004a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  84 004e 5CD4     		bmi	.L22
+ 164:APP/Motor/motor_para.c **** 	{
+ 165:APP/Motor/motor_para.c **** 		return atan_val + 3.141593f;
+ 166:APP/Motor/motor_para.c **** 	}
+ 167:APP/Motor/motor_para.c **** 	else
+ 168:APP/Motor/motor_para.c **** 	{
+ 169:APP/Motor/motor_para.c **** 		if (y > 0) 
+  85              		.loc 1 169 3 is_stmt 1 view .LVU21
+  86              		.loc 1 169 6 is_stmt 0 view .LVU22
+  87 0050 F5EEC00A 		vcmpe.f32	s1, #0
+  88 0054 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  89 0058 5CDD     		ble	.L23
+  90              	.LVL8:
+  91              	.L1:
+ 170:APP/Motor/motor_para.c **** 			return atan_val;
+ 171:APP/Motor/motor_para.c **** 		else 
+ 172:APP/Motor/motor_para.c **** 			return atan_val + 6.283185f;
+ 173:APP/Motor/motor_para.c **** 	}
+ 174:APP/Motor/motor_para.c **** }
+  92              		.loc 1 174 1 view .LVU23
+  93 005a 7047     		bx	lr
+  94              	.LVL9:
+  95              	.L20:
+ 147:APP/Motor/motor_para.c **** 	{
+  96              		.loc 1 147 7 is_stmt 1 view .LVU24
+ 147:APP/Motor/motor_para.c **** 	{
+  97              		.loc 1 147 10 is_stmt 0 view .LVU25
+  98 005c F5EEC07A 		vcmpe.f32	s15, #0
+  99 0060 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 100 0064 06DB     		blt	.L5
+ 147:APP/Motor/motor_para.c **** 	{
+ 101              		.loc 1 147 18 discriminator 1 view .LVU26
+ 102 0066 F7EE006A 		vmov.f32	s13, #1.0e+0
+ 103 006a F4EEE67A 		vcmpe.f32	s15, s13
+ 104 006e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 105 0072 2AD9     		bls	.L24
+ 106              	.L5:
+ 152:APP/Motor/motor_para.c **** 	{
+ 107              		.loc 1 152 7 is_stmt 1 view .LVU27
+ 152:APP/Motor/motor_para.c **** 	{
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 6
+
+
+ 108              		.loc 1 152 10 is_stmt 0 view .LVU28
+ 109 0074 FFEE006A 		vmov.f32	s13, #-1.0e+0
+ 110 0078 F4EEE67A 		vcmpe.f32	s15, s13
+ 111 007c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 112 0080 04DB     		blt	.L8
+ 152:APP/Motor/motor_para.c **** 	{
+ 113              		.loc 1 152 19 discriminator 1 view .LVU29
+ 114 0082 F5EEC07A 		vcmpe.f32	s15, #0
+ 115 0086 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 116 008a 2DD4     		bmi	.L25
+ 117              	.L8:
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 118              		.loc 1 159 3 is_stmt 1 view .LVU30
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 119              		.loc 1 159 16 is_stmt 0 view .LVU31
+ 120 008c F1EE676A 		vneg.f32	s13, s15
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 121              		.loc 1 159 19 view .LVU32
+ 122 0090 B7EE006A 		vmov.f32	s12, #1.0e+0
+ 123 0094 76EEC66A 		vsub.f32	s13, s13, s12
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 124              		.loc 1 159 13 view .LVU33
+ 125 0098 DFED215A 		vldr.32	s11, .L26
+ 126 009c 66EEA56A 		vmul.f32	s13, s13, s11
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 127              		.loc 1 159 30 view .LVU34
+ 128 00a0 36EE676A 		vsub.f32	s12, s12, s15
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 129              		.loc 1 159 24 view .LVU35
+ 130 00a4 C6EE867A 		vdiv.f32	s15, s13, s12
+ 131              	.LVL10:
+ 159:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 132              		.loc 1 159 7 view .LVU36
+ 133 00a8 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 134 00ac 17EE903A 		vmov	r3, s15	@ int
+ 135 00b0 9BB2     		uxth	r3, r3
+ 136              	.LVL11:
+ 160:APP/Motor/motor_para.c **** 	}
+ 137              		.loc 1 160 3 is_stmt 1 view .LVU37
+ 160:APP/Motor/motor_para.c **** 	}
+ 138              		.loc 1 160 22 is_stmt 0 view .LVU38
+ 139 00b2 1C4A     		ldr	r2, .L26+4
+ 140 00b4 02EB8303 		add	r3, r2, r3, lsl #2
+ 141              	.LVL12:
+ 160:APP/Motor/motor_para.c **** 	}
+ 142              		.loc 1 160 22 view .LVU39
+ 143 00b8 D3ED007A 		vldr.32	s15, [r3]
+ 144              	.LVL13:
+ 160:APP/Motor/motor_para.c **** 	}
+ 145              		.loc 1 160 14 view .LVU40
+ 146 00bc F1EE677A 		vneg.f32	s15, s15
+ 160:APP/Motor/motor_para.c **** 	}
+ 147              		.loc 1 160 12 view .LVU41
+ 148 00c0 DFED196A 		vldr.32	s13, .L26+8
+ 149              	.LVL14:
+ 160:APP/Motor/motor_para.c **** 	}
+ 150              		.loc 1 160 12 view .LVU42
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 7
+
+
+ 151 00c4 37EEE60A 		vsub.f32	s0, s15, s13
+ 152              	.LVL15:
+ 160:APP/Motor/motor_para.c **** 	}
+ 153              		.loc 1 160 12 view .LVU43
+ 154 00c8 BDE7     		b	.L4
+ 155              	.LVL16:
+ 156              	.L24:
+ 149:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 157              		.loc 1 149 3 is_stmt 1 view .LVU44
+ 149:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 158              		.loc 1 149 13 is_stmt 0 view .LVU45
+ 159 00ca DFED156A 		vldr.32	s13, .L26
+ 160 00ce 67EEA67A 		vmul.f32	s15, s15, s13
+ 161              	.LVL17:
+ 149:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 162              		.loc 1 149 7 view .LVU46
+ 163 00d2 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 164 00d6 17EE903A 		vmov	r3, s15	@ int
+ 165 00da 9BB2     		uxth	r3, r3
+ 166              	.LVL18:
+ 150:APP/Motor/motor_para.c **** 	}
+ 167              		.loc 1 150 3 is_stmt 1 view .LVU47
+ 150:APP/Motor/motor_para.c **** 	}
+ 168              		.loc 1 150 12 is_stmt 0 view .LVU48
+ 169 00dc 114A     		ldr	r2, .L26+4
+ 170 00de 02EB8303 		add	r3, r2, r3, lsl #2
+ 171              	.LVL19:
+ 150:APP/Motor/motor_para.c **** 	}
+ 172              		.loc 1 150 12 view .LVU49
+ 173 00e2 93ED000A 		vldr.32	s0, [r3]
+ 174              	.LVL20:
+ 150:APP/Motor/motor_para.c **** 	}
+ 175              		.loc 1 150 12 view .LVU50
+ 176 00e6 AEE7     		b	.L4
+ 177              	.LVL21:
+ 178              	.L25:
+ 154:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 179              		.loc 1 154 3 is_stmt 1 view .LVU51
+ 154:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 180              		.loc 1 154 13 is_stmt 0 view .LVU52
+ 181 00e8 DFED0D6A 		vldr.32	s13, .L26
+ 182 00ec 67EEE67A 		vnmul.f32	s15, s15, s13
+ 183              	.LVL22:
+ 154:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 184              		.loc 1 154 7 view .LVU53
+ 185 00f0 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 186 00f4 17EE903A 		vmov	r3, s15	@ int
+ 187 00f8 9BB2     		uxth	r3, r3
+ 188              	.LVL23:
+ 155:APP/Motor/motor_para.c **** 	}
+ 189              		.loc 1 155 3 is_stmt 1 view .LVU54
+ 155:APP/Motor/motor_para.c **** 	}
+ 190              		.loc 1 155 22 is_stmt 0 view .LVU55
+ 191 00fa 0A4A     		ldr	r2, .L26+4
+ 192 00fc 02EB8303 		add	r3, r2, r3, lsl #2
+ 193              	.LVL24:
+ 155:APP/Motor/motor_para.c **** 	}
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 8
+
+
+ 194              		.loc 1 155 22 view .LVU56
+ 195 0100 D3ED007A 		vldr.32	s15, [r3]
+ 196              	.LVL25:
+ 155:APP/Motor/motor_para.c **** 	}
+ 197              		.loc 1 155 12 view .LVU57
+ 198 0104 B1EE670A 		vneg.f32	s0, s15
+ 199              	.LVL26:
+ 155:APP/Motor/motor_para.c **** 	}
+ 200              		.loc 1 155 12 view .LVU58
+ 201 0108 9DE7     		b	.L4
+ 202              	.LVL27:
+ 203              	.L22:
+ 165:APP/Motor/motor_para.c **** 	}
+ 204              		.loc 1 165 3 is_stmt 1 view .LVU59
+ 165:APP/Motor/motor_para.c **** 	}
+ 205              		.loc 1 165 19 is_stmt 0 view .LVU60
+ 206 010a DFED087A 		vldr.32	s15, .L26+12
+ 207 010e 30EE270A 		vadd.f32	s0, s0, s15
+ 208              	.LVL28:
+ 165:APP/Motor/motor_para.c **** 	}
+ 209              		.loc 1 165 19 view .LVU61
+ 210 0112 7047     		bx	lr
+ 211              	.LVL29:
+ 212              	.L23:
+ 172:APP/Motor/motor_para.c **** 	}
+ 213              		.loc 1 172 4 is_stmt 1 view .LVU62
+ 172:APP/Motor/motor_para.c **** 	}
+ 214              		.loc 1 172 20 is_stmt 0 view .LVU63
+ 215 0114 DFED067A 		vldr.32	s15, .L26+16
+ 216 0118 30EE270A 		vadd.f32	s0, s0, s15
+ 217              	.LVL30:
+ 172:APP/Motor/motor_para.c **** 	}
+ 218              		.loc 1 172 20 view .LVU64
+ 219 011c 9DE7     		b	.L1
+ 220              	.L27:
+ 221 011e 00BF     		.align	2
+ 222              	.L26:
+ 223 0120 00000044 		.word	1140850688
+ 224 0124 00000000 		.word	atanTab
+ 225 0128 D80F493F 		.word	1061752792
+ 226 012c DC0F4940 		.word	1078530012
+ 227 0130 DA0FC940 		.word	1086918618
+ 228              		.cfi_endproc
+ 229              	.LFE139:
+ 231              		.section	.text.my_atan,"ax",%progbits
+ 232              		.align	1
+ 233              		.global	my_atan
+ 234              		.syntax unified
+ 235              		.thumb
+ 236              		.thumb_func
+ 238              	my_atan:
+ 239              	.LVL31:
+ 240              	.LFB140:
+ 175:APP/Motor/motor_para.c **** 
+ 176:APP/Motor/motor_para.c **** 
+ 177:APP/Motor/motor_para.c **** float my_atan(float x)
+ 178:APP/Motor/motor_para.c **** {
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 9
+
+
+ 241              		.loc 1 178 1 is_stmt 1 view -0
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+ 179:APP/Motor/motor_para.c **** 	unsigned short idx;
+ 246              		.loc 1 179 2 view .LVU66
+ 180:APP/Motor/motor_para.c **** 	float atan_val;
+ 247              		.loc 1 180 2 view .LVU67
+ 181:APP/Motor/motor_para.c **** 
+ 182:APP/Motor/motor_para.c **** 	if (x > 1)
+ 248              		.loc 1 182 2 view .LVU68
+ 249              		.loc 1 182 5 is_stmt 0 view .LVU69
+ 250 0000 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 251 0004 B4EEE70A 		vcmpe.f32	s0, s15
+ 252 0008 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 253 000c 18DD     		ble	.L43
+ 183:APP/Motor/motor_para.c **** 	{
+ 184:APP/Motor/motor_para.c **** 		idx = 512 * (x - 1) / (x + 1);
+ 254              		.loc 1 184 3 is_stmt 1 view .LVU70
+ 255              		.loc 1 184 18 is_stmt 0 view .LVU71
+ 256 000e 30EE677A 		vsub.f32	s14, s0, s15
+ 257              		.loc 1 184 13 view .LVU72
+ 258 0012 DFED376A 		vldr.32	s13, .L46
+ 259 0016 27EE267A 		vmul.f32	s14, s14, s13
+ 260              		.loc 1 184 28 view .LVU73
+ 261 001a 30EE270A 		vadd.f32	s0, s0, s15
+ 262              	.LVL32:
+ 263              		.loc 1 184 23 view .LVU74
+ 264 001e C7EE007A 		vdiv.f32	s15, s14, s0
+ 265              		.loc 1 184 7 view .LVU75
+ 266 0022 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 267 0026 17EE903A 		vmov	r3, s15	@ int
+ 268 002a 9BB2     		uxth	r3, r3
+ 269              	.LVL33:
+ 185:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx] + 0.785398f;
+ 270              		.loc 1 185 3 is_stmt 1 view .LVU76
+ 271              		.loc 1 185 21 is_stmt 0 view .LVU77
+ 272 002c 314A     		ldr	r2, .L46+4
+ 273 002e 02EB8303 		add	r3, r2, r3, lsl #2
+ 274              	.LVL34:
+ 275              		.loc 1 185 21 view .LVU78
+ 276 0032 93ED000A 		vldr.32	s0, [r3]
+ 277              		.loc 1 185 12 view .LVU79
+ 278 0036 DFED307A 		vldr.32	s15, .L46+8
+ 279              	.LVL35:
+ 280              		.loc 1 185 12 view .LVU80
+ 281 003a 30EE270A 		vadd.f32	s0, s0, s15
+ 282              	.LVL36:
+ 283              		.loc 1 185 12 view .LVU81
+ 284 003e 7047     		bx	lr
+ 285              	.LVL37:
+ 286              	.L43:
+ 186:APP/Motor/motor_para.c **** 	}
+ 187:APP/Motor/motor_para.c **** 	else if (x >= 0 && x <= 1)
+ 287              		.loc 1 187 7 is_stmt 1 view .LVU82
+ 288              		.loc 1 187 10 is_stmt 0 view .LVU83
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 10
+
+
+ 289 0040 B5EEC00A 		vcmpe.f32	s0, #0
+ 290 0044 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 291 0048 06DB     		blt	.L32
+ 292              		.loc 1 187 18 discriminator 1 view .LVU84
+ 293 004a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 294 004e B4EEE70A 		vcmpe.f32	s0, s15
+ 295 0052 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 296 0056 2AD9     		bls	.L44
+ 297              	.L32:
+ 188:APP/Motor/motor_para.c **** 	{
+ 189:APP/Motor/motor_para.c **** 		idx = 512 * x;
+ 190:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 191:APP/Motor/motor_para.c **** 	}
+ 192:APP/Motor/motor_para.c **** 	else if (x >= -1 && x < 0)
+ 298              		.loc 1 192 7 is_stmt 1 view .LVU85
+ 299              		.loc 1 192 10 is_stmt 0 view .LVU86
+ 300 0058 FFEE007A 		vmov.f32	s15, #-1.0e+0
+ 301 005c B4EEE70A 		vcmpe.f32	s0, s15
+ 302 0060 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 303 0064 04DB     		blt	.L35
+ 304              		.loc 1 192 19 discriminator 1 view .LVU87
+ 305 0066 B5EEC00A 		vcmpe.f32	s0, #0
+ 306 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 307 006e 2DD4     		bmi	.L45
+ 308              	.L35:
+ 193:APP/Motor/motor_para.c **** 	{
+ 194:APP/Motor/motor_para.c **** 		idx = 512 * (-x);
+ 195:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 196:APP/Motor/motor_para.c **** 	}
+ 197:APP/Motor/motor_para.c **** 	else
+ 198:APP/Motor/motor_para.c **** 	{
+ 199:APP/Motor/motor_para.c **** 		idx = 512 * (-x - 1) / (-x + 1);
+ 309              		.loc 1 199 3 is_stmt 1 view .LVU88
+ 310              		.loc 1 199 16 is_stmt 0 view .LVU89
+ 311 0070 B1EE407A 		vneg.f32	s14, s0
+ 312              		.loc 1 199 19 view .LVU90
+ 313 0074 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 314 0078 37EE677A 		vsub.f32	s14, s14, s15
+ 315              		.loc 1 199 13 view .LVU91
+ 316 007c DFED1C6A 		vldr.32	s13, .L46
+ 317 0080 27EE267A 		vmul.f32	s14, s14, s13
+ 318              		.loc 1 199 30 view .LVU92
+ 319 0084 77EEC06A 		vsub.f32	s13, s15, s0
+ 320              		.loc 1 199 24 view .LVU93
+ 321 0088 C7EE267A 		vdiv.f32	s15, s14, s13
+ 322              		.loc 1 199 7 view .LVU94
+ 323 008c FCEEE77A 		vcvt.u32.f32	s15, s15
+ 324 0090 17EE903A 		vmov	r3, s15	@ int
+ 325 0094 9BB2     		uxth	r3, r3
+ 326              	.LVL38:
+ 200:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx] - 0.785398f;
+ 327              		.loc 1 200 3 is_stmt 1 view .LVU95
+ 328              		.loc 1 200 22 is_stmt 0 view .LVU96
+ 329 0096 174A     		ldr	r2, .L46+4
+ 330 0098 02EB8303 		add	r3, r2, r3, lsl #2
+ 331              	.LVL39:
+ 332              		.loc 1 200 22 view .LVU97
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 11
+
+
+ 333 009c 93ED000A 		vldr.32	s0, [r3]
+ 334              	.LVL40:
+ 335              		.loc 1 200 14 view .LVU98
+ 336 00a0 B1EE400A 		vneg.f32	s0, s0
+ 337              		.loc 1 200 12 view .LVU99
+ 338 00a4 DFED147A 		vldr.32	s15, .L46+8
+ 339              	.LVL41:
+ 340              		.loc 1 200 12 view .LVU100
+ 341 00a8 30EE670A 		vsub.f32	s0, s0, s15
+ 342              	.LVL42:
+ 201:APP/Motor/motor_para.c **** 	}
+ 202:APP/Motor/motor_para.c **** 
+ 203:APP/Motor/motor_para.c **** 	return atan_val;
+ 343              		.loc 1 203 2 is_stmt 1 view .LVU101
+ 204:APP/Motor/motor_para.c **** }
+ 344              		.loc 1 204 1 is_stmt 0 view .LVU102
+ 345 00ac 7047     		bx	lr
+ 346              	.LVL43:
+ 347              	.L44:
+ 189:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 348              		.loc 1 189 3 is_stmt 1 view .LVU103
+ 189:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 349              		.loc 1 189 13 is_stmt 0 view .LVU104
+ 350 00ae DFED107A 		vldr.32	s15, .L46
+ 351 00b2 20EE270A 		vmul.f32	s0, s0, s15
+ 352              	.LVL44:
+ 189:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
+ 353              		.loc 1 189 7 view .LVU105
+ 354 00b6 BCEEC00A 		vcvt.u32.f32	s0, s0
+ 355 00ba 10EE103A 		vmov	r3, s0	@ int
+ 356 00be 9BB2     		uxth	r3, r3
+ 357              	.LVL45:
+ 190:APP/Motor/motor_para.c **** 	}
+ 358              		.loc 1 190 3 is_stmt 1 view .LVU106
+ 190:APP/Motor/motor_para.c **** 	}
+ 359              		.loc 1 190 12 is_stmt 0 view .LVU107
+ 360 00c0 0C4A     		ldr	r2, .L46+4
+ 361 00c2 02EB8303 		add	r3, r2, r3, lsl #2
+ 362              	.LVL46:
+ 190:APP/Motor/motor_para.c **** 	}
+ 363              		.loc 1 190 12 view .LVU108
+ 364 00c6 93ED000A 		vldr.32	s0, [r3]
+ 365              	.LVL47:
+ 190:APP/Motor/motor_para.c **** 	}
+ 366              		.loc 1 190 12 view .LVU109
+ 367 00ca 7047     		bx	lr
+ 368              	.LVL48:
+ 369              	.L45:
+ 194:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 370              		.loc 1 194 3 is_stmt 1 view .LVU110
+ 194:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 371              		.loc 1 194 13 is_stmt 0 view .LVU111
+ 372 00cc DFED087A 		vldr.32	s15, .L46
+ 373 00d0 20EE670A 		vnmul.f32	s0, s0, s15
+ 374              	.LVL49:
+ 194:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
+ 375              		.loc 1 194 7 view .LVU112
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 12
+
+
+ 376 00d4 BCEEC00A 		vcvt.u32.f32	s0, s0
+ 377 00d8 10EE103A 		vmov	r3, s0	@ int
+ 378 00dc 9BB2     		uxth	r3, r3
+ 379              	.LVL50:
+ 195:APP/Motor/motor_para.c **** 	}
+ 380              		.loc 1 195 3 is_stmt 1 view .LVU113
+ 195:APP/Motor/motor_para.c **** 	}
+ 381              		.loc 1 195 22 is_stmt 0 view .LVU114
+ 382 00de 054A     		ldr	r2, .L46+4
+ 383 00e0 02EB8303 		add	r3, r2, r3, lsl #2
+ 384              	.LVL51:
+ 195:APP/Motor/motor_para.c **** 	}
+ 385              		.loc 1 195 22 view .LVU115
+ 386 00e4 93ED000A 		vldr.32	s0, [r3]
+ 387              	.LVL52:
+ 195:APP/Motor/motor_para.c **** 	}
+ 388              		.loc 1 195 12 view .LVU116
+ 389 00e8 B1EE400A 		vneg.f32	s0, s0
+ 390              	.LVL53:
+ 195:APP/Motor/motor_para.c **** 	}
+ 391              		.loc 1 195 12 view .LVU117
+ 392 00ec 7047     		bx	lr
+ 393              	.L47:
+ 394 00ee 00BF     		.align	2
+ 395              	.L46:
+ 396 00f0 00000044 		.word	1140850688
+ 397 00f4 00000000 		.word	atanTab
+ 398 00f8 D80F493F 		.word	1061752792
+ 399              		.cfi_endproc
+ 400              	.LFE140:
+ 402              		.section	.text.Sign,"ax",%progbits
+ 403              		.align	1
+ 404              		.global	Sign
+ 405              		.syntax unified
+ 406              		.thumb
+ 407              		.thumb_func
+ 409              	Sign:
+ 410              	.LVL54:
+ 411              	.LFB141:
+ 205:APP/Motor/motor_para.c **** 
+ 206:APP/Motor/motor_para.c **** int8_t Sign(float x)
+ 207:APP/Motor/motor_para.c **** {
+ 412              		.loc 1 207 1 is_stmt 1 view -0
+ 413              		.cfi_startproc
+ 414              		@ args = 0, pretend = 0, frame = 0
+ 415              		@ frame_needed = 0, uses_anonymous_args = 0
+ 416              		@ link register save eliminated.
+ 208:APP/Motor/motor_para.c **** 	if (x > 0)
+ 417              		.loc 1 208 2 view .LVU119
+ 418              		.loc 1 208 5 is_stmt 0 view .LVU120
+ 419 0000 B5EEC00A 		vcmpe.f32	s0, #0
+ 420 0004 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 421 0008 05DC     		bgt	.L51
+ 209:APP/Motor/motor_para.c **** 		return 1;
+ 210:APP/Motor/motor_para.c **** 	else if (x < 0)
+ 422              		.loc 1 210 7 is_stmt 1 view .LVU121
+ 423              		.loc 1 210 10 is_stmt 0 view .LVU122
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 13
+
+
+ 424 000a 01D4     		bmi	.L55
+ 211:APP/Motor/motor_para.c **** 		return -1;
+ 212:APP/Motor/motor_para.c **** 	else
+ 213:APP/Motor/motor_para.c **** 		return 0;
+ 425              		.loc 1 213 10 view .LVU123
+ 426 000c 0020     		movs	r0, #0
+ 214:APP/Motor/motor_para.c **** }
+ 427              		.loc 1 214 1 view .LVU124
+ 428 000e 7047     		bx	lr
+ 429              	.L55:
+ 211:APP/Motor/motor_para.c **** 		return -1;
+ 430              		.loc 1 211 10 view .LVU125
+ 431 0010 4FF0FF30 		mov	r0, #-1
+ 432 0014 7047     		bx	lr
+ 433              	.L51:
+ 209:APP/Motor/motor_para.c **** 		return 1;
+ 434              		.loc 1 209 10 view .LVU126
+ 435 0016 0120     		movs	r0, #1
+ 436 0018 7047     		bx	lr
+ 437              		.cfi_endproc
+ 438              	.LFE141:
+ 440              		.section	.text.my_abs,"ax",%progbits
+ 441              		.align	1
+ 442              		.global	my_abs
+ 443              		.syntax unified
+ 444              		.thumb
+ 445              		.thumb_func
+ 447              	my_abs:
+ 448              	.LVL55:
+ 449              	.LFB142:
+ 215:APP/Motor/motor_para.c **** float my_abs(float x)
+ 216:APP/Motor/motor_para.c **** {
+ 450              		.loc 1 216 1 is_stmt 1 view -0
+ 451              		.cfi_startproc
+ 452              		@ args = 0, pretend = 0, frame = 0
+ 453              		@ frame_needed = 0, uses_anonymous_args = 0
+ 454              		@ link register save eliminated.
+ 217:APP/Motor/motor_para.c **** 	if (x >= 0)
+ 455              		.loc 1 217 2 view .LVU128
+ 456              		.loc 1 217 5 is_stmt 0 view .LVU129
+ 457 0000 B5EEC00A 		vcmpe.f32	s0, #0
+ 458 0004 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 459 0008 00DB     		blt	.L58
+ 460              	.LVL56:
+ 461              	.L57:
+ 218:APP/Motor/motor_para.c **** 		return x;
+ 219:APP/Motor/motor_para.c **** 	else
+ 220:APP/Motor/motor_para.c **** 		return -x;
+ 221:APP/Motor/motor_para.c **** }
+ 462              		.loc 1 221 1 view .LVU130
+ 463 000a 7047     		bx	lr
+ 464              	.LVL57:
+ 465              	.L58:
+ 220:APP/Motor/motor_para.c **** }
+ 466              		.loc 1 220 3 is_stmt 1 view .LVU131
+ 220:APP/Motor/motor_para.c **** }
+ 467              		.loc 1 220 10 is_stmt 0 view .LVU132
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 14
+
+
+ 468 000c B1EE400A 		vneg.f32	s0, s0
+ 469              	.LVL58:
+ 220:APP/Motor/motor_para.c **** }
+ 470              		.loc 1 220 10 view .LVU133
+ 471 0010 FBE7     		b	.L57
+ 472              		.cfi_endproc
+ 473              	.LFE142:
+ 475              		.section	.text.Sat,"ax",%progbits
+ 476              		.align	1
+ 477              		.global	Sat
+ 478              		.syntax unified
+ 479              		.thumb
+ 480              		.thumb_func
+ 482              	Sat:
+ 483              	.LVL59:
+ 484              	.LFB143:
+ 222:APP/Motor/motor_para.c **** float Sat(float s, float delta)
+ 223:APP/Motor/motor_para.c **** {
+ 485              		.loc 1 223 1 is_stmt 1 view -0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489              		@ link register save eliminated.
+ 490              		.loc 1 223 1 is_stmt 0 view .LVU135
+ 491 0000 F0EE407A 		vmov.f32	s15, s0
+ 224:APP/Motor/motor_para.c **** 	if (s > delta)
+ 492              		.loc 1 224 2 is_stmt 1 view .LVU136
+ 493              		.loc 1 224 5 is_stmt 0 view .LVU137
+ 494 0004 B4EEE00A 		vcmpe.f32	s0, s1
+ 495 0008 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 496 000c 09DC     		bgt	.L61
+ 225:APP/Motor/motor_para.c **** 		return 1;
+ 226:APP/Motor/motor_para.c **** 	else if (s < -delta)
+ 497              		.loc 1 226 7 is_stmt 1 view .LVU138
+ 498              		.loc 1 226 15 is_stmt 0 view .LVU139
+ 499 000e B1EE607A 		vneg.f32	s14, s1
+ 500              		.loc 1 226 10 view .LVU140
+ 501 0012 B4EEC07A 		vcmpe.f32	s14, s0
+ 502 0016 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 503 001a 05DC     		bgt	.L62
+ 227:APP/Motor/motor_para.c **** 		return -1;
+ 228:APP/Motor/motor_para.c **** 	else
+ 229:APP/Motor/motor_para.c **** 		return s / delta;
+ 504              		.loc 1 229 3 is_stmt 1 view .LVU141
+ 505              		.loc 1 229 12 is_stmt 0 view .LVU142
+ 506 001c 87EEA00A 		vdiv.f32	s0, s15, s1
+ 507              	.LVL60:
+ 508              		.loc 1 229 12 view .LVU143
+ 509 0020 7047     		bx	lr
+ 510              	.LVL61:
+ 511              	.L61:
+ 225:APP/Motor/motor_para.c **** 		return 1;
+ 512              		.loc 1 225 10 view .LVU144
+ 513 0022 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 514              	.LVL62:
+ 225:APP/Motor/motor_para.c **** 		return 1;
+ 515              		.loc 1 225 10 view .LVU145
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 15
+
+
+ 516 0026 7047     		bx	lr
+ 517              	.LVL63:
+ 518              	.L62:
+ 227:APP/Motor/motor_para.c **** 		return -1;
+ 519              		.loc 1 227 10 view .LVU146
+ 520 0028 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 521              	.LVL64:
+ 230:APP/Motor/motor_para.c **** }
+ 522              		.loc 1 230 1 view .LVU147
+ 523 002c 7047     		bx	lr
+ 524              		.cfi_endproc
+ 525              	.LFE143:
+ 527              		.section	.text.my_max,"ax",%progbits
+ 528              		.align	1
+ 529              		.global	my_max
+ 530              		.syntax unified
+ 531              		.thumb
+ 532              		.thumb_func
+ 534              	my_max:
+ 535              	.LVL65:
+ 536              	.LFB144:
+ 231:APP/Motor/motor_para.c **** 
+ 232:APP/Motor/motor_para.c **** float my_max(float a, float b)
+ 233:APP/Motor/motor_para.c **** {
+ 537              		.loc 1 233 1 is_stmt 1 view -0
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ 542              		.loc 1 233 1 is_stmt 0 view .LVU149
+ 543 0000 F0EE407A 		vmov.f32	s15, s0
+ 544 0004 B0EE600A 		vmov.f32	s0, s1
+ 545              	.LVL66:
+ 234:APP/Motor/motor_para.c **** 	if (a >= b)
+ 546              		.loc 1 234 2 is_stmt 1 view .LVU150
+ 547              		.loc 1 234 5 is_stmt 0 view .LVU151
+ 548 0008 F4EEE07A 		vcmpe.f32	s15, s1
+ 549 000c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 550 0010 01DB     		blt	.L64
+ 235:APP/Motor/motor_para.c **** 		return a;
+ 551              		.loc 1 235 10 view .LVU152
+ 552 0012 B0EE670A 		vmov.f32	s0, s15
+ 553              	.L64:
+ 236:APP/Motor/motor_para.c **** 	else
+ 237:APP/Motor/motor_para.c **** 		return b;
+ 238:APP/Motor/motor_para.c **** }
+ 554              		.loc 1 238 1 view .LVU153
+ 555 0016 7047     		bx	lr
+ 556              		.cfi_endproc
+ 557              	.LFE144:
+ 559              		.section	.text.MotorInit,"ax",%progbits
+ 560              		.align	1
+ 561              		.global	MotorInit
+ 562              		.syntax unified
+ 563              		.thumb
+ 564              		.thumb_func
+ 566              	MotorInit:
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 16
+
+
+ 567              	.LFB145:
+ 239:APP/Motor/motor_para.c **** 
+ 240:APP/Motor/motor_para.c **** 
+ 241:APP/Motor/motor_para.c **** 
+ 242:APP/Motor/motor_para.c **** void MotorInit(void)
+ 243:APP/Motor/motor_para.c **** {
+ 568              		.loc 1 243 1 is_stmt 1 view -0
+ 569              		.cfi_startproc
+ 570              		@ args = 0, pretend = 0, frame = 0
+ 571              		@ frame_needed = 0, uses_anonymous_args = 0
+ 572              		@ link register save eliminated.
+ 244:APP/Motor/motor_para.c **** 	// Para.SpdSenKp = 0.001f;
+ 245:APP/Motor/motor_para.c **** 	// Para.SpdSenKi = 0.1f;
+ 246:APP/Motor/motor_para.c **** 	// Para.SpdLessKp = 0.0005f;
+ 247:APP/Motor/motor_para.c **** 	// Para.SpdLessKi = 0.01f;
+ 248:APP/Motor/motor_para.c **** 	// Pos.Kp = 0.3;
+ 249:APP/Motor/motor_para.c **** 	//Para.PosRef = 1000;
+ 250:APP/Motor/motor_para.c **** 
+ 251:APP/Motor/motor_para.c **** 	// Motor.P = MOTOR_P;	 
+ 252:APP/Motor/motor_para.c **** 	// Motor.Rs = MOTOR_Rs; 
+ 253:APP/Motor/motor_para.c **** 	// Motor.Ls = MOTOR_Ls; 
+ 254:APP/Motor/motor_para.c **** 
+ 255:APP/Motor/motor_para.c **** 	// PllSmoPara.Kp = 540.35f;  
+ 256:APP/Motor/motor_para.c **** 	// PllSmoPara.Ki = 72995.6f; 
+ 257:APP/Motor/motor_para.c **** 	// PllHfiPara.Kp = 540.35f;  
+ 258:APP/Motor/motor_para.c **** 	// PllHfiPara.Ki = 72995.6f; 
+ 259:APP/Motor/motor_para.c **** 
+ 260:APP/Motor/motor_para.c **** 	// SensorLess.Speed_Max = 2000;   
+ 261:APP/Motor/motor_para.c **** 	// SensorLess.w1 = 250 * Motor.P; 
+ 262:APP/Motor/motor_para.c **** 	// SensorLess.w2 = 350 * Motor.P; 
+ 263:APP/Motor/motor_para.c **** 	// // Para.SpeedRef = 2000;
+ 264:APP/Motor/motor_para.c **** 	// // Para.CurRef = 0.5f;
+ 265:APP/Motor/motor_para.c **** 	// Para.IfCurrent = IF_CUR_MAX;
+ 266:APP/Motor/motor_para.c **** 
+ 267:APP/Motor/motor_para.c **** 	// FluxInit(&flux);
+ 268:APP/Motor/motor_para.c **** 
+ 269:APP/Motor/motor_para.c **** 	//	SMO_Init();													
+ 270:APP/Motor/motor_para.c **** 	// PiParaInit();													 
+ 271:APP/Motor/motor_para.c **** 	// IirButterworthCoefficientInit(WE_IIR_LPF_Coeff, &WE_IIR_LPF_Par); 
+ 272:APP/Motor/motor_para.c **** }
+ 573              		.loc 1 272 1 view .LVU155
+ 574 0000 7047     		bx	lr
+ 575              		.cfi_endproc
+ 576              	.LFE145:
+ 578              		.global	atanTab
+ 579              		.section	.rodata.atanTab,"a"
+ 580              		.align	2
+ 583              	atanTab:
+ 584 0000 00000000 		.word	0
+ 585 0004 0341003B 		.word	989872387
+ 586 0008 0341803B 		.word	998260995
+ 587 000c 8461C03B 		.word	1002463620
+ 588 0010 0341003C 		.word	1006649603
+ 589 0014 124D203C 		.word	1008749842
+ 590 0018 535D403C 		.word	1010851155
+ 591 001c 946D603C 		.word	1012952468
+ 592 0020 D13C803C 		.word	1015037137
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 17
+
+
+ 593 0024 F244903C 		.word	1016087794
+ 594 0028 F94AA03C 		.word	1017137913
+ 595 002c 0151B03C 		.word	1018188033
+ 596 0030 0857C03C 		.word	1019238152
+ 597 0034 105DD03C 		.word	1020288272
+ 598 0038 FE60E03C 		.word	1021337854
+ 599 003c 0667F03C 		.word	1022387974
+ 600 0040 7A35003D 		.word	1023423866
+ 601 0044 7237083D 		.word	1023948658
+ 602 0048 5C38103D 		.word	1024473180
+ 603 004c 543A183D 		.word	1024997972
+ 604 0050 3F3B203D 		.word	1025522495
+ 605 0054 293C283D 		.word	1026047017
+ 606 0058 083C303D 		.word	1026571272
+ 607 005c E63B383D 		.word	1027095526
+ 608 0060 C53B403D 		.word	1027619781
+ 609 0064 A33B483D 		.word	1028144035
+ 610 0068 753A503D 		.word	1028668021
+ 611 006c 3B38583D 		.word	1029191739
+ 612 0070 0D37603D 		.word	1029715725
+ 613 0074 D234683D 		.word	1030239442
+ 614 0078 8C31703D 		.word	1030762892
+ 615 007c 452E783D 		.word	1031286341
+ 616 0080 7F15803D 		.word	1031804287
+ 617 0084 5513843D 		.word	1032065877
+ 618 0088 A510883D 		.word	1032327333
+ 619 008c F60D8C3D 		.word	1032588790
+ 620 0090 460B903D 		.word	1032850246
+ 621 0094 1008943D 		.word	1033111568
+ 622 0098 5304983D 		.word	1033372755
+ 623 009c 97009C3D 		.word	1033633943
+ 624 00a0 DBFC9F3D 		.word	1033895131
+ 625 00a4 12F8A33D 		.word	1034156050
+ 626 00a8 49F3A73D 		.word	1034416969
+ 627 00ac 80EEAB3D 		.word	1034677888
+ 628 00b0 32E9AF3D 		.word	1034938674
+ 629 00b4 5CE3B33D 		.word	1035199324
+ 630 00b8 87DDB73D 		.word	1035459975
+ 631 00bc A6D6BB3D 		.word	1035720358
+ 632 00c0 4AD0BF3D 		.word	1035980874
+ 633 00c4 E2C8C33D 		.word	1036241122
+ 634 00c8 7BC1C73D 		.word	1036501371
+ 635 00cc 8CB9CB3D 		.word	1036761484
+ 636 00d0 18B1CF3D 		.word	1037021464
+ 637 00d4 A4A8D33D 		.word	1037281444
+ 638 00d8 239FD73D 		.word	1037541155
+ 639 00dc A395DB3D 		.word	1037800867
+ 640 00e0 9C8BDF3D 		.word	1038060444
+ 641 00e4 9581E33D 		.word	1038320021
+ 642 00e8 8176E73D 		.word	1038579329
+ 643 00ec 6E6BEB3D 		.word	1038838638
+ 644 00f0 D45FEF3D 		.word	1039097812
+ 645 00f4 B553F33D 		.word	1039356853
+ 646 00f8 0F47F73D 		.word	1039615759
+ 647 00fc E239FB3D 		.word	1039874530
+ 648 0100 302CFF3D 		.word	1040133168
+ 649 0104 FC8E013E 		.word	1040289532
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 18
+
+
+ 650 0108 9C87033E 		.word	1040418716
+ 651 010c 3D80053E 		.word	1040547901
+ 652 0110 5778073E 		.word	1040676951
+ 653 0114 7270093E 		.word	1040806002
+ 654 0118 06680B3E 		.word	1040934918
+ 655 011c 575F0D3E 		.word	1041063767
+ 656 0120 A8560F3E 		.word	1041192616
+ 657 0124 724D113E 		.word	1041321330
+ 658 0128 FA43133E 		.word	1041449978
+ 659 012c 823A153E 		.word	1041578626
+ 660 0130 8330173E 		.word	1041707139
+ 661 0134 4226193E 		.word	1041835586
+ 662 0138 BD1B1B3E 		.word	1041963965
+ 663 013c F5101D3E 		.word	1042092277
+ 664 0140 A7051F3E 		.word	1042220455
+ 665 0144 59FA203E 		.word	1042348633
+ 666 0148 85EE223E 		.word	1042476677
+ 667 014c 6DE2243E 		.word	1042604653
+ 668 0150 13D6263E 		.word	1042732563
+ 669 0154 75C9283E 		.word	1042860405
+ 670 0158 94BC2A3E 		.word	1042988180
+ 671 015c 2DAF2C3E 		.word	1043115821
+ 672 0160 C7A12E3E 		.word	1043243463
+ 673 0164 D993303E 		.word	1043370969
+ 674 0168 6685323E 		.word	1043498342
+ 675 016c F376343E 		.word	1043625715
+ 676 0170 F967363E 		.word	1043752953
+ 677 0174 BC58383E 		.word	1043880124
+ 678 0178 F9483A3E 		.word	1044007161
+ 679 017c F3383C3E 		.word	1044134131
+ 680 0180 AA283E3E 		.word	1044261034
+ 681 0184 1E18403E 		.word	1044387870
+ 682 0188 0C07423E 		.word	1044514572
+ 683 018c B6F5433E 		.word	1044641206
+ 684 0190 DAE3453E 		.word	1044767706
+ 685 0194 FED1473E 		.word	1044894206
+ 686 0198 59BF493E 		.word	1045020505
+ 687 019c 71AC4B3E 		.word	1045146737
+ 688 01a0 46994D3E 		.word	1045272902
+ 689 01a4 D7854F3E 		.word	1045398999
+ 690 01a8 E371513E 		.word	1045524963
+ 691 01ac 685D533E 		.word	1045650792
+ 692 01b0 AA48553E 		.word	1045776554
+ 693 01b4 A933573E 		.word	1045902249
+ 694 01b8 211E593E 		.word	1046027809
+ 695 01bc 14085B3E 		.word	1046153236
+ 696 01c0 C3F15C3E 		.word	1046278595
+ 697 01c4 2FDB5E3E 		.word	1046403887
+ 698 01c8 15C4603E 		.word	1046529045
+ 699 01cc 75AC623E 		.word	1046654069
+ 700 01d0 9294643E 		.word	1046779026
+ 701 01d4 287C663E 		.word	1046903848
+ 702 01d8 7C63683E 		.word	1047028604
+ 703 01dc 494A6A3E 		.word	1047153225
+ 704 01e0 90306C3E 		.word	1047277712
+ 705 01e4 94166E3E 		.word	1047402132
+ 706 01e8 11FC6F3E 		.word	1047526417
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 19
+
+
+ 707 01ec 4CE1713E 		.word	1047650636
+ 708 01f0 00C6733E 		.word	1047774720
+ 709 01f4 2EAA753E 		.word	1047898670
+ 710 01f8 198E773E 		.word	1048022553
+ 711 01fc 7E71793E 		.word	1048146302
+ 712 0200 5C547B3E 		.word	1048269916
+ 713 0204 F8367D3E 		.word	1048393464
+ 714 0208 CA187F3E 		.word	1048516810
+ 715 020c 4E7D803E 		.word	1048608078
+ 716 0210 D26D813E 		.word	1048669650
+ 717 0214 355E823E 		.word	1048731189
+ 718 0218 554E833E 		.word	1048792661
+ 719 021c 323E843E 		.word	1048854066
+ 720 0220 CB2D853E 		.word	1048915403
+ 721 0224 431D863E 		.word	1048976707
+ 722 0228 780C873E 		.word	1049037944
+ 723 022c 6AFB873E 		.word	1049099114
+ 724 0230 18EA883E 		.word	1049160216
+ 725 0234 84D8893E 		.word	1049221252
+ 726 0238 CEC68A3E 		.word	1049282254
+ 727 023c D5B48B3E 		.word	1049343189
+ 728 0240 77A28C3E 		.word	1049404023
+ 729 0244 F78F8D3E 		.word	1049464823
+ 730 0248 567D8E3E 		.word	1049525590
+ 731 024c 516A8F3E 		.word	1049586257
+ 732 0250 0857903E 		.word	1049646856
+ 733 0254 9E43913E 		.word	1049707422
+ 734 0258 F12F923E 		.word	1049767921
+ 735 025c DF1B933E 		.word	1049828319
+ 736 0260 AB07943E 		.word	1049888683
+ 737 0264 34F3943E 		.word	1049948980
+ 738 0268 7ADE953E 		.word	1050009210
+ 739 026c 7EC9963E 		.word	1050069374
+ 740 0270 3EB4973E 		.word	1050129470
+ 741 0274 BA9E983E 		.word	1050189498
+ 742 0278 1689993E 		.word	1050249494
+ 743 027c 0C739A3E 		.word	1050309388
+ 744 0280 C05C9B3E 		.word	1050369216
+ 745 0284 30469C3E 		.word	1050428976
+ 746 0288 5E2F9D3E 		.word	1050488670
+ 747 028c 6A189E3E 		.word	1050548330
+ 748 0290 11019F3E 		.word	1050607889
+ 749 0294 75E99F3E 		.word	1050667381
+ 750 0298 96D1A03E 		.word	1050726806
+ 751 029c 73B9A13E 		.word	1050786163
+ 752 02a0 0EA1A23E 		.word	1050845454
+ 753 02a4 6688A33E 		.word	1050904678
+ 754 02a8 7A6FA43E 		.word	1050963834
+ 755 02ac 4B56A53E 		.word	1051022923
+ 756 02b0 DA3CA63E 		.word	1051081946
+ 757 02b4 2523A73E 		.word	1051140901
+ 758 02b8 2D09A83E 		.word	1051199789
+ 759 02bc D0EEA83E 		.word	1051258576
+ 760 02c0 52D4A93E 		.word	1051317330
+ 761 02c4 6FB9AA3E 		.word	1051375983
+ 762 02c8 499EAB3E 		.word	1051434569
+ 763 02cc E082AC3E 		.word	1051493088
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 20
+
+
+ 764 02d0 3467AD3E 		.word	1051551540
+ 765 02d4 454BAE3E 		.word	1051609925
+ 766 02d8 122FAF3E 		.word	1051668242
+ 767 02dc 7B12B03E 		.word	1051726459
+ 768 02e0 C3F5B03E 		.word	1051784643
+ 769 02e4 A5D8B13E 		.word	1051842725
+ 770 02e8 45BBB23E 		.word	1051900741
+ 771 02ec A19DB33E 		.word	1051958689
+ 772 02f0 BB7FB43E 		.word	1052016571
+ 773 02f4 7061B53E 		.word	1052074352
+ 774 02f8 0343B63E 		.word	1052132099
+ 775 02fc 3124B73E 		.word	1052189745
+ 776 0300 1D05B83E 		.word	1052247325
+ 777 0304 C5E5B83E 		.word	1052304837
+ 778 0308 09C6B93E 		.word	1052362249
+ 779 030c 09A6BA3E 		.word	1052419593
+ 780 0310 E885BB3E 		.word	1052476904
+ 781 0314 4165BC3E 		.word	1052534081
+ 782 0318 7844BD3E 		.word	1052591224
+ 783 031c 4B23BE3E 		.word	1052648267
+ 784 0320 FC01BF3E 		.word	1052705276
+ 785 0324 26E0BF3E 		.word	1052762150
+ 786 0328 2FBEC03E 		.word	1052818991
+ 787 032c D49BC13E 		.word	1052875732
+ 788 0330 3579C23E 		.word	1052932405
+ 789 0334 5456C33E 		.word	1052989012
+ 790 0338 2F33C43E 		.word	1053045551
+ 791 033c A60FC53E 		.word	1053101990
+ 792 0340 D9EBC53E 		.word	1053158361
+ 793 0344 C9C7C63E 		.word	1053214665
+ 794 0348 55A3C73E 		.word	1053270869
+ 795 034c 9E7EC83E 		.word	1053327006
+ 796 0350 A359C93E 		.word	1053383075
+ 797 0354 4434CA3E 		.word	1053439044
+ 798 0358 A20ECB3E 		.word	1053494946
+ 799 035c BCE8CB3E 		.word	1053550780
+ 800 0360 72C2CC3E 		.word	1053606514
+ 801 0364 069CCD3E 		.word	1053662214
+ 802 0368 1475CE3E 		.word	1053717780
+ 803 036c 014ECF3E 		.word	1053773313
+ 804 0370 8926D03E 		.word	1053828745
+ 805 0374 CEFED03E 		.word	1053884110
+ 806 0378 AED6D13E 		.word	1053939374
+ 807 037c 4BAED23E 		.word	1053994571
+ 808 0380 A585D33E 		.word	1054049701
+ 809 0384 9A5CD43E 		.word	1054104730
+ 810 0388 4C33D53E 		.word	1054159692
+ 811 038c BB09D63E 		.word	1054214587
+ 812 0390 C6DFD63E 		.word	1054269382
+ 813 0394 8DB5D73E 		.word	1054324109
+ 814 0398 F08AD83E 		.word	1054378736
+ 815 039c 0F60D93E 		.word	1054433295
+ 816 03a0 EC34DA3E 		.word	1054487788
+ 817 03a4 6309DB3E 		.word	1054542179
+ 818 03a8 98DDDB3E 		.word	1054596504
+ 819 03ac 89B1DC3E 		.word	1054650761
+ 820 03b0 1685DD3E 		.word	1054704918
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 21
+
+
+ 821 03b4 6058DE3E 		.word	1054759008
+ 822 03b8 452BDF3E 		.word	1054812997
+ 823 03bc E7FDDF3E 		.word	1054866919
+ 824 03c0 24D0E03E 		.word	1054920740
+ 825 03c4 1FA2E13E 		.word	1054974495
+ 826 03c8 D673E23E 		.word	1055028182
+ 827 03cc 2845E33E 		.word	1055081768
+ 828 03d0 3716E43E 		.word	1055135287
+ 829 03d4 04E7E43E 		.word	1055188740
+ 830 03d8 6BB7E53E 		.word	1055242091
+ 831 03dc 6E87E63E 		.word	1055295342
+ 832 03e0 2E57E73E 		.word	1055348526
+ 833 03e4 AB26E83E 		.word	1055401643
+ 834 03e8 C3F5E83E 		.word	1055454659
+ 835 03ec 97C4E93E 		.word	1055507607
+ 836 03f0 0893EA3E 		.word	1055560456
+ 837 03f4 3561EB3E 		.word	1055613237
+ 838 03f8 1F2FEC3E 		.word	1055665951
+ 839 03fc A4FCEC3E 		.word	1055718564
+ 840 0400 C5C9ED3E 		.word	1055771077
+ 841 0404 A296EE3E 		.word	1055823522
+ 842 0408 3D63EF3E 		.word	1055875901
+ 843 040c 732FF03E 		.word	1055928179
+ 844 0410 65FBF03E 		.word	1055980389
+ 845 0414 F3C6F13E 		.word	1056032499
+ 846 0418 3E92F23E 		.word	1056084542
+ 847 041c 255DF33E 		.word	1056136485
+ 848 0420 C827F43E 		.word	1056188360
+ 849 0424 28F2F43E 		.word	1056240168
+ 850 0428 23BCF53E 		.word	1056291875
+ 851 042c BA85F63E 		.word	1056343482
+ 852 0430 0E4FF73E 		.word	1056395022
+ 853 0434 1E18F83E 		.word	1056446494
+ 854 0438 CAE0F83E 		.word	1056497866
+ 855 043c 11A9F93E 		.word	1056549137
+ 856 0440 1571FA3E 		.word	1056600341
+ 857 0444 D638FB3E 		.word	1056651478
+ 858 0448 3200FC3E 		.word	1056702514
+ 859 044c 4CC7FC3E 		.word	1056753484
+ 860 0450 008EFD3E 		.word	1056804352
+ 861 0454 7154FE3E 		.word	1056855153
+ 862 0458 7E1AFF3E 		.word	1056905854
+ 863 045c 48E0FF3E 		.word	1056956488
+ 864 0460 D652003F 		.word	1056985814
+ 865 0464 67B5003F 		.word	1057011047
+ 866 0468 C617013F 		.word	1057036230
+ 867 046c 037A013F 		.word	1057061379
+ 868 0470 1EDC013F 		.word	1057086494
+ 869 0474 083E023F 		.word	1057111560
+ 870 0478 BE9F023F 		.word	1057136574
+ 871 047c 5401033F 		.word	1057161556
+ 872 0480 B762033F 		.word	1057186487
+ 873 0484 F8C3033F 		.word	1057211384
+ 874 0488 1825043F 		.word	1057236248
+ 875 048c 0586043F 		.word	1057261061
+ 876 0490 C1E6043F 		.word	1057285825
+ 877 0494 5A47053F 		.word	1057310554
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 22
+
+
+ 878 0498 D2A7053F 		.word	1057335250
+ 879 049c 1808063F 		.word	1057359896
+ 880 04a0 2B68063F 		.word	1057384491
+ 881 04a4 1DC8063F 		.word	1057409053
+ 882 04a8 EE27073F 		.word	1057433582
+ 883 04ac 8B87073F 		.word	1057458059
+ 884 04b0 F7E6073F 		.word	1057482487
+ 885 04b4 5246083F 		.word	1057506898
+ 886 04b8 6AA5083F 		.word	1057531242
+ 887 04bc 6004093F 		.word	1057555552
+ 888 04c0 3563093F 		.word	1057579829
+ 889 04c4 D7C1093F 		.word	1057604055
+ 890 04c8 58200A3F 		.word	1057628248
+ 891 04cc A67E0A3F 		.word	1057652390
+ 892 04d0 D3DC0A3F 		.word	1057676499
+ 893 04d4 CD3A0B3F 		.word	1057700557
+ 894 04d8 A6980B3F 		.word	1057724582
+ 895 04dc 4DF60B3F 		.word	1057748557
+ 896 04e0 D2530C3F 		.word	1057772498
+ 897 04e4 25B10C3F 		.word	1057796389
+ 898 04e8 560E0D3F 		.word	1057820246
+ 899 04ec 556B0D3F 		.word	1057844053
+ 900 04f0 32C80D3F 		.word	1057867826
+ 901 04f4 DD240E3F 		.word	1057891549
+ 902 04f8 67810E3F 		.word	1057915239
+ 903 04fc BEDD0E3F 		.word	1057938878
+ 904 0500 F3390F3F 		.word	1057962483
+ 905 0504 07960F3F 		.word	1057986055
+ 906 0508 E9F10F3F 		.word	1058009577
+ 907 050c 984D103F 		.word	1058033048
+ 908 0510 26A9103F 		.word	1058056486
+ 909 0514 9204113F 		.word	1058079890
+ 910 0518 CC5F113F 		.word	1058103244
+ 911 051c E4BA113F 		.word	1058126564
+ 912 0520 CA15123F 		.word	1058149834
+ 913 0524 8F70123F 		.word	1058173071
+ 914 0528 21CB123F 		.word	1058196257
+ 915 052c 9225133F 		.word	1058219410
+ 916 0530 D07F133F 		.word	1058242512
+ 917 0534 ECD9133F 		.word	1058265580
+ 918 0538 D733143F 		.word	1058288599
+ 919 053c A08D143F 		.word	1058311584
+ 920 0540 36E7143F 		.word	1058334518
+ 921 0544 BC40153F 		.word	1058357436
+ 922 0548 FE99153F 		.word	1058380286
+ 923 054c 1FF3153F 		.word	1058403103
+ 924 0550 1F4C163F 		.word	1058425887
+ 925 0554 ECA4163F 		.word	1058448620
+ 926 0558 97FD163F 		.word	1058471319
+ 927 055c 1156173F 		.word	1058493969
+ 928 0560 68AE173F 		.word	1058516584
+ 929 0564 8E06183F 		.word	1058539150
+ 930 0568 925E183F 		.word	1058561682
+ 931 056c 74B6183F 		.word	1058584180
+ 932 0570 240E193F 		.word	1058606628
+ 933 0574 B265193F 		.word	1058629042
+ 934 0578 0EBD193F 		.word	1058651406
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 23
+
+
+ 935 057c 49141A3F 		.word	1058673737
+ 936 0580 516B1A3F 		.word	1058696017
+ 937 0584 37C21A3F 		.word	1058718263
+ 938 0588 FC181B3F 		.word	1058740476
+ 939 058c 8F6F1B3F 		.word	1058762639
+ 940 0590 00C61B3F 		.word	1058784768
+ 941 0594 3F1C1C3F 		.word	1058806847
+ 942 0598 5C721C3F 		.word	1058828892
+ 943 059c 47C81C3F 		.word	1058850887
+ 944 05a0 111E1D3F 		.word	1058872849
+ 945 05a4 B8731D3F 		.word	1058894776
+ 946 05a8 2EC91D3F 		.word	1058916654
+ 947 05ac 821E1E3F 		.word	1058938498
+ 948 05b0 A3731E3F 		.word	1058960291
+ 949 05b4 A3C81E3F 		.word	1058982051
+ 950 05b8 821D1F3F 		.word	1059003778
+ 951 05bc 2E721F3F 		.word	1059025454
+ 952 05c0 B9C61F3F 		.word	1059047097
+ 953 05c4 221B203F 		.word	1059068706
+ 954 05c8 586F203F 		.word	1059090264
+ 955 05cc 5DC3203F 		.word	1059111773
+ 956 05d0 5017213F 		.word	1059133264
+ 957 05d4 016B213F 		.word	1059154689
+ 958 05d8 A1BE213F 		.word	1059176097
+ 959 05dc 0E12223F 		.word	1059197454
+ 960 05e0 5A65223F 		.word	1059218778
+ 961 05e4 73B8223F 		.word	1059240051
+ 962 05e8 6B0B233F 		.word	1059261291
+ 963 05ec 425E233F 		.word	1059282498
+ 964 05f0 E6B0233F 		.word	1059303654
+ 965 05f4 6803243F 		.word	1059324776
+ 966 05f8 C955243F 		.word	1059345865
+ 967 05fc F8A7243F 		.word	1059366904
+ 968 0600 05FA243F 		.word	1059387909
+ 969 0604 E04B253F 		.word	1059408864
+ 970 0608 999D253F 		.word	1059429785
+ 971 060c 31EF253F 		.word	1059450673
+ 972 0610 A740263F 		.word	1059471527
+ 973 0614 EA91263F 		.word	1059492330
+ 974 0618 0DE3263F 		.word	1059513101
+ 975 061c FD33273F 		.word	1059533821
+ 976 0620 CB84273F 		.word	1059554507
+ 977 0624 78D5273F 		.word	1059575160
+ 978 0628 0326283F 		.word	1059595779
+ 979 062c 5C76283F 		.word	1059616348
+ 980 0630 93C6283F 		.word	1059636883
+ 981 0634 9816293F 		.word	1059657368
+ 982 0638 7B66293F 		.word	1059677819
+ 983 063c 3DB6293F 		.word	1059698237
+ 984 0640 DE052A3F 		.word	1059718622
+ 985 0644 4C552A3F 		.word	1059738956
+ 986 0648 98A42A3F 		.word	1059759256
+ 987 064c C3F32A3F 		.word	1059779523
+ 988 0650 BB422B3F 		.word	1059799739
+ 989 0654 92912B3F 		.word	1059819922
+ 990 0658 48E02B3F 		.word	1059840072
+ 991 065c CB2E2C3F 		.word	1059860171
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 24
+
+
+ 992 0660 3D7D2C3F 		.word	1059880253
+ 993 0664 7DCB2C3F 		.word	1059900285
+ 994 0668 8B192D3F 		.word	1059920267
+ 995 066c 88672D3F 		.word	1059940232
+ 996 0670 52B52D3F 		.word	1059960146
+ 997 0674 FB022E3F 		.word	1059980027
+ 998 0678 72502E3F 		.word	1059999858
+ 999 067c C79D2E3F 		.word	1060019655
+ 1000 0680 0BEB2E3F 		.word	1060039435
+ 1001 0684 0D382F3F 		.word	1060059149
+ 1002 0688 FD842F3F 		.word	1060078845
+ 1003 068c BBD12F3F 		.word	1060098491
+ 1004 0690 581E303F 		.word	1060118104
+ 1005 0694 D36A303F 		.word	1060137683
+ 1006 0698 2CB7303F 		.word	1060157228
+ 1007 069c 5303313F 		.word	1060176723
+ 1008 06a0 594F313F 		.word	1060196185
+ 1009 06a4 3D9B313F 		.word	1060215613
+ 1010 06a8 FFE6313F 		.word	1060235007
+ 1011 06ac 9032323F 		.word	1060254352
+ 1012 06b0 FE7D323F 		.word	1060273662
+ 1013 06b4 4BC9323F 		.word	1060292939
+ 1014 06b8 7714333F 		.word	1060312183
+ 1015 06bc 815F333F 		.word	1060331393
+ 1016 06c0 58AA333F 		.word	1060350552
+ 1017 06c4 0EF5333F 		.word	1060369678
+ 1018 06c8 A33F343F 		.word	1060388771
+ 1019 06cc 168A343F 		.word	1060407830
+ 1020 06d0 67D4343F 		.word	1060426855
+ 1021 06d4 861E353F 		.word	1060445830
+ 1022 06d8 8368353F 		.word	1060464771
+ 1023 06dc 5FB2353F 		.word	1060483679
+ 1024 06e0 1AFC353F 		.word	1060502554
+ 1025 06e4 B345363F 		.word	1060521395
+ 1026 06e8 198F363F 		.word	1060540185
+ 1027 06ec 6FD8363F 		.word	1060558959
+ 1028 06f0 9221373F 		.word	1060577682
+ 1029 06f4 946A373F 		.word	1060596372
+ 1030 06f8 74B3373F 		.word	1060615028
+ 1031 06fc 22FC373F 		.word	1060633634
+ 1032 0700 BF44383F 		.word	1060652223
+ 1033 0704 2A8D383F 		.word	1060670762
+ 1034 0708 84D5383F 		.word	1060689284
+ 1035 070c AC1D393F 		.word	1060707756
+ 1036 0710 B265393F 		.word	1060726194
+ 1037 0714 97AD393F 		.word	1060744599
+ 1038 0718 49F5393F 		.word	1060762953
+ 1039 071c EA3C3A3F 		.word	1060781290
+ 1040 0720 5A843A3F 		.word	1060799578
+ 1041 0724 B8CB3A3F 		.word	1060817848
+ 1042 0728 E4123B3F 		.word	1060836068
+ 1043 072c EF593B3F 		.word	1060854255
+ 1044 0730 D7A03B3F 		.word	1060872407
+ 1045 0734 9FE73B3F 		.word	1060890527
+ 1046 0738 452E3C3F 		.word	1060908613
+ 1047 073c C9743C3F 		.word	1060926665
+ 1048 0740 1BBB3C3F 		.word	1060944667
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 25
+
+
+ 1049 0744 5C013D3F 		.word	1060962652
+ 1050 0748 6B473D3F 		.word	1060980587
+ 1051 074c 698D3D3F 		.word	1060998505
+ 1052 0750 35D33D3F 		.word	1061016373
+ 1053 0754 DF183E3F 		.word	1061034207
+ 1054 0758 685E3E3F 		.word	1061052008
+ 1055 075c CFA33E3F 		.word	1061069775
+ 1056 0760 14E93E3F 		.word	1061087508
+ 1057 0764 382E3F3F 		.word	1061105208
+ 1058 0768 3B733F3F 		.word	1061122875
+ 1059 076c 1BB83F3F 		.word	1061140507
+ 1060 0770 DBFC3F3F 		.word	1061158107
+ 1061 0774 7841403F 		.word	1061175672
+ 1062 0778 F585403F 		.word	1061193205
+ 1063 077c 3ECA403F 		.word	1061210686
+ 1064 0780 780E413F 		.word	1061228152
+ 1065 0784 7E52413F 		.word	1061245566
+ 1066 0788 7496413F 		.word	1061262964
+ 1067 078c 49DA413F 		.word	1061280329
+ 1068 0790 EB1D423F 		.word	1061297643
+ 1069 0794 7C61423F 		.word	1061314940
+ 1070 0798 DBA4423F 		.word	1061332187
+ 1071 079c 29E8423F 		.word	1061349417
+ 1072 07a0 452B433F 		.word	1061366597
+ 1073 07a4 506E433F 		.word	1061383760
+ 1074 07a8 29B1433F 		.word	1061400873
+ 1075 07ac F1F3433F 		.word	1061417969
+ 1076 07b0 8736443F 		.word	1061435015
+ 1077 07b4 0C79443F 		.word	1061452044
+ 1078 07b8 5EBB443F 		.word	1061469022
+ 1079 07bc A0FD443F 		.word	1061485984
+ 1080 07c0 C03F453F 		.word	1061502912
+ 1081 07c4 AE81453F 		.word	1061519790
+ 1082 07c8 8BC3453F 		.word	1061536651
+ 1083 07cc 4705463F 		.word	1061553479
+ 1084 07d0 D046463F 		.word	1061570256
+ 1085 07d4 4888463F 		.word	1061587016
+ 1086 07d8 9FC9463F 		.word	1061603743
+ 1087 07dc D40A473F 		.word	1061620436
+ 1088 07e0 E84B473F 		.word	1061637096
+ 1089 07e4 DA8C473F 		.word	1061653722
+ 1090 07e8 ABCD473F 		.word	1061670315
+ 1091 07ec 5A0E483F 		.word	1061686874
+ 1092 07f0 E84E483F 		.word	1061703400
+ 1093 07f4 548F483F 		.word	1061719892
+ 1094 07f8 AFCF483F 		.word	1061736367
+ 1095 07fc D80F493F 		.word	1061752792
+ 1096              		.global	ubeta_tab
+ 1097              		.section	.rodata.ubeta_tab,"a"
+ 1098              		.align	2
+ 1101              	ubeta_tab:
+ 1102 0000 00000000 		.word	0
+ 1103 0004 7FF70E3C 		.word	1007613823
+ 1104 0008 4DF38E3C 		.word	1016001357
+ 1105 000c 465ED63C 		.word	1020681798
+ 1106 0010 3CDC0E3D 		.word	1024384060
+ 1107 0014 D87E323D 		.word	1026719448
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 26
+
+
+ 1108 0018 C712563D 		.word	1029051079
+ 1109 001c FB96793D 		.word	1031378683
+ 1110 0020 A1838E3D 		.word	1032749985
+ 1111 0024 3C30A03D 		.word	1033908284
+ 1112 0028 C8D0B13D 		.word	1035063496
+ 1113 002c 2C63C33D 		.word	1036215084
+ 1114 0030 E2E6D43D 		.word	1037362914
+ 1115 0034 D159E63D 		.word	1038506449
+ 1116 0038 67BAF73D 		.word	1039645287
+ 1117 003c 0E84043E 		.word	1040483342
+ 1118 0040 6D200D3E 		.word	1041047661
+ 1119 0044 C8B1153E 		.word	1041609160
+ 1120 0048 9B371E3E 		.word	1042167707
+ 1121 004c D9B0263E 		.word	1042723033
+ 1122 0050 3F1D2F3E 		.word	1043275071
+ 1123 0054 037C373E 		.word	1043823619
+ 1124 0058 5CCC3F3E 		.word	1044368476
+ 1125 005c 060E483E 		.word	1044909574
+ 1126 0060 B33F503E 		.word	1045446579
+ 1127 0064 6361583E 		.word	1045979491
+ 1128 0068 4B72603E 		.word	1046508107
+ 1129 006c 6171683E 		.word	1047032161
+ 1130 0070 A25E703E 		.word	1047551650
+ 1131 0074 0439783E 		.word	1048066308
+ 1132 0078 0000803E 		.word	1048576000
+ 1133 007c 88D9833E 		.word	1048828296
+ 1134 0080 D6A8873E 		.word	1049077974
+ 1135 0084 876D8B3E 		.word	1049324935
+ 1136 0088 35278F3E 		.word	1049569077
+ 1137 008c E0D5923E 		.word	1049810400
+ 1138 0090 2579963E 		.word	1050048805
+ 1139 0094 9D109A3E 		.word	1050284189
+ 1140 0098 069C9D3E 		.word	1050516486
+ 1141 009c 1E1BA13E 		.word	1050745630
+ 1142 00a0 C18DA43E 		.word	1050971585
+ 1143 00a4 8CF3A73E 		.word	1051194252
+ 1144 00a8 1B4CAB3E 		.word	1051413531
+ 1145 00ac 6C97AE3E 		.word	1051629420
+ 1146 00b0 1BD5B13E 		.word	1051841819
+ 1147 00b4 E604B53E 		.word	1052050662
+ 1148 00b8 AB26B83E 		.word	1052255915
+ 1149 00bc 043ABB3E 		.word	1052457476
+ 1150 00c0 AF3EBE3E 		.word	1052655279
+ 1151 00c4 AD34C13E 		.word	1052849325
+ 1152 00c8 761BC43E 		.word	1053039478
+ 1153 00cc 0AF3C63E 		.word	1053225738
+ 1154 00d0 06BBC93E 		.word	1053408006
+ 1155 00d4 6973CC3E 		.word	1053586281
+ 1156 00d8 CE1BCF3E 		.word	1053760462
+ 1157 00dc F2B3D13E 		.word	1053930482
+ 1158 00e0 D63BD43E 		.word	1054096342
+ 1159 00e4 14B3D63E 		.word	1054257940
+ 1160 00e8 AC19D93E 		.word	1054415276
+ 1161 00ec 5D6FDB3E 		.word	1054568285
+ 1162 00f0 E1B3DD3E 		.word	1054716897
+ 1163 00f4 19E7DF3E 		.word	1054861081
+ 1164 00f8 E108E23E 		.word	1055000801
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 27
+
+
+ 1165 00fc F818E43E 		.word	1055135992
+ 1166 0100 5D17E63E 		.word	1055266653
+ 1167 0104 CD03E83E 		.word	1055392717
+ 1168 0108 27DEE93E 		.word	1055514151
+ 1169 010c 26A6EB3E 		.word	1055630886
+ 1170 0110 EE5BED3E 		.word	1055742958
+ 1171 0114 19FFEE3E 		.word	1055850265
+ 1172 0118 A88FF03E 		.word	1055952808
+ 1173 011c 780DF23E 		.word	1056050552
+ 1174 0120 6878F33E 		.word	1056143464
+ 1175 0124 57D0F43E 		.word	1056231511
+ 1176 0128 4415F63E 		.word	1056314692
+ 1177 012c ED46F73E 		.word	1056392941
+ 1178 0130 5265F83E 		.word	1056466258
+ 1179 0134 5070F93E 		.word	1056534608
+ 1180 0138 E867FA3E 		.word	1056597992
+ 1181 013c F94BFB3E 		.word	1056656377
+ 1182 0140 611CFC3E 		.word	1056709729
+ 1183 0144 1FD9FC3E 		.word	1056758047
+ 1184 0148 3482FD3E 		.word	1056801332
+ 1185 014c 7F17FE3E 		.word	1056839551
+ 1186 0150 FE98FE3E 		.word	1056872702
+ 1187 0154 9206FF3E 		.word	1056900754
+ 1188 0158 5B60FF3E 		.word	1056923739
+ 1189 015c 37A6FF3E 		.word	1056941623
+ 1190 0160 06D8FF3E 		.word	1056954374
+ 1191 0164 0AF6FF3E 		.word	1056962058
+ 1192 0168 0000003F 		.word	1056964608
+ 1193 016c 0AF6FF3E 		.word	1056962058
+ 1194 0170 06D8FF3E 		.word	1056954374
+ 1195 0174 37A6FF3E 		.word	1056941623
+ 1196 0178 5B60FF3E 		.word	1056923739
+ 1197 017c 9206FF3E 		.word	1056900754
+ 1198 0180 FE98FE3E 		.word	1056872702
+ 1199 0184 7F17FE3E 		.word	1056839551
+ 1200 0188 3482FD3E 		.word	1056801332
+ 1201 018c 1FD9FC3E 		.word	1056758047
+ 1202 0190 611CFC3E 		.word	1056709729
+ 1203 0194 F94BFB3E 		.word	1056656377
+ 1204 0198 E867FA3E 		.word	1056597992
+ 1205 019c 5070F93E 		.word	1056534608
+ 1206 01a0 5265F83E 		.word	1056466258
+ 1207 01a4 ED46F73E 		.word	1056392941
+ 1208 01a8 4415F63E 		.word	1056314692
+ 1209 01ac 57D0F43E 		.word	1056231511
+ 1210 01b0 6878F33E 		.word	1056143464
+ 1211 01b4 780DF23E 		.word	1056050552
+ 1212 01b8 A88FF03E 		.word	1055952808
+ 1213 01bc 19FFEE3E 		.word	1055850265
+ 1214 01c0 EE5BED3E 		.word	1055742958
+ 1215 01c4 26A6EB3E 		.word	1055630886
+ 1216 01c8 27DEE93E 		.word	1055514151
+ 1217 01cc CD03E83E 		.word	1055392717
+ 1218 01d0 5D17E63E 		.word	1055266653
+ 1219 01d4 F818E43E 		.word	1055135992
+ 1220 01d8 E108E23E 		.word	1055000801
+ 1221 01dc 19E7DF3E 		.word	1054861081
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 28
+
+
+ 1222 01e0 E1B3DD3E 		.word	1054716897
+ 1223 01e4 5D6FDB3E 		.word	1054568285
+ 1224 01e8 AC19D93E 		.word	1054415276
+ 1225 01ec 14B3D63E 		.word	1054257940
+ 1226 01f0 D63BD43E 		.word	1054096342
+ 1227 01f4 F2B3D13E 		.word	1053930482
+ 1228 01f8 CE1BCF3E 		.word	1053760462
+ 1229 01fc 6973CC3E 		.word	1053586281
+ 1230 0200 06BBC93E 		.word	1053408006
+ 1231 0204 0AF3C63E 		.word	1053225738
+ 1232 0208 761BC43E 		.word	1053039478
+ 1233 020c AD34C13E 		.word	1052849325
+ 1234 0210 AF3EBE3E 		.word	1052655279
+ 1235 0214 043ABB3E 		.word	1052457476
+ 1236 0218 AB26B83E 		.word	1052255915
+ 1237 021c E604B53E 		.word	1052050662
+ 1238 0220 1BD5B13E 		.word	1051841819
+ 1239 0224 6C97AE3E 		.word	1051629420
+ 1240 0228 1B4CAB3E 		.word	1051413531
+ 1241 022c 8CF3A73E 		.word	1051194252
+ 1242 0230 C18DA43E 		.word	1050971585
+ 1243 0234 1E1BA13E 		.word	1050745630
+ 1244 0238 069C9D3E 		.word	1050516486
+ 1245 023c 9D109A3E 		.word	1050284189
+ 1246 0240 2579963E 		.word	1050048805
+ 1247 0244 E0D5923E 		.word	1049810400
+ 1248 0248 35278F3E 		.word	1049569077
+ 1249 024c 876D8B3E 		.word	1049324935
+ 1250 0250 D6A8873E 		.word	1049077974
+ 1251 0254 88D9833E 		.word	1048828296
+ 1252 0258 0000803E 		.word	1048576000
+ 1253 025c 0439783E 		.word	1048066308
+ 1254 0260 A25E703E 		.word	1047551650
+ 1255 0264 6171683E 		.word	1047032161
+ 1256 0268 4B72603E 		.word	1046508107
+ 1257 026c 6361583E 		.word	1045979491
+ 1258 0270 B33F503E 		.word	1045446579
+ 1259 0274 060E483E 		.word	1044909574
+ 1260 0278 5CCC3F3E 		.word	1044368476
+ 1261 027c 037C373E 		.word	1043823619
+ 1262 0280 3F1D2F3E 		.word	1043275071
+ 1263 0284 D9B0263E 		.word	1042723033
+ 1264 0288 9B371E3E 		.word	1042167707
+ 1265 028c C8B1153E 		.word	1041609160
+ 1266 0290 6D200D3E 		.word	1041047661
+ 1267 0294 0E84043E 		.word	1040483342
+ 1268 0298 67BAF73D 		.word	1039645287
+ 1269 029c D159E63D 		.word	1038506449
+ 1270 02a0 E2E6D43D 		.word	1037362914
+ 1271 02a4 2C63C33D 		.word	1036215084
+ 1272 02a8 C8D0B13D 		.word	1035063496
+ 1273 02ac 3C30A03D 		.word	1033908284
+ 1274 02b0 A1838E3D 		.word	1032749985
+ 1275 02b4 FB96793D 		.word	1031378683
+ 1276 02b8 C712563D 		.word	1029051079
+ 1277 02bc D87E323D 		.word	1026719448
+ 1278 02c0 3CDC0E3D 		.word	1024384060
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 29
+
+
+ 1279 02c4 465ED63C 		.word	1020681798
+ 1280 02c8 4DF38E3C 		.word	1016001357
+ 1281 02cc 7FF70E3C 		.word	1007613823
+ 1282 02d0 00000080 		.word	-2147483648
+ 1283 02d4 7FF70EBC 		.word	-1139869825
+ 1284 02d8 4DF38EBC 		.word	-1131482291
+ 1285 02dc 465ED6BC 		.word	-1126801850
+ 1286 02e0 3CDC0EBD 		.word	-1123099588
+ 1287 02e4 D87E32BD 		.word	-1120764200
+ 1288 02e8 C71256BD 		.word	-1118432569
+ 1289 02ec FB9679BD 		.word	-1116104965
+ 1290 02f0 A1838EBD 		.word	-1114733663
+ 1291 02f4 3C30A0BD 		.word	-1113575364
+ 1292 02f8 C8D0B1BD 		.word	-1112420152
+ 1293 02fc 2C63C3BD 		.word	-1111268564
+ 1294 0300 E2E6D4BD 		.word	-1110120734
+ 1295 0304 D159E6BD 		.word	-1108977199
+ 1296 0308 67BAF7BD 		.word	-1107838361
+ 1297 030c 0E8404BE 		.word	-1107000306
+ 1298 0310 6D200DBE 		.word	-1106435987
+ 1299 0314 C8B115BE 		.word	-1105874488
+ 1300 0318 9B371EBE 		.word	-1105315941
+ 1301 031c D9B026BE 		.word	-1104760615
+ 1302 0320 3F1D2FBE 		.word	-1104208577
+ 1303 0324 037C37BE 		.word	-1103660029
+ 1304 0328 5CCC3FBE 		.word	-1103115172
+ 1305 032c 060E48BE 		.word	-1102574074
+ 1306 0330 B33F50BE 		.word	-1102037069
+ 1307 0334 636158BE 		.word	-1101504157
+ 1308 0338 4B7260BE 		.word	-1100975541
+ 1309 033c 617168BE 		.word	-1100451487
+ 1310 0340 A25E70BE 		.word	-1099931998
+ 1311 0344 043978BE 		.word	-1099417340
+ 1312 0348 000080BE 		.word	-1098907648
+ 1313 034c 88D983BE 		.word	-1098655352
+ 1314 0350 D6A887BE 		.word	-1098405674
+ 1315 0354 876D8BBE 		.word	-1098158713
+ 1316 0358 35278FBE 		.word	-1097914571
+ 1317 035c E0D592BE 		.word	-1097673248
+ 1318 0360 257996BE 		.word	-1097434843
+ 1319 0364 9D109ABE 		.word	-1097199459
+ 1320 0368 069C9DBE 		.word	-1096967162
+ 1321 036c 1E1BA1BE 		.word	-1096738018
+ 1322 0370 C18DA4BE 		.word	-1096512063
+ 1323 0374 8CF3A7BE 		.word	-1096289396
+ 1324 0378 1B4CABBE 		.word	-1096070117
+ 1325 037c 6C97AEBE 		.word	-1095854228
+ 1326 0380 1BD5B1BE 		.word	-1095641829
+ 1327 0384 E604B5BE 		.word	-1095432986
+ 1328 0388 AB26B8BE 		.word	-1095227733
+ 1329 038c 043ABBBE 		.word	-1095026172
+ 1330 0390 AF3EBEBE 		.word	-1094828369
+ 1331 0394 AD34C1BE 		.word	-1094634323
+ 1332 0398 761BC4BE 		.word	-1094444170
+ 1333 039c 0AF3C6BE 		.word	-1094257910
+ 1334 03a0 06BBC9BE 		.word	-1094075642
+ 1335 03a4 6973CCBE 		.word	-1093897367
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 30
+
+
+ 1336 03a8 CE1BCFBE 		.word	-1093723186
+ 1337 03ac F2B3D1BE 		.word	-1093553166
+ 1338 03b0 D63BD4BE 		.word	-1093387306
+ 1339 03b4 14B3D6BE 		.word	-1093225708
+ 1340 03b8 AC19D9BE 		.word	-1093068372
+ 1341 03bc 5D6FDBBE 		.word	-1092915363
+ 1342 03c0 E1B3DDBE 		.word	-1092766751
+ 1343 03c4 19E7DFBE 		.word	-1092622567
+ 1344 03c8 E108E2BE 		.word	-1092482847
+ 1345 03cc F818E4BE 		.word	-1092347656
+ 1346 03d0 5D17E6BE 		.word	-1092216995
+ 1347 03d4 CD03E8BE 		.word	-1092090931
+ 1348 03d8 27DEE9BE 		.word	-1091969497
+ 1349 03dc 26A6EBBE 		.word	-1091852762
+ 1350 03e0 EE5BEDBE 		.word	-1091740690
+ 1351 03e4 19FFEEBE 		.word	-1091633383
+ 1352 03e8 A88FF0BE 		.word	-1091530840
+ 1353 03ec 780DF2BE 		.word	-1091433096
+ 1354 03f0 6878F3BE 		.word	-1091340184
+ 1355 03f4 57D0F4BE 		.word	-1091252137
+ 1356 03f8 4415F6BE 		.word	-1091168956
+ 1357 03fc ED46F7BE 		.word	-1091090707
+ 1358 0400 5265F8BE 		.word	-1091017390
+ 1359 0404 5070F9BE 		.word	-1090949040
+ 1360 0408 E867FABE 		.word	-1090885656
+ 1361 040c F94BFBBE 		.word	-1090827271
+ 1362 0410 611CFCBE 		.word	-1090773919
+ 1363 0414 1FD9FCBE 		.word	-1090725601
+ 1364 0418 3482FDBE 		.word	-1090682316
+ 1365 041c 7F17FEBE 		.word	-1090644097
+ 1366 0420 FE98FEBE 		.word	-1090610946
+ 1367 0424 9206FFBE 		.word	-1090582894
+ 1368 0428 5B60FFBE 		.word	-1090559909
+ 1369 042c 37A6FFBE 		.word	-1090542025
+ 1370 0430 06D8FFBE 		.word	-1090529274
+ 1371 0434 0AF6FFBE 		.word	-1090521590
+ 1372 0438 000000BF 		.word	-1090519040
+ 1373 043c 0AF6FFBE 		.word	-1090521590
+ 1374 0440 06D8FFBE 		.word	-1090529274
+ 1375 0444 37A6FFBE 		.word	-1090542025
+ 1376 0448 5B60FFBE 		.word	-1090559909
+ 1377 044c 9206FFBE 		.word	-1090582894
+ 1378 0450 FE98FEBE 		.word	-1090610946
+ 1379 0454 7F17FEBE 		.word	-1090644097
+ 1380 0458 3482FDBE 		.word	-1090682316
+ 1381 045c 1FD9FCBE 		.word	-1090725601
+ 1382 0460 611CFCBE 		.word	-1090773919
+ 1383 0464 F94BFBBE 		.word	-1090827271
+ 1384 0468 E867FABE 		.word	-1090885656
+ 1385 046c 5070F9BE 		.word	-1090949040
+ 1386 0470 5265F8BE 		.word	-1091017390
+ 1387 0474 ED46F7BE 		.word	-1091090707
+ 1388 0478 4415F6BE 		.word	-1091168956
+ 1389 047c 57D0F4BE 		.word	-1091252137
+ 1390 0480 6878F3BE 		.word	-1091340184
+ 1391 0484 780DF2BE 		.word	-1091433096
+ 1392 0488 A88FF0BE 		.word	-1091530840
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 31
+
+
+ 1393 048c 19FFEEBE 		.word	-1091633383
+ 1394 0490 EE5BEDBE 		.word	-1091740690
+ 1395 0494 26A6EBBE 		.word	-1091852762
+ 1396 0498 27DEE9BE 		.word	-1091969497
+ 1397 049c CD03E8BE 		.word	-1092090931
+ 1398 04a0 5D17E6BE 		.word	-1092216995
+ 1399 04a4 F818E4BE 		.word	-1092347656
+ 1400 04a8 E108E2BE 		.word	-1092482847
+ 1401 04ac 19E7DFBE 		.word	-1092622567
+ 1402 04b0 E1B3DDBE 		.word	-1092766751
+ 1403 04b4 5D6FDBBE 		.word	-1092915363
+ 1404 04b8 AC19D9BE 		.word	-1093068372
+ 1405 04bc 14B3D6BE 		.word	-1093225708
+ 1406 04c0 D63BD4BE 		.word	-1093387306
+ 1407 04c4 F2B3D1BE 		.word	-1093553166
+ 1408 04c8 CE1BCFBE 		.word	-1093723186
+ 1409 04cc 6973CCBE 		.word	-1093897367
+ 1410 04d0 06BBC9BE 		.word	-1094075642
+ 1411 04d4 0AF3C6BE 		.word	-1094257910
+ 1412 04d8 761BC4BE 		.word	-1094444170
+ 1413 04dc AD34C1BE 		.word	-1094634323
+ 1414 04e0 AF3EBEBE 		.word	-1094828369
+ 1415 04e4 043ABBBE 		.word	-1095026172
+ 1416 04e8 AB26B8BE 		.word	-1095227733
+ 1417 04ec E604B5BE 		.word	-1095432986
+ 1418 04f0 1BD5B1BE 		.word	-1095641829
+ 1419 04f4 6C97AEBE 		.word	-1095854228
+ 1420 04f8 1B4CABBE 		.word	-1096070117
+ 1421 04fc 8CF3A7BE 		.word	-1096289396
+ 1422 0500 C18DA4BE 		.word	-1096512063
+ 1423 0504 1E1BA1BE 		.word	-1096738018
+ 1424 0508 069C9DBE 		.word	-1096967162
+ 1425 050c 9D109ABE 		.word	-1097199459
+ 1426 0510 257996BE 		.word	-1097434843
+ 1427 0514 E0D592BE 		.word	-1097673248
+ 1428 0518 35278FBE 		.word	-1097914571
+ 1429 051c 876D8BBE 		.word	-1098158713
+ 1430 0520 D6A887BE 		.word	-1098405674
+ 1431 0524 88D983BE 		.word	-1098655352
+ 1432 0528 000080BE 		.word	-1098907648
+ 1433 052c 043978BE 		.word	-1099417340
+ 1434 0530 A25E70BE 		.word	-1099931998
+ 1435 0534 617168BE 		.word	-1100451487
+ 1436 0538 4B7260BE 		.word	-1100975541
+ 1437 053c 636158BE 		.word	-1101504157
+ 1438 0540 B33F50BE 		.word	-1102037069
+ 1439 0544 060E48BE 		.word	-1102574074
+ 1440 0548 5CCC3FBE 		.word	-1103115172
+ 1441 054c 037C37BE 		.word	-1103660029
+ 1442 0550 3F1D2FBE 		.word	-1104208577
+ 1443 0554 D9B026BE 		.word	-1104760615
+ 1444 0558 9B371EBE 		.word	-1105315941
+ 1445 055c C8B115BE 		.word	-1105874488
+ 1446 0560 6D200DBE 		.word	-1106435987
+ 1447 0564 0E8404BE 		.word	-1107000306
+ 1448 0568 67BAF7BD 		.word	-1107838361
+ 1449 056c D159E6BD 		.word	-1108977199
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 32
+
+
+ 1450 0570 E2E6D4BD 		.word	-1110120734
+ 1451 0574 2C63C3BD 		.word	-1111268564
+ 1452 0578 C8D0B1BD 		.word	-1112420152
+ 1453 057c 3C30A0BD 		.word	-1113575364
+ 1454 0580 A1838EBD 		.word	-1114733663
+ 1455 0584 FB9679BD 		.word	-1116104965
+ 1456 0588 C71256BD 		.word	-1118432569
+ 1457 058c D87E32BD 		.word	-1120764200
+ 1458 0590 3CDC0EBD 		.word	-1123099588
+ 1459 0594 465ED6BC 		.word	-1126801850
+ 1460 0598 4DF38EBC 		.word	-1131482291
+ 1461 059c 7FF70EBC 		.word	-1139869825
+ 1462              		.global	ualpha_tab
+ 1463              		.section	.rodata.ualpha_tab,"a"
+ 1464              		.align	2
+ 1467              	ualpha_tab:
+ 1468 0000 0000003F 		.word	1056964608
+ 1469 0004 0AF6FF3E 		.word	1056962058
+ 1470 0008 06D8FF3E 		.word	1056954374
+ 1471 000c 37A6FF3E 		.word	1056941623
+ 1472 0010 5B60FF3E 		.word	1056923739
+ 1473 0014 9206FF3E 		.word	1056900754
+ 1474 0018 FE98FE3E 		.word	1056872702
+ 1475 001c 7F17FE3E 		.word	1056839551
+ 1476 0020 3482FD3E 		.word	1056801332
+ 1477 0024 1FD9FC3E 		.word	1056758047
+ 1478 0028 611CFC3E 		.word	1056709729
+ 1479 002c F94BFB3E 		.word	1056656377
+ 1480 0030 E867FA3E 		.word	1056597992
+ 1481 0034 5070F93E 		.word	1056534608
+ 1482 0038 5265F83E 		.word	1056466258
+ 1483 003c ED46F73E 		.word	1056392941
+ 1484 0040 4415F63E 		.word	1056314692
+ 1485 0044 57D0F43E 		.word	1056231511
+ 1486 0048 6878F33E 		.word	1056143464
+ 1487 004c 780DF23E 		.word	1056050552
+ 1488 0050 A88FF03E 		.word	1055952808
+ 1489 0054 19FFEE3E 		.word	1055850265
+ 1490 0058 EE5BED3E 		.word	1055742958
+ 1491 005c 26A6EB3E 		.word	1055630886
+ 1492 0060 27DEE93E 		.word	1055514151
+ 1493 0064 CD03E83E 		.word	1055392717
+ 1494 0068 5D17E63E 		.word	1055266653
+ 1495 006c F818E43E 		.word	1055135992
+ 1496 0070 E108E23E 		.word	1055000801
+ 1497 0074 19E7DF3E 		.word	1054861081
+ 1498 0078 E1B3DD3E 		.word	1054716897
+ 1499 007c 5D6FDB3E 		.word	1054568285
+ 1500 0080 AC19D93E 		.word	1054415276
+ 1501 0084 14B3D63E 		.word	1054257940
+ 1502 0088 D63BD43E 		.word	1054096342
+ 1503 008c F2B3D13E 		.word	1053930482
+ 1504 0090 CE1BCF3E 		.word	1053760462
+ 1505 0094 6973CC3E 		.word	1053586281
+ 1506 0098 06BBC93E 		.word	1053408006
+ 1507 009c 0AF3C63E 		.word	1053225738
+ 1508 00a0 761BC43E 		.word	1053039478
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 33
+
+
+ 1509 00a4 AD34C13E 		.word	1052849325
+ 1510 00a8 AF3EBE3E 		.word	1052655279
+ 1511 00ac 043ABB3E 		.word	1052457476
+ 1512 00b0 AB26B83E 		.word	1052255915
+ 1513 00b4 E604B53E 		.word	1052050662
+ 1514 00b8 1BD5B13E 		.word	1051841819
+ 1515 00bc 6C97AE3E 		.word	1051629420
+ 1516 00c0 1B4CAB3E 		.word	1051413531
+ 1517 00c4 8CF3A73E 		.word	1051194252
+ 1518 00c8 C18DA43E 		.word	1050971585
+ 1519 00cc 1E1BA13E 		.word	1050745630
+ 1520 00d0 069C9D3E 		.word	1050516486
+ 1521 00d4 9D109A3E 		.word	1050284189
+ 1522 00d8 2579963E 		.word	1050048805
+ 1523 00dc E0D5923E 		.word	1049810400
+ 1524 00e0 35278F3E 		.word	1049569077
+ 1525 00e4 876D8B3E 		.word	1049324935
+ 1526 00e8 D6A8873E 		.word	1049077974
+ 1527 00ec 88D9833E 		.word	1048828296
+ 1528 00f0 0000803E 		.word	1048576000
+ 1529 00f4 0439783E 		.word	1048066308
+ 1530 00f8 A25E703E 		.word	1047551650
+ 1531 00fc 6171683E 		.word	1047032161
+ 1532 0100 4B72603E 		.word	1046508107
+ 1533 0104 6361583E 		.word	1045979491
+ 1534 0108 B33F503E 		.word	1045446579
+ 1535 010c 060E483E 		.word	1044909574
+ 1536 0110 5CCC3F3E 		.word	1044368476
+ 1537 0114 037C373E 		.word	1043823619
+ 1538 0118 3F1D2F3E 		.word	1043275071
+ 1539 011c D9B0263E 		.word	1042723033
+ 1540 0120 9B371E3E 		.word	1042167707
+ 1541 0124 C8B1153E 		.word	1041609160
+ 1542 0128 6D200D3E 		.word	1041047661
+ 1543 012c 0E84043E 		.word	1040483342
+ 1544 0130 67BAF73D 		.word	1039645287
+ 1545 0134 D159E63D 		.word	1038506449
+ 1546 0138 E2E6D43D 		.word	1037362914
+ 1547 013c 2C63C33D 		.word	1036215084
+ 1548 0140 C8D0B13D 		.word	1035063496
+ 1549 0144 3C30A03D 		.word	1033908284
+ 1550 0148 A1838E3D 		.word	1032749985
+ 1551 014c FB96793D 		.word	1031378683
+ 1552 0150 C712563D 		.word	1029051079
+ 1553 0154 D87E323D 		.word	1026719448
+ 1554 0158 3CDC0E3D 		.word	1024384060
+ 1555 015c 465ED63C 		.word	1020681798
+ 1556 0160 4DF38E3C 		.word	1016001357
+ 1557 0164 7FF70E3C 		.word	1007613823
+ 1558 0168 00000080 		.word	-2147483648
+ 1559 016c 7FF70EBC 		.word	-1139869825
+ 1560 0170 4DF38EBC 		.word	-1131482291
+ 1561 0174 465ED6BC 		.word	-1126801850
+ 1562 0178 3CDC0EBD 		.word	-1123099588
+ 1563 017c D87E32BD 		.word	-1120764200
+ 1564 0180 C71256BD 		.word	-1118432569
+ 1565 0184 FB9679BD 		.word	-1116104965
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 34
+
+
+ 1566 0188 A1838EBD 		.word	-1114733663
+ 1567 018c 3C30A0BD 		.word	-1113575364
+ 1568 0190 C8D0B1BD 		.word	-1112420152
+ 1569 0194 2C63C3BD 		.word	-1111268564
+ 1570 0198 E2E6D4BD 		.word	-1110120734
+ 1571 019c D159E6BD 		.word	-1108977199
+ 1572 01a0 67BAF7BD 		.word	-1107838361
+ 1573 01a4 0E8404BE 		.word	-1107000306
+ 1574 01a8 6D200DBE 		.word	-1106435987
+ 1575 01ac C8B115BE 		.word	-1105874488
+ 1576 01b0 9B371EBE 		.word	-1105315941
+ 1577 01b4 D9B026BE 		.word	-1104760615
+ 1578 01b8 3F1D2FBE 		.word	-1104208577
+ 1579 01bc 037C37BE 		.word	-1103660029
+ 1580 01c0 5CCC3FBE 		.word	-1103115172
+ 1581 01c4 060E48BE 		.word	-1102574074
+ 1582 01c8 B33F50BE 		.word	-1102037069
+ 1583 01cc 636158BE 		.word	-1101504157
+ 1584 01d0 4B7260BE 		.word	-1100975541
+ 1585 01d4 617168BE 		.word	-1100451487
+ 1586 01d8 A25E70BE 		.word	-1099931998
+ 1587 01dc 043978BE 		.word	-1099417340
+ 1588 01e0 000080BE 		.word	-1098907648
+ 1589 01e4 88D983BE 		.word	-1098655352
+ 1590 01e8 D6A887BE 		.word	-1098405674
+ 1591 01ec 876D8BBE 		.word	-1098158713
+ 1592 01f0 35278FBE 		.word	-1097914571
+ 1593 01f4 E0D592BE 		.word	-1097673248
+ 1594 01f8 257996BE 		.word	-1097434843
+ 1595 01fc 9D109ABE 		.word	-1097199459
+ 1596 0200 069C9DBE 		.word	-1096967162
+ 1597 0204 1E1BA1BE 		.word	-1096738018
+ 1598 0208 C18DA4BE 		.word	-1096512063
+ 1599 020c 8CF3A7BE 		.word	-1096289396
+ 1600 0210 1B4CABBE 		.word	-1096070117
+ 1601 0214 6C97AEBE 		.word	-1095854228
+ 1602 0218 1BD5B1BE 		.word	-1095641829
+ 1603 021c E604B5BE 		.word	-1095432986
+ 1604 0220 AB26B8BE 		.word	-1095227733
+ 1605 0224 043ABBBE 		.word	-1095026172
+ 1606 0228 AF3EBEBE 		.word	-1094828369
+ 1607 022c AD34C1BE 		.word	-1094634323
+ 1608 0230 761BC4BE 		.word	-1094444170
+ 1609 0234 0AF3C6BE 		.word	-1094257910
+ 1610 0238 06BBC9BE 		.word	-1094075642
+ 1611 023c 6973CCBE 		.word	-1093897367
+ 1612 0240 CE1BCFBE 		.word	-1093723186
+ 1613 0244 F2B3D1BE 		.word	-1093553166
+ 1614 0248 D63BD4BE 		.word	-1093387306
+ 1615 024c 14B3D6BE 		.word	-1093225708
+ 1616 0250 AC19D9BE 		.word	-1093068372
+ 1617 0254 5D6FDBBE 		.word	-1092915363
+ 1618 0258 E1B3DDBE 		.word	-1092766751
+ 1619 025c 19E7DFBE 		.word	-1092622567
+ 1620 0260 E108E2BE 		.word	-1092482847
+ 1621 0264 F818E4BE 		.word	-1092347656
+ 1622 0268 5D17E6BE 		.word	-1092216995
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 35
+
+
+ 1623 026c CD03E8BE 		.word	-1092090931
+ 1624 0270 27DEE9BE 		.word	-1091969497
+ 1625 0274 26A6EBBE 		.word	-1091852762
+ 1626 0278 EE5BEDBE 		.word	-1091740690
+ 1627 027c 19FFEEBE 		.word	-1091633383
+ 1628 0280 A88FF0BE 		.word	-1091530840
+ 1629 0284 780DF2BE 		.word	-1091433096
+ 1630 0288 6878F3BE 		.word	-1091340184
+ 1631 028c 57D0F4BE 		.word	-1091252137
+ 1632 0290 4415F6BE 		.word	-1091168956
+ 1633 0294 ED46F7BE 		.word	-1091090707
+ 1634 0298 5265F8BE 		.word	-1091017390
+ 1635 029c 5070F9BE 		.word	-1090949040
+ 1636 02a0 E867FABE 		.word	-1090885656
+ 1637 02a4 F94BFBBE 		.word	-1090827271
+ 1638 02a8 611CFCBE 		.word	-1090773919
+ 1639 02ac 1FD9FCBE 		.word	-1090725601
+ 1640 02b0 3482FDBE 		.word	-1090682316
+ 1641 02b4 7F17FEBE 		.word	-1090644097
+ 1642 02b8 FE98FEBE 		.word	-1090610946
+ 1643 02bc 9206FFBE 		.word	-1090582894
+ 1644 02c0 5B60FFBE 		.word	-1090559909
+ 1645 02c4 37A6FFBE 		.word	-1090542025
+ 1646 02c8 06D8FFBE 		.word	-1090529274
+ 1647 02cc 0AF6FFBE 		.word	-1090521590
+ 1648 02d0 000000BF 		.word	-1090519040
+ 1649 02d4 0AF6FFBE 		.word	-1090521590
+ 1650 02d8 06D8FFBE 		.word	-1090529274
+ 1651 02dc 37A6FFBE 		.word	-1090542025
+ 1652 02e0 5B60FFBE 		.word	-1090559909
+ 1653 02e4 9206FFBE 		.word	-1090582894
+ 1654 02e8 FE98FEBE 		.word	-1090610946
+ 1655 02ec 7F17FEBE 		.word	-1090644097
+ 1656 02f0 3482FDBE 		.word	-1090682316
+ 1657 02f4 1FD9FCBE 		.word	-1090725601
+ 1658 02f8 611CFCBE 		.word	-1090773919
+ 1659 02fc F94BFBBE 		.word	-1090827271
+ 1660 0300 E867FABE 		.word	-1090885656
+ 1661 0304 5070F9BE 		.word	-1090949040
+ 1662 0308 5265F8BE 		.word	-1091017390
+ 1663 030c ED46F7BE 		.word	-1091090707
+ 1664 0310 4415F6BE 		.word	-1091168956
+ 1665 0314 57D0F4BE 		.word	-1091252137
+ 1666 0318 6878F3BE 		.word	-1091340184
+ 1667 031c 780DF2BE 		.word	-1091433096
+ 1668 0320 A88FF0BE 		.word	-1091530840
+ 1669 0324 19FFEEBE 		.word	-1091633383
+ 1670 0328 EE5BEDBE 		.word	-1091740690
+ 1671 032c 26A6EBBE 		.word	-1091852762
+ 1672 0330 27DEE9BE 		.word	-1091969497
+ 1673 0334 CD03E8BE 		.word	-1092090931
+ 1674 0338 5D17E6BE 		.word	-1092216995
+ 1675 033c F818E4BE 		.word	-1092347656
+ 1676 0340 E108E2BE 		.word	-1092482847
+ 1677 0344 19E7DFBE 		.word	-1092622567
+ 1678 0348 E1B3DDBE 		.word	-1092766751
+ 1679 034c 5D6FDBBE 		.word	-1092915363
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 36
+
+
+ 1680 0350 AC19D9BE 		.word	-1093068372
+ 1681 0354 14B3D6BE 		.word	-1093225708
+ 1682 0358 D63BD4BE 		.word	-1093387306
+ 1683 035c F2B3D1BE 		.word	-1093553166
+ 1684 0360 CE1BCFBE 		.word	-1093723186
+ 1685 0364 6973CCBE 		.word	-1093897367
+ 1686 0368 06BBC9BE 		.word	-1094075642
+ 1687 036c 0AF3C6BE 		.word	-1094257910
+ 1688 0370 761BC4BE 		.word	-1094444170
+ 1689 0374 AD34C1BE 		.word	-1094634323
+ 1690 0378 AF3EBEBE 		.word	-1094828369
+ 1691 037c 043ABBBE 		.word	-1095026172
+ 1692 0380 AB26B8BE 		.word	-1095227733
+ 1693 0384 E604B5BE 		.word	-1095432986
+ 1694 0388 1BD5B1BE 		.word	-1095641829
+ 1695 038c 6C97AEBE 		.word	-1095854228
+ 1696 0390 1B4CABBE 		.word	-1096070117
+ 1697 0394 8CF3A7BE 		.word	-1096289396
+ 1698 0398 C18DA4BE 		.word	-1096512063
+ 1699 039c 1E1BA1BE 		.word	-1096738018
+ 1700 03a0 069C9DBE 		.word	-1096967162
+ 1701 03a4 9D109ABE 		.word	-1097199459
+ 1702 03a8 257996BE 		.word	-1097434843
+ 1703 03ac E0D592BE 		.word	-1097673248
+ 1704 03b0 35278FBE 		.word	-1097914571
+ 1705 03b4 876D8BBE 		.word	-1098158713
+ 1706 03b8 D6A887BE 		.word	-1098405674
+ 1707 03bc 88D983BE 		.word	-1098655352
+ 1708 03c0 000080BE 		.word	-1098907648
+ 1709 03c4 043978BE 		.word	-1099417340
+ 1710 03c8 A25E70BE 		.word	-1099931998
+ 1711 03cc 617168BE 		.word	-1100451487
+ 1712 03d0 4B7260BE 		.word	-1100975541
+ 1713 03d4 636158BE 		.word	-1101504157
+ 1714 03d8 B33F50BE 		.word	-1102037069
+ 1715 03dc 060E48BE 		.word	-1102574074
+ 1716 03e0 5CCC3FBE 		.word	-1103115172
+ 1717 03e4 037C37BE 		.word	-1103660029
+ 1718 03e8 3F1D2FBE 		.word	-1104208577
+ 1719 03ec D9B026BE 		.word	-1104760615
+ 1720 03f0 9B371EBE 		.word	-1105315941
+ 1721 03f4 C8B115BE 		.word	-1105874488
+ 1722 03f8 6D200DBE 		.word	-1106435987
+ 1723 03fc 0E8404BE 		.word	-1107000306
+ 1724 0400 67BAF7BD 		.word	-1107838361
+ 1725 0404 D159E6BD 		.word	-1108977199
+ 1726 0408 E2E6D4BD 		.word	-1110120734
+ 1727 040c 2C63C3BD 		.word	-1111268564
+ 1728 0410 C8D0B1BD 		.word	-1112420152
+ 1729 0414 3C30A0BD 		.word	-1113575364
+ 1730 0418 A1838EBD 		.word	-1114733663
+ 1731 041c FB9679BD 		.word	-1116104965
+ 1732 0420 C71256BD 		.word	-1118432569
+ 1733 0424 D87E32BD 		.word	-1120764200
+ 1734 0428 3CDC0EBD 		.word	-1123099588
+ 1735 042c 465ED6BC 		.word	-1126801850
+ 1736 0430 4DF38EBC 		.word	-1131482291
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 37
+
+
+ 1737 0434 7FF70EBC 		.word	-1139869825
+ 1738 0438 00000000 		.word	0
+ 1739 043c 7FF70E3C 		.word	1007613823
+ 1740 0440 4DF38E3C 		.word	1016001357
+ 1741 0444 465ED63C 		.word	1020681798
+ 1742 0448 3CDC0E3D 		.word	1024384060
+ 1743 044c D87E323D 		.word	1026719448
+ 1744 0450 C712563D 		.word	1029051079
+ 1745 0454 FB96793D 		.word	1031378683
+ 1746 0458 A1838E3D 		.word	1032749985
+ 1747 045c 3C30A03D 		.word	1033908284
+ 1748 0460 C8D0B13D 		.word	1035063496
+ 1749 0464 2C63C33D 		.word	1036215084
+ 1750 0468 E2E6D43D 		.word	1037362914
+ 1751 046c D159E63D 		.word	1038506449
+ 1752 0470 67BAF73D 		.word	1039645287
+ 1753 0474 0E84043E 		.word	1040483342
+ 1754 0478 6D200D3E 		.word	1041047661
+ 1755 047c C8B1153E 		.word	1041609160
+ 1756 0480 9B371E3E 		.word	1042167707
+ 1757 0484 D9B0263E 		.word	1042723033
+ 1758 0488 3F1D2F3E 		.word	1043275071
+ 1759 048c 037C373E 		.word	1043823619
+ 1760 0490 5CCC3F3E 		.word	1044368476
+ 1761 0494 060E483E 		.word	1044909574
+ 1762 0498 B33F503E 		.word	1045446579
+ 1763 049c 6361583E 		.word	1045979491
+ 1764 04a0 4B72603E 		.word	1046508107
+ 1765 04a4 6171683E 		.word	1047032161
+ 1766 04a8 A25E703E 		.word	1047551650
+ 1767 04ac 0439783E 		.word	1048066308
+ 1768 04b0 0000803E 		.word	1048576000
+ 1769 04b4 88D9833E 		.word	1048828296
+ 1770 04b8 D6A8873E 		.word	1049077974
+ 1771 04bc 876D8B3E 		.word	1049324935
+ 1772 04c0 35278F3E 		.word	1049569077
+ 1773 04c4 E0D5923E 		.word	1049810400
+ 1774 04c8 2579963E 		.word	1050048805
+ 1775 04cc 9D109A3E 		.word	1050284189
+ 1776 04d0 069C9D3E 		.word	1050516486
+ 1777 04d4 1E1BA13E 		.word	1050745630
+ 1778 04d8 C18DA43E 		.word	1050971585
+ 1779 04dc 8CF3A73E 		.word	1051194252
+ 1780 04e0 1B4CAB3E 		.word	1051413531
+ 1781 04e4 6C97AE3E 		.word	1051629420
+ 1782 04e8 1BD5B13E 		.word	1051841819
+ 1783 04ec E604B53E 		.word	1052050662
+ 1784 04f0 AB26B83E 		.word	1052255915
+ 1785 04f4 043ABB3E 		.word	1052457476
+ 1786 04f8 AF3EBE3E 		.word	1052655279
+ 1787 04fc AD34C13E 		.word	1052849325
+ 1788 0500 761BC43E 		.word	1053039478
+ 1789 0504 0AF3C63E 		.word	1053225738
+ 1790 0508 06BBC93E 		.word	1053408006
+ 1791 050c 6973CC3E 		.word	1053586281
+ 1792 0510 CE1BCF3E 		.word	1053760462
+ 1793 0514 F2B3D13E 		.word	1053930482
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 38
+
+
+ 1794 0518 D63BD43E 		.word	1054096342
+ 1795 051c 14B3D63E 		.word	1054257940
+ 1796 0520 AC19D93E 		.word	1054415276
+ 1797 0524 5D6FDB3E 		.word	1054568285
+ 1798 0528 E1B3DD3E 		.word	1054716897
+ 1799 052c 19E7DF3E 		.word	1054861081
+ 1800 0530 E108E23E 		.word	1055000801
+ 1801 0534 F818E43E 		.word	1055135992
+ 1802 0538 5D17E63E 		.word	1055266653
+ 1803 053c CD03E83E 		.word	1055392717
+ 1804 0540 27DEE93E 		.word	1055514151
+ 1805 0544 26A6EB3E 		.word	1055630886
+ 1806 0548 EE5BED3E 		.word	1055742958
+ 1807 054c 19FFEE3E 		.word	1055850265
+ 1808 0550 A88FF03E 		.word	1055952808
+ 1809 0554 780DF23E 		.word	1056050552
+ 1810 0558 6878F33E 		.word	1056143464
+ 1811 055c 57D0F43E 		.word	1056231511
+ 1812 0560 4415F63E 		.word	1056314692
+ 1813 0564 ED46F73E 		.word	1056392941
+ 1814 0568 5265F83E 		.word	1056466258
+ 1815 056c 5070F93E 		.word	1056534608
+ 1816 0570 E867FA3E 		.word	1056597992
+ 1817 0574 F94BFB3E 		.word	1056656377
+ 1818 0578 611CFC3E 		.word	1056709729
+ 1819 057c 1FD9FC3E 		.word	1056758047
+ 1820 0580 3482FD3E 		.word	1056801332
+ 1821 0584 7F17FE3E 		.word	1056839551
+ 1822 0588 FE98FE3E 		.word	1056872702
+ 1823 058c 9206FF3E 		.word	1056900754
+ 1824 0590 5B60FF3E 		.word	1056923739
+ 1825 0594 37A6FF3E 		.word	1056941623
+ 1826 0598 06D8FF3E 		.word	1056954374
+ 1827 059c 0AF6FF3E 		.word	1056962058
+ 1828              		.text
+ 1829              	.Letext0:
+ 1830              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 1831              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s 			page 39
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 motor_para.c
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:21     .text.my_atan2:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:27     .text.my_atan2:00000000 my_atan2
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:223    .text.my_atan2:00000120 $d
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:583    .rodata.atanTab:00000000 atanTab
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:232    .text.my_atan:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:238    .text.my_atan:00000000 my_atan
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:396    .text.my_atan:000000f0 $d
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:403    .text.Sign:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:409    .text.Sign:00000000 Sign
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:441    .text.my_abs:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:447    .text.my_abs:00000000 my_abs
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:476    .text.Sat:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:482    .text.Sat:00000000 Sat
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:528    .text.my_max:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:534    .text.my_max:00000000 my_max
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:560    .text.MotorInit:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:566    .text.MotorInit:00000000 MotorInit
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:580    .rodata.atanTab:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:1101   .rodata.ubeta_tab:00000000 ubeta_tab
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:1098   .rodata.ubeta_tab:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:1467   .rodata.ualpha_tab:00000000 ualpha_tab
+C:\Users\sunhao\AppData\Local\Temp\ccitkd0Q.s:1464   .rodata.ualpha_tab:00000000 $d
+
+NO UNDEFINED SYMBOLS

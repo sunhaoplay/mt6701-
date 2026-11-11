@@ -1,0 +1,331 @@
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"foc.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "APP/Motor/foc.c"
+  20              		.section	.text.SvpwmCal,"ax",%progbits
+  21              		.align	1
+  22              		.global	SvpwmCal
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	SvpwmCal:
+  28              	.LVL0:
+  29              	.LFB167:
+   1:APP/Motor/foc.c **** #include "foc.h"
+   2:APP/Motor/foc.c **** #include "tim.h"
+   3:APP/Motor/foc.c **** #include "motor_para.h"
+   4:APP/Motor/foc.c **** void SvpwmCal(M_SVPWM pv)
+   5:APP/Motor/foc.c **** {
+  30              		.loc 1 5 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   6:APP/Motor/foc.c ****     pv->u1 = pv->Ubeta; 
+  35              		.loc 1 6 5 view .LVU1
+  36              		.loc 1 6 16 is_stmt 0 view .LVU2
+  37 0000 90ED017A 		vldr.32	s14, [r0, #4]
+  38              		.loc 1 6 12 view .LVU3
+  39 0004 80ED057A 		vstr.32	s14, [r0, #20]
+   7:APP/Motor/foc.c ****     pv->u2 = pv->Ubeta * 0.5f + pv->Ualpha * 0.8660254f;
+  40              		.loc 1 7 5 is_stmt 1 view .LVU4
+  41              		.loc 1 7 24 is_stmt 0 view .LVU5
+  42 0008 F6EE007A 		vmov.f32	s15, #5.0e-1
+  43 000c 67EE277A 		vmul.f32	s15, s14, s15
+  44              		.loc 1 7 35 view .LVU6
+  45 0010 D0ED006A 		vldr.32	s13, [r0]
+  46              		.loc 1 7 44 view .LVU7
+  47 0014 9FED486A 		vldr.32	s12, .L18
+  48 0018 66EE866A 		vmul.f32	s13, s13, s12
+  49              		.loc 1 7 31 view .LVU8
+  50 001c 77EEA67A 		vadd.f32	s15, s15, s13
+  51              		.loc 1 7 12 view .LVU9
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 2
+
+
+  52 0020 C0ED067A 		vstr.32	s15, [r0, #24]
+   8:APP/Motor/foc.c ****     pv->u3 = pv->u2 - pv->u1;
+  53              		.loc 1 8 5 is_stmt 1 view .LVU10
+  54              		.loc 1 8 21 is_stmt 0 view .LVU11
+  55 0024 77EEC76A 		vsub.f32	s13, s15, s14
+  56              		.loc 1 8 12 view .LVU12
+  57 0028 C0ED076A 		vstr.32	s13, [r0, #28]
+   9:APP/Motor/foc.c **** 
+  10:APP/Motor/foc.c ****    
+  11:APP/Motor/foc.c ****     pv->VecSector = 3;
+  58              		.loc 1 11 5 is_stmt 1 view .LVU13
+  59              		.loc 1 11 19 is_stmt 0 view .LVU14
+  60 002c 0323     		movs	r3, #3
+  61 002e 80F82430 		strb	r3, [r0, #36]
+  12:APP/Motor/foc.c ****     pv->VecSector = (pv->u2 > 0) ? (pv->VecSector - 1) : pv->VecSector;
+  62              		.loc 1 12 5 is_stmt 1 view .LVU15
+  63              		.loc 1 12 19 is_stmt 0 view .LVU16
+  64 0032 F5EEC07A 		vcmpe.f32	s15, #0
+  65 0036 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  66 003a 5ADD     		ble	.L16
+  67              		.loc 1 12 19 discriminator 1 view .LVU17
+  68 003c 0223     		movs	r3, #2
+  69              	.L2:
+  70              		.loc 1 12 19 discriminator 4 view .LVU18
+  71 003e 80F82430 		strb	r3, [r0, #36]
+  13:APP/Motor/foc.c ****     pv->VecSector = (pv->u3 > 0) ? (pv->VecSector - 1) : pv->VecSector;
+  72              		.loc 1 13 5 is_stmt 1 view .LVU19
+  73              		.loc 1 13 19 is_stmt 0 view .LVU20
+  74 0042 F5EEC06A 		vcmpe.f32	s13, #0
+  75 0046 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  76 004a 01DD     		ble	.L4
+  77              		.loc 1 13 19 discriminator 1 view .LVU21
+  78 004c 013B     		subs	r3, r3, #1
+  79 004e DBB2     		uxtb	r3, r3
+  80              	.L4:
+  81              		.loc 1 13 19 discriminator 4 view .LVU22
+  82 0050 80F82430 		strb	r3, [r0, #36]
+  14:APP/Motor/foc.c ****     pv->VecSector = (pv->u1 < 0) ? (7 - pv->VecSector) : pv->VecSector;
+  83              		.loc 1 14 5 is_stmt 1 view .LVU23
+  84              		.loc 1 14 19 is_stmt 0 view .LVU24
+  85 0054 B5EEC07A 		vcmpe.f32	s14, #0
+  86 0058 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  87 005c 4BD4     		bmi	.L17
+  88              	.L6:
+  89              		.loc 1 14 19 discriminator 4 view .LVU25
+  90 005e 80F82430 		strb	r3, [r0, #36]
+  15:APP/Motor/foc.c **** 
+  16:APP/Motor/foc.c ****    
+  17:APP/Motor/foc.c ****     if ((pv->VecSector == 1) || (pv->VecSector == 4))
+  91              		.loc 1 17 5 is_stmt 1 view .LVU26
+  92 0062 062B     		cmp	r3, #6
+  93 0064 63D8     		bhi	.L8
+  94 0066 0122     		movs	r2, #1
+  95 0068 02FA03F3 		lsl	r3, r2, r3
+  96 006c 13F0480F 		tst	r3, #72
+  97 0070 50D1     		bne	.L9
+  98 0072 13F0240F 		tst	r3, #36
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 3
+
+
+  99 0076 42D1     		bne	.L10
+ 100 0078 13F0120F 		tst	r3, #18
+ 101 007c 57D0     		beq	.L8
+  18:APP/Motor/foc.c ****     {
+  19:APP/Motor/foc.c ****         pv->Ta = pv->u2;
+ 102              		.loc 1 19 9 view .LVU27
+ 103              		.loc 1 19 16 is_stmt 0 view .LVU28
+ 104 007e C0ED027A 		vstr.32	s15, [r0, #8]
+  20:APP/Motor/foc.c ****         pv->Tb = pv->u1 - pv->u3;
+ 105              		.loc 1 20 9 is_stmt 1 view .LVU29
+ 106              		.loc 1 20 25 is_stmt 0 view .LVU30
+ 107 0082 37EE667A 		vsub.f32	s14, s14, s13
+ 108              		.loc 1 20 16 view .LVU31
+ 109 0086 80ED037A 		vstr.32	s14, [r0, #12]
+  21:APP/Motor/foc.c ****         pv->Tc = -pv->u2;
+ 110              		.loc 1 21 9 is_stmt 1 view .LVU32
+ 111              		.loc 1 21 18 is_stmt 0 view .LVU33
+ 112 008a F1EE677A 		vneg.f32	s15, s15
+ 113              		.loc 1 21 16 view .LVU34
+ 114 008e C0ED047A 		vstr.32	s15, [r0, #16]
+ 115              	.L11:
+  22:APP/Motor/foc.c ****     }
+  23:APP/Motor/foc.c ****     else if ((pv->VecSector == 2) || (pv->VecSector == 5))
+  24:APP/Motor/foc.c ****     {
+  25:APP/Motor/foc.c ****         pv->Ta = pv->u3 + pv->u2;
+  26:APP/Motor/foc.c ****         pv->Tb = pv->u1;
+  27:APP/Motor/foc.c ****         pv->Tc = -pv->u1;
+  28:APP/Motor/foc.c ****     }
+  29:APP/Motor/foc.c ****     else if ((pv->VecSector == 3) || (pv->VecSector == 6))
+  30:APP/Motor/foc.c ****     {
+  31:APP/Motor/foc.c ****         pv->Ta = pv->u3;
+  32:APP/Motor/foc.c ****         pv->Tb = -pv->u3;
+  33:APP/Motor/foc.c ****         pv->Tc = -(pv->u1 + pv->u2);
+  34:APP/Motor/foc.c ****     }
+  35:APP/Motor/foc.c ****     else 
+  36:APP/Motor/foc.c ****     {
+  37:APP/Motor/foc.c ****         pv->Ta = 0;
+  38:APP/Motor/foc.c ****         pv->Tb = 0;
+  39:APP/Motor/foc.c ****         pv->Tc = 0;
+  40:APP/Motor/foc.c ****     }
+  41:APP/Motor/foc.c **** 
+  42:APP/Motor/foc.c **** 
+  43:APP/Motor/foc.c ****     TIM1->CCR1 = (uint16_t)((pv->Ta * SVPWM_KM_BACKW * TIM1_PERIOD_HALF) + TIM1_PERIOD_HALF);
+ 116              		.loc 1 43 5 is_stmt 1 view .LVU35
+ 117              		.loc 1 43 32 is_stmt 0 view .LVU36
+ 118 0092 D0ED027A 		vldr.32	s15, [r0, #8]
+ 119              		.loc 1 43 37 view .LVU37
+ 120 0096 DFED296A 		vldr.32	s13, .L18+4
+ 121 009a 67EEA67A 		vmul.f32	s15, s15, s13
+ 122              		.loc 1 43 54 view .LVU38
+ 123 009e 9FED287A 		vldr.32	s14, .L18+8
+ 124 00a2 67EE877A 		vmul.f32	s15, s15, s14
+ 125              		.loc 1 43 74 view .LVU39
+ 126 00a6 77EE877A 		vadd.f32	s15, s15, s14
+ 127              		.loc 1 43 18 view .LVU40
+ 128 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 129 00ae 17EE903A 		vmov	r3, s15	@ int
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 4
+
+
+ 130 00b2 9BB2     		uxth	r3, r3
+ 131              		.loc 1 43 16 view .LVU41
+ 132 00b4 234A     		ldr	r2, .L18+12
+ 133 00b6 5363     		str	r3, [r2, #52]
+  44:APP/Motor/foc.c ****     TIM1->CCR2 = (uint16_t)((pv->Tb * SVPWM_KM_BACKW * TIM1_PERIOD_HALF) + TIM1_PERIOD_HALF);
+ 134              		.loc 1 44 5 is_stmt 1 view .LVU42
+ 135              		.loc 1 44 32 is_stmt 0 view .LVU43
+ 136 00b8 D0ED037A 		vldr.32	s15, [r0, #12]
+ 137              		.loc 1 44 37 view .LVU44
+ 138 00bc 67EEA67A 		vmul.f32	s15, s15, s13
+ 139              		.loc 1 44 54 view .LVU45
+ 140 00c0 67EE877A 		vmul.f32	s15, s15, s14
+ 141              		.loc 1 44 74 view .LVU46
+ 142 00c4 77EE877A 		vadd.f32	s15, s15, s14
+ 143              		.loc 1 44 18 view .LVU47
+ 144 00c8 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 145 00cc 17EE903A 		vmov	r3, s15	@ int
+ 146 00d0 9BB2     		uxth	r3, r3
+ 147              		.loc 1 44 16 view .LVU48
+ 148 00d2 9363     		str	r3, [r2, #56]
+  45:APP/Motor/foc.c ****     TIM1->CCR3 = (uint16_t)((pv->Tc * SVPWM_KM_BACKW * TIM1_PERIOD_HALF) + TIM1_PERIOD_HALF);
+ 149              		.loc 1 45 5 is_stmt 1 view .LVU49
+ 150              		.loc 1 45 32 is_stmt 0 view .LVU50
+ 151 00d4 D0ED047A 		vldr.32	s15, [r0, #16]
+ 152              		.loc 1 45 37 view .LVU51
+ 153 00d8 67EEA67A 		vmul.f32	s15, s15, s13
+ 154              		.loc 1 45 54 view .LVU52
+ 155 00dc 67EE877A 		vmul.f32	s15, s15, s14
+ 156              		.loc 1 45 74 view .LVU53
+ 157 00e0 77EE877A 		vadd.f32	s15, s15, s14
+ 158              		.loc 1 45 18 view .LVU54
+ 159 00e4 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 160 00e8 17EE903A 		vmov	r3, s15	@ int
+ 161 00ec 9BB2     		uxth	r3, r3
+ 162              		.loc 1 45 16 view .LVU55
+ 163 00ee D363     		str	r3, [r2, #60]
+  46:APP/Motor/foc.c **** }
+ 164              		.loc 1 46 1 view .LVU56
+ 165 00f0 7047     		bx	lr
+ 166              	.L16:
+  12:APP/Motor/foc.c ****     pv->VecSector = (pv->u3 > 0) ? (pv->VecSector - 1) : pv->VecSector;
+ 167              		.loc 1 12 19 discriminator 2 view .LVU57
+ 168 00f2 0323     		movs	r3, #3
+ 169 00f4 A3E7     		b	.L2
+ 170              	.L17:
+  14:APP/Motor/foc.c **** 
+ 171              		.loc 1 14 19 discriminator 1 view .LVU58
+ 172 00f6 C3F10703 		rsb	r3, r3, #7
+ 173 00fa DBB2     		uxtb	r3, r3
+ 174 00fc AFE7     		b	.L6
+ 175              	.L10:
+  25:APP/Motor/foc.c ****         pv->Tb = pv->u1;
+ 176              		.loc 1 25 9 is_stmt 1 view .LVU59
+  25:APP/Motor/foc.c ****         pv->Tb = pv->u1;
+ 177              		.loc 1 25 25 is_stmt 0 view .LVU60
+ 178 00fe 77EEA67A 		vadd.f32	s15, s15, s13
+  25:APP/Motor/foc.c ****         pv->Tb = pv->u1;
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 5
+
+
+ 179              		.loc 1 25 16 view .LVU61
+ 180 0102 C0ED027A 		vstr.32	s15, [r0, #8]
+  26:APP/Motor/foc.c ****         pv->Tc = -pv->u1;
+ 181              		.loc 1 26 9 is_stmt 1 view .LVU62
+  26:APP/Motor/foc.c ****         pv->Tc = -pv->u1;
+ 182              		.loc 1 26 16 is_stmt 0 view .LVU63
+ 183 0106 80ED037A 		vstr.32	s14, [r0, #12]
+  27:APP/Motor/foc.c ****     }
+ 184              		.loc 1 27 9 is_stmt 1 view .LVU64
+  27:APP/Motor/foc.c ****     }
+ 185              		.loc 1 27 18 is_stmt 0 view .LVU65
+ 186 010a B1EE477A 		vneg.f32	s14, s14
+  27:APP/Motor/foc.c ****     }
+ 187              		.loc 1 27 16 view .LVU66
+ 188 010e 80ED047A 		vstr.32	s14, [r0, #16]
+ 189 0112 BEE7     		b	.L11
+ 190              	.L9:
+  31:APP/Motor/foc.c ****         pv->Tb = -pv->u3;
+ 191              		.loc 1 31 9 is_stmt 1 view .LVU67
+  31:APP/Motor/foc.c ****         pv->Tb = -pv->u3;
+ 192              		.loc 1 31 16 is_stmt 0 view .LVU68
+ 193 0114 C0ED026A 		vstr.32	s13, [r0, #8]
+  32:APP/Motor/foc.c ****         pv->Tc = -(pv->u1 + pv->u2);
+ 194              		.loc 1 32 9 is_stmt 1 view .LVU69
+  32:APP/Motor/foc.c ****         pv->Tc = -(pv->u1 + pv->u2);
+ 195              		.loc 1 32 18 is_stmt 0 view .LVU70
+ 196 0118 F1EE666A 		vneg.f32	s13, s13
+  32:APP/Motor/foc.c ****         pv->Tc = -(pv->u1 + pv->u2);
+ 197              		.loc 1 32 16 view .LVU71
+ 198 011c C0ED036A 		vstr.32	s13, [r0, #12]
+  33:APP/Motor/foc.c ****     }
+ 199              		.loc 1 33 9 is_stmt 1 view .LVU72
+  33:APP/Motor/foc.c ****     }
+ 200              		.loc 1 33 27 is_stmt 0 view .LVU73
+ 201 0120 37EE277A 		vadd.f32	s14, s14, s15
+  33:APP/Motor/foc.c ****     }
+ 202              		.loc 1 33 18 view .LVU74
+ 203 0124 B1EE477A 		vneg.f32	s14, s14
+  33:APP/Motor/foc.c ****     }
+ 204              		.loc 1 33 16 view .LVU75
+ 205 0128 80ED047A 		vstr.32	s14, [r0, #16]
+ 206 012c B1E7     		b	.L11
+ 207              	.L8:
+  37:APP/Motor/foc.c ****         pv->Tb = 0;
+ 208              		.loc 1 37 9 is_stmt 1 view .LVU76
+  37:APP/Motor/foc.c ****         pv->Tb = 0;
+ 209              		.loc 1 37 16 is_stmt 0 view .LVU77
+ 210 012e 0023     		movs	r3, #0
+ 211 0130 8360     		str	r3, [r0, #8]	@ float
+  38:APP/Motor/foc.c ****         pv->Tc = 0;
+ 212              		.loc 1 38 9 is_stmt 1 view .LVU78
+  38:APP/Motor/foc.c ****         pv->Tc = 0;
+ 213              		.loc 1 38 16 is_stmt 0 view .LVU79
+ 214 0132 C360     		str	r3, [r0, #12]	@ float
+  39:APP/Motor/foc.c ****     }
+ 215              		.loc 1 39 9 is_stmt 1 view .LVU80
+  39:APP/Motor/foc.c ****     }
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 6
+
+
+ 216              		.loc 1 39 16 is_stmt 0 view .LVU81
+ 217 0134 0361     		str	r3, [r0, #16]	@ float
+ 218 0136 ACE7     		b	.L11
+ 219              	.L19:
+ 220              		.align	2
+ 221              	.L18:
+ 222 0138 D7B35D3F 		.word	1063105495
+ 223 013c 3CCD133E 		.word	1041485116
+ 224 0140 00408345 		.word	1166229504
+ 225 0144 00000140 		.word	1073807360
+ 226              		.cfi_endproc
+ 227              	.LFE167:
+ 229              		.text
+ 230              	.Letext0:
+ 231              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 232              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 233              		.file 4 "APP/Motor/foc.h"
+ 234              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 foc.c
+C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s:21     .text.SvpwmCal:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s:27     .text.SvpwmCal:00000000 SvpwmCal
+C:\Users\sunhao\AppData\Local\Temp\ccUajkBz.s:222    .text.SvpwmCal:00000138 $d
+
+NO UNDEFINED SYMBOLS
