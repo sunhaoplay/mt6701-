@@ -63,6 +63,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define VBUS_Pin GPIO_PIN_0
+#define VBUS_GPIO_Port GPIOC
+#define PORT_ADC_Pin GPIO_PIN_4
+#define PORT_ADC_GPIO_Port GPIOA
+#define TEMP_Pin GPIO_PIN_4
+#define TEMP_GPIO_Port GPIOC
+#define ADC_U_Pin GPIO_PIN_5
+#define ADC_U_GPIO_Port GPIOC
+#define ADC_W_Pin GPIO_PIN_1
+#define ADC_W_GPIO_Port GPIOB
 #define PWR_Pin GPIO_PIN_10
 #define PWR_GPIO_Port GPIOB
 #define LED_B_Pin GPIO_PIN_11

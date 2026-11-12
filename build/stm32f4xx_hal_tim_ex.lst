@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   24              		.thumb_func
   26              	TIM_CCxNChannelCmd:
   27              	.LVL0:
-  28              	.LFB175:
+  28              	.LFB280:
    1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** /**
    2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   ******************************************************************************
    3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @file    stm32f4xx_hal_tim_ex.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   [..]
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     The Timer Extended features include:
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     (#) Complementary outputs with programmable dead-time for :
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 2
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****         (++) Output Compare
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** /** @defgroup TIMEx TIMEx
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 3
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 3
 
 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @brief TIM Extended HAL module driver
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the TIM handle allocation */
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   if (htim == NULL)
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 4
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 4
 
 
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     return HAL_ERROR;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Use the TIM_TS_TI1F_ED signal to reset the TIM counter each edge detection */
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->Instance->SMCR &= ~TIM_SMCR_SMS;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 5
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 5
 
 
  202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->Instance->SMCR |= TIM_SLAVEMODE_RESET;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->HallSensor_MspDeInitCallback(htim);
  257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** #else
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* DeInit the low level hardware: GPIO, CLOCK, NVIC */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 6
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 6
 
 
  259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_TIMEx_HallSensor_MspDeInit(htim);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @retval HAL status
  314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
  315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_HallSensor_Start(TIM_HandleTypeDef *htim)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 7
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 7
 
 
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** {
  371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_HALL_SENSOR_INTERFACE_INSTANCE(htim->Instance));
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 8
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 8
 
 
  373:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   (in the Hall Sensor Interface the three possible channels that can be used are TIM_CHANNEL_1,
  428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_2 and TIM_CHANNEL_3) */
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CCxChannelCmd(htim->Instance, TIM_CHANNEL_1, TIM_CCx_ENABLE);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 9
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 9
 
 
  430:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @param  Length The length of data to be transferred from TIM peripheral to memory.
  485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @retval HAL status
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 10
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 10
 
 
  487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_HallSensor_Start_DMA(TIM_HandleTypeDef *htim, uint32_t *pData, uint16_t
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   if (IS_TIM_SLAVE_INSTANCE(htim->Instance))
  542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     tmpsmcr = htim->Instance->SMCR & TIM_SMCR_SMS;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 11
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 11
 
 
  544:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  598:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   ==============================================================================
  599:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****               ##### Timer Complementary Output Compare functions #####
  600:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   ==============================================================================
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 12
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 12
 
 
  601:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   [..]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  656:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   else
  657:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 13
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 13
 
 
  658:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     __HAL_TIM_ENABLE(htim);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  712:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  713:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_CCXN_INSTANCE(htim->Instance, Channel));
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 14
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 14
 
 
  715:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  769:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
  770:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       {
  771:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****         __HAL_TIM_ENABLE(htim);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 15
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 15
 
 
  772:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  826:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     default:
  827:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       status = HAL_ERROR;
  828:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       break;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 16
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 16
 
 
  829:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  883:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  884:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   else if (TIM_CHANNEL_N_STATE_GET(htim, Channel) == HAL_TIM_CHANNEL_STATE_READY)
  885:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 17
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 17
 
 
  886:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     if ((pData == NULL) || (Length == 0U))
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  940:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE_DMA(htim, TIM_DMA_CC2);
  941:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       break;
  942:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 18
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 18
 
 
  943:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  997:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** /**
  998:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @brief  Stops the TIM Output Compare signal generation in DMA mode
  999:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *         on the complementary output.
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 19
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 19
 
 
 1000:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @param  htim TIM Output Compare handle
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1054:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     /* Disable the Peripheral */
 1055:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
 1056:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 20
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 20
 
 
 1057:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     /* Set the TIM complementary channel state */
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Set the TIM complementary channel state */
 1112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, Channel, HAL_TIM_CHANNEL_STATE_BUSY);
 1113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 21
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 21
 
 
 1114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Enable the complementary PWM output  */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 1169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** /**
 1170:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @brief  Starts the PWM signal generation in interrupt mode on the
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 22
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 22
 
 
 1171:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *         complementary output.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   if (status == HAL_OK)
 1226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
 1227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     /* Enable the TIM Break interrupt */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 23
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 23
 
 
 1228:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     __HAL_TIM_ENABLE_IT(htim, TIM_IT_BREAK);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 1283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
 1284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 24
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 24
 
 
 1285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       /* Disable the TIM Capture/Compare 2 interrupt */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1339:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @retval HAL status
 1340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
 1341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_PWMN_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, const uint32_
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 25
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 25
 
 
 1342:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****                                            uint16_t Length)
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1396:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       /* Set the DMA compare callbacks */
 1397:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferCpltCallback = TIM_DMADelayPulseNCplt;
 1398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferHalfCpltCallback = TIM_DMADelayPulseHalfCplt;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 26
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 26
 
 
 1399:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
 1454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       {
 1455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****         __HAL_TIM_ENABLE(htim);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 27
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 27
 
 
 1456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       }
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1510:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
 1511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 1512:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     default:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 28
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 28
 
 
 1513:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       status = HAL_ERROR;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
 1568:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @retval HAL status
 1569:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 29
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 29
 
 
 1570:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_OnePulseN_Start(TIM_HandleTypeDef *htim, uint32_t OutputChannel)
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1624:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_CCXN_INSTANCE(htim->Instance, OutputChannel));
 1625:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 1626:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Disable the complementary One Pulse output channel and the Input Capture channel */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 30
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 30
 
 
 1627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CCxNChannelCmd(htim->Instance, OutputChannel, TIM_CCxN_DISABLE);
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1681:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
 1682:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
 1683:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 31
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 31
 
 
 1684:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Enable the TIM Capture/Compare 1 interrupt */
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1738:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
 1739:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
 1740:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 32
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 32
 
 
 1741:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1795:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
 1796:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMMUTATION_EVENT_INSTANCE(htim->Instance));
 1797:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION(InputTrigger));
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 33
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 33
 
 
 1798:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1852:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMMUTATION_EVENT_INSTANCE(htim->Instance));
 1853:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION(InputTrigger));
 1854:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 34
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 34
 
 
 1855:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   __HAL_LOCK(htim);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1909:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMMUTATION_EVENT_INSTANCE(htim->Instance));
 1910:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION(InputTrigger));
 1911:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 35
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 35
 
 
 1912:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   __HAL_LOCK(htim);
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1966:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   __HAL_LOCK(htim);
 1967:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 1968:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Change the handler state */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 36
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 36
 
 
 1969:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->State = HAL_TIM_STATE_BUSY;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2023:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_OSSR_STATE(sBreakDeadTimeConfig->OffStateRunMode));
 2024:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_OSSI_STATE(sBreakDeadTimeConfig->OffStateIDLEMode));
 2025:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_LOCK_LEVEL(sBreakDeadTimeConfig->LockLevel));
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 37
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 37
 
 
 2026:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   assert_param(IS_TIM_DEADTIME(sBreakDeadTimeConfig->DeadTime));
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2080:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *
 2081:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *         For TIM11, the parameter can have the following values:
 2082:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *           @arg TIM_TIM11_GPIO:     TIM11 TI1 is connected to GPIO
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 38
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 38
 
 
 2083:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   *           @arg TIM_TIM11_HSE:      TIM11 TI1 is connected to HSE_RTC clock
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 2138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** @endverbatim
 2139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @{
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 39
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 39
 
 
 2140:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****                 ##### Extended Peripheral State functions #####
 2195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   ==============================================================================
 2196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   [..]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 40
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 40
 
 
 2197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     This subsection permits to get in run-time the status of the peripheral
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   * @retval None
 2252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   */
 2253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** void TIMEx_DMACommutationCplt(DMA_HandleTypeDef *hdma)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 41
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 41
 
 
 2254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** {
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 2309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     if (hdma->Init.Mode == DMA_NORMAL)
 2310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 42
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 42
 
 
 2311:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
 2366:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1)
 2367:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->ErrorCallback(htim);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 43
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 43
 
 
 2368:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** #else
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   53 0016 8A40     		lsls	r2, r2, r1
   54              	.LVL3:
   55              		.loc 1 2397 14 view .LVU11
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 44
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 44
 
 
   56 0018 1343     		orrs	r3, r3, r2
@@ -2587,7 +2587,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   58              		.loc 1 2398 1 view .LVU12
   59 001c 7047     		bx	lr
   60              		.cfi_endproc
-  61              	.LFE175:
+  61              	.LFE280:
   63              		.section	.text.TIM_DMAErrorCCxN,"ax",%progbits
   64              		.align	1
   65              		.syntax unified
@@ -2595,7 +2595,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   67              		.thumb_func
   69              	TIM_DMAErrorCCxN:
   70              	.LVL4:
-  71              	.LFB174:
+  71              	.LFB279:
 2343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
   72              		.loc 1 2343 1 is_stmt 1 view -0
   73              		.cfi_startproc
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
   99              		.loc 1 2356 30 is_stmt 0 view .LVU24
  100 0010 E36A     		ldr	r3, [r4, #44]
 2356:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 45
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 45
 
 
  101              		.loc 1 2356 11 view .LVU25
@@ -2698,13 +2698,13 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  141              		.loc 1 2359 5 is_stmt 1 view .LVU40
  142 003c 0123     		movs	r3, #1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 46
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 46
 
 
  143 003e 84F84430 		strb	r3, [r4, #68]
  144 0042 E8E7     		b	.L4
  145              		.cfi_endproc
- 146              	.LFE174:
+ 146              	.LFE279:
  148              		.section	.text.TIM_DMADelayPulseNCplt,"ax",%progbits
  149              		.align	1
  150              		.syntax unified
@@ -2712,7 +2712,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  152              		.thumb_func
  154              	TIM_DMADelayPulseNCplt:
  155              	.LVL9:
- 156              	.LFB173:
+ 156              	.LFB278:
 2293:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
  157              		.loc 1 2293 1 view -0
  158              		.cfi_startproc
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  186              		.loc 1 2314 11 view .LVU53
  187 0012 8342     		cmp	r3, r0
  188 0014 17D0     		beq	.L17
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 47
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 47
 
 
  189              	.L12:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 2309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
  227              		.loc 1 2309 8 view .LVU70
  228 003a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 48
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 48
 
 
  229 003c EBD1     		bne	.L12
@@ -2849,7 +2849,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  247 0052 84F84430 		strb	r3, [r4, #68]
  248 0056 DEE7     		b	.L12
  249              		.cfi_endproc
- 250              	.LFE173:
+ 250              	.LFE278:
  252              		.section	.text.HAL_TIMEx_HallSensor_MspInit,"ax",%progbits
  253              		.align	1
  254              		.weak	HAL_TIMEx_HallSensor_MspInit
@@ -2858,7 +2858,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  257              		.thumb_func
  259              	HAL_TIMEx_HallSensor_MspInit:
  260              	.LVL14:
- 261              	.LFB136:
+ 261              	.LFB241:
  286:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  262              		.loc 1 286 1 view -0
  263              		.cfi_startproc
@@ -2871,19 +2871,19 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  268              		.loc 1 293 1 is_stmt 0 view .LVU80
  269 0000 7047     		bx	lr
  270              		.cfi_endproc
- 271              	.LFE136:
+ 271              	.LFE241:
  273              		.section	.text.HAL_TIMEx_HallSensor_Init,"ax",%progbits
  274              		.align	1
  275              		.global	HAL_TIMEx_HallSensor_Init
  276              		.syntax unified
  277              		.thumb
  278              		.thumb_func
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 49
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 49
 
 
  280              	HAL_TIMEx_HallSensor_Init:
  281              	.LVL15:
- 282              	.LFB134:
+ 282              	.LFB239:
  139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_OC_InitTypeDef OC_Config;
  283              		.loc 1 139 1 is_stmt 1 view -0
  284              		.cfi_startproc
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  318 0012 58D0     		beq	.L27
  319              	.LVL16:
  320              	.L21:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 50
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 50
 
 
  180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  358              		.loc 1 194 7 is_stmt 0 view .LVU113
  359 0044 2268     		ldr	r2, [r4]
  194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 51
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 51
 
 
  360              		.loc 1 194 17 view .LVU114
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   OC_Config.OCIdleState = TIM_OCIDLESTATE_RESET;
  397              		.loc 1 205 3 is_stmt 1 view .LVU132
  205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   OC_Config.OCIdleState = TIM_OCIDLESTATE_RESET;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 52
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 52
 
 
  398              		.loc 1 205 24 is_stmt 0 view .LVU133
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  434 009a 5360     		str	r3, [r2, #4]
  218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  435              		.loc 1 218 3 is_stmt 1 view .LVU152
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 53
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 53
 
 
  218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  474 00c6 80F83C30 		strb	r3, [r0, #60]
  175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
  475              		.loc 1 175 5 is_stmt 1 view .LVU169
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 54
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 54
 
 
  476 00ca FFF7FEFF 		bl	HAL_TIMEx_HallSensor_MspInit
@@ -3202,7 +3202,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  491              		.loc 1 233 1 view .LVU172
  492 00d2 7047     		bx	lr
  493              		.cfi_endproc
- 494              	.LFE134:
+ 494              	.LFE239:
  496              		.section	.text.HAL_TIMEx_HallSensor_MspDeInit,"ax",%progbits
  497              		.align	1
  498              		.weak	HAL_TIMEx_HallSensor_MspDeInit
@@ -3211,7 +3211,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  501              		.thumb_func
  503              	HAL_TIMEx_HallSensor_MspDeInit:
  504              	.LVL24:
- 505              	.LFB137:
+ 505              	.LFB242:
  301:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  506              		.loc 1 301 1 is_stmt 1 view -0
  507              		.cfi_startproc
@@ -3224,7 +3224,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  512              		.loc 1 308 1 is_stmt 0 view .LVU175
  513 0000 7047     		bx	lr
  514              		.cfi_endproc
- 515              	.LFE137:
+ 515              	.LFE242:
  517              		.section	.text.HAL_TIMEx_HallSensor_DeInit,"ax",%progbits
  518              		.align	1
  519              		.global	HAL_TIMEx_HallSensor_DeInit
@@ -3233,12 +3233,12 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  522              		.thumb_func
  524              	HAL_TIMEx_HallSensor_DeInit:
  525              	.LVL25:
- 526              	.LFB135:
+ 526              	.LFB240:
  241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  527              		.loc 1 241 1 is_stmt 1 view -0
  528              		.cfi_startproc
  529              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 55
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 55
 
 
  530              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_RESET);
  571              		.loc 1 266 3 is_stmt 1 view .LVU190
  572 0034 84F83E00 		strb	r0, [r4, #62]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 56
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 56
 
 
  267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_RESET);
@@ -3330,7 +3330,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  589              		.loc 1 278 1 view .LVU201
  590              		.cfi_endproc
- 591              	.LFE135:
+ 591              	.LFE240:
  593              		.section	.text.HAL_TIMEx_HallSensor_Start,"ax",%progbits
  594              		.align	1
  595              		.global	HAL_TIMEx_HallSensor_Start
@@ -3339,7 +3339,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  598              		.thumb_func
  600              	HAL_TIMEx_HallSensor_Start:
  601              	.LVL28:
- 602              	.LFB138:
+ 602              	.LFB243:
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  603              		.loc 1 316 1 is_stmt 1 view -0
  604              		.cfi_startproc
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
  615              		.loc 1 318 3 view .LVU205
  318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 57
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 57
 
 
  616              		.loc 1 318 31 is_stmt 0 view .LVU206
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  654 0030 1046     		mov	r0, r2
  655 0032 3DE0     		b	.L33
  656              	.L41:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 58
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 58
 
 
  336:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  347:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  697              		.loc 1 347 7 discriminator 5 view .LVU237
  698 0074 02F57842 		add	r2, r2, #63488
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 59
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 59
 
 
  699 0078 9342     		cmp	r3, r2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  740              	.LVL40:
  741              	.L33:
  362:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 60
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 60
 
 
  742              		.loc 1 362 1 view .LVU251
@@ -3560,7 +3560,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  756              	.L42:
  757 00bc 00000140 		.word	1073807360
  758              		.cfi_endproc
- 759              	.LFE138:
+ 759              	.LFE243:
  761              		.section	.text.HAL_TIMEx_HallSensor_Stop,"ax",%progbits
  762              		.align	1
  763              		.global	HAL_TIMEx_HallSensor_Stop
@@ -3569,7 +3569,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  766              		.thumb_func
  768              	HAL_TIMEx_HallSensor_Stop:
  769              	.LVL43:
- 770              	.LFB139:
+ 770              	.LFB244:
  370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  771              		.loc 1 370 1 is_stmt 1 view -0
  772              		.cfi_startproc
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  380:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  791              		.loc 1 380 3 is_stmt 1 view .LVU259
  380:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 61
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 61
 
 
  792              		.loc 1 380 3 view .LVU260
@@ -3643,7 +3643,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  390:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  822              		.loc 1 390 1 view .LVU270
  823              		.cfi_endproc
- 824              	.LFE139:
+ 824              	.LFE244:
  826              		.section	.text.HAL_TIMEx_HallSensor_Start_IT,"ax",%progbits
  827              		.align	1
  828              		.global	HAL_TIMEx_HallSensor_Start_IT
@@ -3652,13 +3652,13 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  831              		.thumb_func
  833              	HAL_TIMEx_HallSensor_Start_IT:
  834              	.LVL46:
- 835              	.LFB140:
+ 835              	.LFB245:
  398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  836              		.loc 1 398 1 is_stmt 1 view -0
  837              		.cfi_startproc
  838              		@ args = 0, pretend = 0, frame = 0
  839              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 62
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 62
 
 
  398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  877              		.loc 1 410 7 view .LVU288
  878 0024 012B     		cmp	r3, #1
  879 0026 49D1     		bne	.L48
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 63
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 63
 
 
  411:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       || (complementary_channel_2_state != HAL_TIM_CHANNEL_STATE_READY))
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  919              		.loc 1 432 6 view .LVU303
  920 005c 1A4A     		ldr	r2, .L57
  921 005e 9342     		cmp	r3, r2
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 64
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 64
 
 
  922 0060 20D0     		beq	.L49
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
  964              		.loc 1 435 5 is_stmt 1 view .LVU316
  435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 65
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 65
 
 
  965              		.loc 1 435 8 is_stmt 0 view .LVU317
@@ -3883,7 +3883,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  997              	.L57:
  998 00c8 00000140 		.word	1073807360
  999              		.cfi_endproc
- 1000              	.LFE140:
+ 1000              	.LFE245:
  1002              		.section	.text.HAL_TIMEx_HallSensor_Stop_IT,"ax",%progbits
  1003              		.align	1
  1004              		.global	HAL_TIMEx_HallSensor_Stop_IT
@@ -3892,13 +3892,13 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1007              		.thumb_func
  1009              	HAL_TIMEx_HallSensor_Stop_IT:
  1010              	.LVL62:
- 1011              	.LFB141:
+ 1011              	.LFB246:
  455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  1012              		.loc 1 455 1 is_stmt 1 view -0
  1013              		.cfi_startproc
  1014              		@ args = 0, pretend = 0, frame = 0
  1015              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 66
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 66
 
 
  455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1058              		.loc 1 472 3 view .LVU337
  1059 003c 84F83F30 		strb	r3, [r4, #63]
  473:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 67
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 67
 
 
  1060              		.loc 1 473 3 view .LVU338
@@ -3975,7 +3975,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  478:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  1068              		.loc 1 478 1 view .LVU342
  1069              		.cfi_endproc
- 1070              	.LFE141:
+ 1070              	.LFE246:
  1072              		.section	.text.HAL_TIMEx_HallSensor_Start_DMA,"ax",%progbits
  1073              		.align	1
  1074              		.global	HAL_TIMEx_HallSensor_Start_DMA
@@ -3984,7 +3984,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1077              		.thumb_func
  1079              	HAL_TIMEx_HallSensor_Start_DMA:
  1080              	.LVL65:
- 1081              	.LFB142:
+ 1081              	.LFB247:
  488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  1082              		.loc 1 488 1 is_stmt 1 view -0
  1083              		.cfi_startproc
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1105 000c 94F84250 		ldrb	r5, [r4, #66]	@ zero_extendqisi2
  1106              	.LVL67:
  494:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 68
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 68
 
 
  1107              		.loc 1 494 3 is_stmt 1 view .LVU350
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1146              		.loc 1 523 3 is_stmt 0 view .LVU365
  1147 003e 0021     		movs	r1, #0
  1148              	.LVL71:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 69
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 69
 
 
  523:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1187 006a 2268     		ldr	r2, [r4]
  1188 006c D368     		ldr	r3, [r2, #12]
  1189 006e 43F40073 		orr	r3, r3, #512
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 70
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 70
 
 
  1190 0072 D360     		str	r3, [r2, #12]
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
  1232              		.loc 1 543 29 is_stmt 0 view .LVU394
  1233 00bc 9A68     		ldr	r2, [r3, #8]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 71
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 71
 
 
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
@@ -4258,14 +4258,14 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1276              		.align	2
  1277              	.L73:
  1278 00e0 00000000 		.word	TIM_DMACaptureCplt
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 72
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 72
 
 
  1279 00e4 00000000 		.word	TIM_DMACaptureHalfCplt
  1280 00e8 00000000 		.word	TIM_DMAError
  1281 00ec 00000140 		.word	1073807360
  1282              		.cfi_endproc
- 1283              	.LFE142:
+ 1283              	.LFE247:
  1285              		.section	.text.HAL_TIMEx_HallSensor_Stop_DMA,"ax",%progbits
  1286              		.align	1
  1287              		.global	HAL_TIMEx_HallSensor_Stop_DMA
@@ -4274,7 +4274,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1290              		.thumb_func
  1292              	HAL_TIMEx_HallSensor_Stop_DMA:
  1293              	.LVL84:
- 1294              	.LFB143:
+ 1294              	.LFB248:
  564:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  1295              		.loc 1 564 1 is_stmt 1 view -0
  1296              		.cfi_startproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  580:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  1326              		.loc 1 580 3 view .LVU416
  1327 001e 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 73
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 73
 
 
  1328 0020 196A     		ldr	r1, [r3, #32]
@@ -4355,7 +4355,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  588:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  1352              		.loc 1 588 1 view .LVU424
  1353              		.cfi_endproc
- 1354              	.LFE143:
+ 1354              	.LFE248:
  1356              		.section	.text.HAL_TIMEx_OCN_Start,"ax",%progbits
  1357              		.align	1
  1358              		.global	HAL_TIMEx_OCN_Start
@@ -4364,7 +4364,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1361              		.thumb_func
  1363              	HAL_TIMEx_OCN_Start:
  1364              	.LVL88:
- 1365              	.LFB144:
+ 1365              	.LFB249:
  626:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  1366              		.loc 1 626 1 is_stmt 1 view -0
  1367              		.cfi_startproc
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1374              		.cfi_offset 4, -8
  1375              		.cfi_offset 14, -4
  1376 0002 0446     		mov	r4, r0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 74
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 74
 
 
  627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1417 0034 5364     		str	r3, [r2, #68]
  648:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  1418              		.loc 1 648 3 view .LVU441
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 75
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 75
 
 
  648:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1461              		.loc 1 633 46 discriminator 2 view .LVU453
  1462 0080 0429     		cmp	r1, #4
  1463 0082 07D0     		beq	.L93
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 76
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 76
 
 
  633:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  639:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  1507              		.loc 1 639 3 discriminator 6 view .LVU465
  1508 00c4 0223     		movs	r3, #2
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 77
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 77
 
 
  1509 00c6 84F84430 		strb	r3, [r4, #68]
@@ -4616,9 +4616,9 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1549              	.L97:
  1550 00ec 00000140 		.word	1073807360
  1551              		.cfi_endproc
- 1552              	.LFE144:
+ 1552              	.LFE249:
  1554              		.section	.text.HAL_TIMEx_OCN_Stop,"ax",%progbits
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 78
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 78
 
 
  1555              		.align	1
@@ -4628,7 +4628,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1559              		.thumb_func
  1561              	HAL_TIMEx_OCN_Stop:
  1562              	.LVL101:
- 1563              	.LFB145:
+ 1563              	.LFB250:
  677:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  1564              		.loc 1 677 1 is_stmt 1 view -0
  1565              		.cfi_startproc
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1601 002a 5A64     		str	r2, [r3, #68]
  1602              	.L100:
  685:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 79
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 79
 
 
  1603              		.loc 1 685 3 view .LVU487
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  691:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  1645              		.loc 1 691 3 discriminator 3 view .LVU500
  1646 0066 0123     		movs	r3, #1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 80
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 80
 
 
  1647 0068 84F84330 		strb	r3, [r4, #67]
@@ -4750,7 +4750,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1652 0070 84F84430 		strb	r3, [r4, #68]
  1653 0074 EDE7     		b	.L103
  1654              		.cfi_endproc
- 1655              	.LFE145:
+ 1655              	.LFE250:
  1657              		.section	.text.HAL_TIMEx_OCN_Start_IT,"ax",%progbits
  1658              		.align	1
  1659              		.global	HAL_TIMEx_OCN_Start_IT
@@ -4759,7 +4759,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1662              		.thumb_func
  1664              	HAL_TIMEx_OCN_Start_IT:
  1665              	.LVL105:
- 1666              	.LFB146:
+ 1666              	.LFB251:
  709:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  1667              		.loc 1 709 1 is_stmt 1 view -0
  1668              		.cfi_startproc
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1692 000e 013B     		subs	r3, r3, #1
  1693 0010 18BF     		it	ne
  1694 0012 0123     		movne	r3, #1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 81
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 81
 
 
  1695              	.L111:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  766:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
  1736              		.loc 1 766 9 is_stmt 0 view .LVU525
  1737 004a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 82
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 82
 
 
  766:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1781 0098 0829     		cmp	r1, #8
  1782 009a 0BD0     		beq	.L129
  717:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 83
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 83
 
 
  1783              		.loc 1 717 7 discriminator 8 view .LVU537
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1827              	.LVL113:
  1828              	.L130:
  723:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 84
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 84
 
 
  1829              		.loc 1 723 3 discriminator 3 view .LVU548
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1868              		.loc 1 771 9 is_stmt 1 view .LVU563
  1869 010c 1A68     		ldr	r2, [r3]
  1870              	.LVL116:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 85
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 85
 
 
  771:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       }
@@ -5071,7 +5071,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1893              	.L132:
  1894 0120 00000140 		.word	1073807360
  1895              		.cfi_endproc
- 1896              	.LFE146:
+ 1896              	.LFE251:
  1898              		.section	.text.HAL_TIMEx_OCN_Stop_IT,"ax",%progbits
  1899              		.align	1
  1900              		.global	HAL_TIMEx_OCN_Stop_IT
@@ -5080,7 +5080,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1903              		.thumb_func
  1905              	HAL_TIMEx_OCN_Stop_IT:
  1906              	.LVL121:
- 1907              	.LFB147:
+ 1907              	.LFB252:
  796:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  1908              		.loc 1 796 1 is_stmt 1 view -0
  1909              		.cfi_startproc
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  1920 0002 0446     		mov	r4, r0
  1921 0004 0D46     		mov	r5, r1
  797:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpccer;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 86
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 86
 
 
  1922              		.loc 1 797 3 is_stmt 1 view .LVU571
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  840:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
  1962              		.loc 1 840 7 is_stmt 1 view .LVU586
  1963 0032 DA68     		ldr	r2, [r3, #12]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 87
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 87
 
 
  1964 0034 22F08002 		bic	r2, r2, #128
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2006 0076 85B9     		cbnz	r5, .L142
  850:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  2007              		.loc 1 850 5 is_stmt 0 discriminator 1 view .LVU599
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 88
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 88
 
 
  2008 0078 0123     		movs	r3, #1
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2050 00ac 0123     		movs	r3, #1
  2051 00ae 84F84330 		strb	r3, [r4, #67]
  2052 00b2 0020     		movs	r0, #0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 89
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 89
 
 
  2053 00b4 E4E7     		b	.L137
@@ -5299,7 +5299,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2065              		.loc 1 803 3 view .LVU614
  2066 00c2 DDE7     		b	.L137
  2067              		.cfi_endproc
- 2068              	.LFE147:
+ 2068              	.LFE252:
  2070              		.section	.text.HAL_TIMEx_OCN_Start_DMA,"ax",%progbits
  2071              		.align	1
  2072              		.global	HAL_TIMEx_OCN_Start_DMA
@@ -5308,7 +5308,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2075              		.thumb_func
  2077              	HAL_TIMEx_OCN_Start_DMA:
  2078              	.LVL133:
- 2079              	.LFB148:
+ 2079              	.LFB253:
  872:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  2080              		.loc 1 872 1 is_stmt 1 view -0
  2081              		.cfi_startproc
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2099              		.loc 1 880 46 is_stmt 0 view .LVU621
  2100 0006 0D46     		mov	r5, r1
  2101 0008 0029     		cmp	r1, #0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 90
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 90
 
 
  2102 000a 6BD1     		bne	.L150
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2143 0048 84F84220 		strb	r2, [r4, #66]
  900:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  2144              		.loc 1 900 3 is_stmt 1 view .LVU635
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 91
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 91
 
 
  2145              	.L160:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2183              		.loc 1 920 7 view .LVU651
  970:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  2184              		.loc 1 970 3 view .LVU652
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 92
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 92
 
 
  2185              	.L165:
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2227              		.loc 1 979 9 discriminator 7 view .LVU664
  2228 00d0 A2F59432 		sub	r2, r2, #75776
  2229 00d4 9342     		cmp	r3, r2
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 93
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 93
 
 
  2230 00d6 7AD0     		beq	.L166
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2275 0114 80E7     		b	.L151
  2276              	.L155:
  884:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 94
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 94
 
 
  2277              		.loc 1 884 51 discriminator 2 view .LVU674
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2321              		.loc 1 892 7 discriminator 7 view .LVU684
  2322 0150 0222     		movs	r2, #2
  2323 0152 84F84520 		strb	r2, [r4, #69]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 95
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 95
 
 
  900:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2362              		.loc 1 933 11 view .LVU700
  2363 0182 3832     		adds	r2, r2, #56
  2364 0184 3146     		mov	r1, r6
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 96
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 96
 
 
  2365 0186 A06A     		ldr	r0, [r4, #40]
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2403              		.loc 1 951 53 view .LVU716
  2404 01b0 1649     		ldr	r1, .L184+8
  2405 01b2 D164     		str	r1, [r2, #76]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 97
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 97
 
 
  954:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****                            Length) != HAL_OK)
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  882:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  2446              		.loc 1 882 12 view .LVU731
  2447 01e4 0220     		movs	r0, #2
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 98
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 98
 
 
  2448 01e6 00E0     		b	.L154
@@ -5871,19 +5871,19 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2488 020c 00000000 		.word	TIM_DMAErrorCCxN
  2489 0210 00000140 		.word	1073807360
  2490              		.cfi_endproc
- 2491              	.LFE148:
+ 2491              	.LFE253:
  2493              		.section	.text.HAL_TIMEx_OCN_Stop_DMA,"ax",%progbits
  2494              		.align	1
  2495              		.global	HAL_TIMEx_OCN_Stop_DMA
  2496              		.syntax unified
  2497              		.thumb
  2498              		.thumb_func
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 99
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 99
 
 
  2500              	HAL_TIMEx_OCN_Stop_DMA:
  2501              	.LVL164:
- 2502              	.LFB149:
+ 2502              	.LFB254:
 1009:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  2503              		.loc 1 1009 1 is_stmt 1 view -0
  2504              		.cfi_startproc
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2542              		.loc 1 1049 5 view .LVU750
  2543 0022 0022     		movs	r2, #0
  2544 0024 2946     		mov	r1, r5
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 100
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 100
 
 
  2545 0026 2068     		ldr	r0, [r4]
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2587 006a 0123     		movs	r3, #1
  2588 006c 84F84230 		strb	r3, [r4, #66]
  2589 0070 0020     		movs	r0, #0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 101
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 101
 
 
  2590              	.L189:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1058:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  2630              		.loc 1 1058 5 is_stmt 0 discriminator 2 view .LVU777
  2631 0098 042D     		cmp	r5, #4
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 102
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 102
 
 
  2632 009a 06D0     		beq	.L198
@@ -6096,7 +6096,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2658              		.loc 1 1015 3 view .LVU783
  2659 00c0 D7E7     		b	.L189
  2660              		.cfi_endproc
- 2661              	.LFE149:
+ 2661              	.LFE254:
  2663              		.section	.text.HAL_TIMEx_PWMN_Start,"ax",%progbits
  2664              		.align	1
  2665              		.global	HAL_TIMEx_PWMN_Start
@@ -6105,7 +6105,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2668              		.thumb_func
  2670              	HAL_TIMEx_PWMN_Start:
  2671              	.LVL178:
- 2672              	.LFB150:
+ 2672              	.LFB255:
 1099:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  2673              		.loc 1 1099 1 is_stmt 1 view -0
  2674              		.cfi_startproc
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2680              		.cfi_def_cfa_offset 8
  2681              		.cfi_offset 4, -8
  2682              		.cfi_offset 14, -4
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 103
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 103
 
 
  2683 0002 0446     		mov	r4, r0
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2723 0030 43F40043 		orr	r3, r3, #32768
  2724 0034 5364     		str	r3, [r2, #68]
 1121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 104
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 104
 
 
  2725              		.loc 1 1121 3 view .LVU800
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1106:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  2768              		.loc 1 1106 46 discriminator 2 view .LVU812
  2769 0080 0429     		cmp	r1, #4
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 105
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 105
 
 
  2770 0082 07D0     		beq	.L215
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2813              	.L218:
 1112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  2814              		.loc 1 1112 3 discriminator 6 view .LVU824
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 106
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 106
 
 
  2815 00c4 0223     		movs	r3, #2
@@ -6357,8 +6357,8 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2856              	.L219:
  2857 00ec 00000140 		.word	1073807360
  2858              		.cfi_endproc
- 2859              	.LFE150:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 107
+ 2859              	.LFE255:
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 107
 
 
  2861              		.section	.text.HAL_TIMEx_PWMN_Stop,"ax",%progbits
@@ -6369,7 +6369,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2866              		.thumb_func
  2868              	HAL_TIMEx_PWMN_Stop:
  2869              	.LVL191:
- 2870              	.LFB151:
+ 2870              	.LFB256:
 1149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  2871              		.loc 1 1149 1 is_stmt 1 view -0
  2872              		.cfi_startproc
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2907 0026 22F40042 		bic	r2, r2, #32768
  2908 002a 5A64     		str	r2, [r3, #68]
  2909              	.L222:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 108
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 108
 
 
 1157:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2951              	.L229:
 1163:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  2952              		.loc 1 1163 3 discriminator 3 view .LVU859
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 109
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 109
 
 
  2953 0066 0123     		movs	r3, #1
@@ -6491,7 +6491,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2959 0070 84F84430 		strb	r3, [r4, #68]
  2960 0074 EDE7     		b	.L225
  2961              		.cfi_endproc
- 2962              	.LFE151:
+ 2962              	.LFE256:
  2964              		.section	.text.HAL_TIMEx_PWMN_Start_IT,"ax",%progbits
  2965              		.align	1
  2966              		.global	HAL_TIMEx_PWMN_Start_IT
@@ -6500,7 +6500,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2969              		.thumb_func
  2971              	HAL_TIMEx_PWMN_Start_IT:
  2972              	.LVL195:
- 2973              	.LFB152:
+ 2973              	.LFB257:
 1181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  2974              		.loc 1 1181 1 is_stmt 1 view -0
  2975              		.cfi_startproc
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  2998              		.loc 1 1189 46 discriminator 1 view .LVU870
  2999 000e 013B     		subs	r3, r3, #1
  3000 0010 18BF     		it	ne
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 110
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 110
 
 
  3001 0012 0123     		movne	r3, #1
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3042              		.loc 1 1237 5 view .LVU883
 1237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
  3043              		.loc 1 1237 9 is_stmt 0 view .LVU884
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 111
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 111
 
 
  3044 004a 2368     		ldr	r3, [r4]
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3087              		.loc 1 1189 46 discriminator 5 view .LVU895
  3088 0098 0829     		cmp	r1, #8
  3089 009a 0BD0     		beq	.L251
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 112
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 112
 
 
 1189:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3133 00dc 1BE0     		b	.L236
  3134              	.LVL203:
  3135              	.L252:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 113
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 113
 
 
 1195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       }
  3175              		.loc 1 1242 9 is_stmt 1 view .LVU922
  3176 010c 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 114
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 114
 
 
  3177              	.LVL206:
@@ -6812,7 +6812,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3200              	.L254:
  3201 0120 00000140 		.word	1073807360
  3202              		.cfi_endproc
- 3203              	.LFE152:
+ 3203              	.LFE257:
  3205              		.section	.text.HAL_TIMEx_PWMN_Stop_IT,"ax",%progbits
  3206              		.align	1
  3207              		.global	HAL_TIMEx_PWMN_Stop_IT
@@ -6821,7 +6821,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3210              		.thumb_func
  3212              	HAL_TIMEx_PWMN_Stop_IT:
  3213              	.LVL211:
- 3214              	.LFB153:
+ 3214              	.LFB258:
 1267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  3215              		.loc 1 1267 1 is_stmt 1 view -0
  3216              		.cfi_startproc
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3226              		.cfi_offset 14, -4
  3227 0002 0446     		mov	r4, r0
  3228 0004 0D46     		mov	r5, r1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 115
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 115
 
 
 1268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpccer;
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3268 0030 03D1     		bne	.L261
 1311:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
  3269              		.loc 1 1311 7 is_stmt 1 view .LVU945
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 116
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 116
 
 
  3270 0032 DA68     		ldr	r2, [r3, #12]
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3312              		.loc 1 1321 5 view .LVU957
  3313 0076 85B9     		cbnz	r5, .L264
 1321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 117
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 117
 
 
  3314              		.loc 1 1321 5 is_stmt 0 discriminator 1 view .LVU958
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3356              		.loc 1 1321 5 discriminator 3 view .LVU970
  3357 00ac 0123     		movs	r3, #1
  3358 00ae 84F84330 		strb	r3, [r4, #67]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 118
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 118
 
 
  3359 00b2 0020     		movs	r0, #0
@@ -7040,7 +7040,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3372              		.loc 1 1274 3 view .LVU973
  3373 00c2 DDE7     		b	.L259
  3374              		.cfi_endproc
- 3375              	.LFE153:
+ 3375              	.LFE258:
  3377              		.section	.text.HAL_TIMEx_PWMN_Start_DMA,"ax",%progbits
  3378              		.align	1
  3379              		.global	HAL_TIMEx_PWMN_Start_DMA
@@ -7049,7 +7049,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3382              		.thumb_func
  3384              	HAL_TIMEx_PWMN_Start_DMA:
  3385              	.LVL223:
- 3386              	.LFB154:
+ 3386              	.LFB259:
 1343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  3387              		.loc 1 1343 1 is_stmt 1 view -0
  3388              		.cfi_startproc
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1351:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  3406              		.loc 1 1351 46 is_stmt 0 view .LVU980
  3407 0006 0D46     		mov	r5, r1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 119
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 119
 
 
  3408 0008 0029     		cmp	r1, #0
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3449 0046 0222     		movs	r2, #2
  3450 0048 84F84220 		strb	r2, [r4, #66]
 1371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 120
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 120
 
 
  3451              		.loc 1 1371 3 is_stmt 1 view .LVU994
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1391:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
  3490              		.loc 1 1391 7 view .LVU1010
 1441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 121
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 121
 
 
  3491              		.loc 1 1441 3 view .LVU1011
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1450:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     {
  3534              		.loc 1 1450 9 discriminator 7 view .LVU1023
  3535 00d0 A2F59432 		sub	r2, r2, #75776
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 122
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 122
 
 
  3536 00d4 9342     		cmp	r3, r2
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3581 0112 0120     		moveq	r0, #1
  3582 0114 80E7     		b	.L273
  3583              	.L277:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 123
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 123
 
 
 1355:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1363:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****     }
  3628              		.loc 1 1363 7 discriminator 7 view .LVU1043
  3629 0150 0222     		movs	r2, #2
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 124
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 124
 
 
  3630 0152 84F84520 		strb	r2, [r4, #69]
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1404:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****                            Length) != HAL_OK)
  3669              		.loc 1 1404 11 view .LVU1059
  3670 0182 3832     		adds	r2, r2, #56
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 125
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 125
 
 
  3671 0184 3146     		mov	r1, r6
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1422:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  3710              		.loc 1 1422 53 view .LVU1075
  3711 01b0 1649     		ldr	r1, .L306+8
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 126
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 126
 
 
  3712 01b2 D164     		str	r1, [r2, #76]
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3752              	.L290:
 1353:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  3753              		.loc 1 1353 12 view .LVU1090
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 127
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 127
 
 
  3754 01e4 0220     		movs	r0, #2
@@ -7612,19 +7612,19 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3795 020c 00000000 		.word	TIM_DMAErrorCCxN
  3796 0210 00000140 		.word	1073807360
  3797              		.cfi_endproc
- 3798              	.LFE154:
+ 3798              	.LFE259:
  3800              		.section	.text.HAL_TIMEx_PWMN_Stop_DMA,"ax",%progbits
  3801              		.align	1
  3802              		.global	HAL_TIMEx_PWMN_Stop_DMA
  3803              		.syntax unified
  3804              		.thumb
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 128
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 128
 
 
  3805              		.thumb_func
  3807              	HAL_TIMEx_PWMN_Stop_DMA:
  3808              	.LVL254:
- 3809              	.LFB155:
+ 3809              	.LFB260:
 1480:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  3810              		.loc 1 1480 1 is_stmt 1 view -0
  3811              		.cfi_startproc
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1520:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  3849              		.loc 1 1520 5 view .LVU1109
  3850 0022 0022     		movs	r2, #0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 129
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 129
 
 
  3851 0024 2946     		mov	r1, r5
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3893              		.loc 1 1529 5 is_stmt 0 discriminator 1 view .LVU1121
  3894 006a 0123     		movs	r3, #1
  3895 006c 84F84230 		strb	r3, [r4, #66]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 130
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 130
 
 
  3896 0070 0020     		movs	r0, #0
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3936              	.L315:
 1529:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  3937              		.loc 1 1529 5 is_stmt 0 discriminator 2 view .LVU1136
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 131
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 131
 
 
  3938 0098 042D     		cmp	r5, #4
@@ -7837,7 +7837,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3965              		.loc 1 1486 3 view .LVU1142
  3966 00c0 D7E7     		b	.L311
  3967              		.cfi_endproc
- 3968              	.LFE155:
+ 3968              	.LFE260:
  3970              		.section	.text.HAL_TIMEx_OnePulseN_Start,"ax",%progbits
  3971              		.align	1
  3972              		.global	HAL_TIMEx_OnePulseN_Start
@@ -7846,7 +7846,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3975              		.thumb_func
  3977              	HAL_TIMEx_OnePulseN_Start:
  3978              	.LVL268:
- 3979              	.LFB156:
+ 3979              	.LFB261:
 1571:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
  3980              		.loc 1 1571 1 is_stmt 1 view -0
  3981              		.cfi_startproc
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  3986              	.LCFI26:
  3987              		.cfi_def_cfa_offset 16
  3988              		.cfi_offset 4, -16
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 132
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 132
 
 
  3989              		.cfi_offset 5, -12
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4028 002e 23D1     		bne	.L324
 1584:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       || (complementary_channel_2_state != HAL_TIM_CHANNEL_STATE_READY))
  4029              		.loc 1 1584 7 view .LVU1160
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 133
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 133
 
 
  4030 0030 012A     		cmp	r2, #1
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4070              		.loc 1 1598 3 is_stmt 1 view .LVU1174
  4071 005e 0122     		movs	r2, #1
  4072 0060 2946     		mov	r1, r5
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 134
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 134
 
 
  4073 0062 2068     		ldr	r0, [r4]
@@ -8016,7 +8016,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4098              		.loc 1 1587 12 view .LVU1181
  4099 007c FCE7     		b	.L324
  4100              		.cfi_endproc
- 4101              	.LFE156:
+ 4101              	.LFE261:
  4103              		.section	.text.HAL_TIMEx_OnePulseN_Stop,"ax",%progbits
  4104              		.align	1
  4105              		.global	HAL_TIMEx_OnePulseN_Stop
@@ -8025,7 +8025,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4108              		.thumb_func
  4110              	HAL_TIMEx_OnePulseN_Stop:
  4111              	.LVL287:
- 4112              	.LFB157:
+ 4112              	.LFB262:
 1620:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
  4113              		.loc 1 1620 1 is_stmt 1 view -0
  4114              		.cfi_startproc
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4120              		.cfi_def_cfa_offset 16
  4121              		.cfi_offset 3, -16
  4122              		.cfi_offset 4, -12
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 135
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 135
 
 
  4123              		.cfi_offset 5, -8
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4165              		.loc 1 1631 3 view .LVU1195
 1634:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4166              		.loc 1 1634 3 view .LVU1196
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 136
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 136
 
 
 1634:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -8148,7 +8148,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4200 006e 0025     		movs	r5, #0
  4201 0070 CBE7     		b	.L332
  4202              		.cfi_endproc
- 4203              	.LFE157:
+ 4203              	.LFE262:
  4205              		.section	.text.HAL_TIMEx_OnePulseN_Start_IT,"ax",%progbits
  4206              		.align	1
  4207              		.global	HAL_TIMEx_OnePulseN_Start_IT
@@ -8157,8 +8157,8 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4210              		.thumb_func
  4212              	HAL_TIMEx_OnePulseN_Start_IT:
  4213              	.LVL293:
- 4214              	.LFB158:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 137
+ 4214              	.LFB263:
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 137
 
 
 1659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1667:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4256              		.loc 1 1667 3 is_stmt 1 view .LVU1221
 1670:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****       || (channel_2_state != HAL_TIM_CHANNEL_STATE_READY)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 138
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 138
 
 
  4257              		.loc 1 1670 3 view .LVU1222
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4297 0056 D368     		ldr	r3, [r2, #12]
  4298 0058 43F00203 		orr	r3, r3, #2
  4299 005c D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 139
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 139
 
 
 1688:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
@@ -8338,11 +8338,11 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1675:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   }
  4343              		.loc 1 1675 12 view .LVU1248
  4344 0090 FCE7     		b	.L339
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 140
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 140
 
 
  4345              		.cfi_endproc
- 4346              	.LFE158:
+ 4346              	.LFE263:
  4348              		.section	.text.HAL_TIMEx_OnePulseN_Stop_IT,"ax",%progbits
  4349              		.align	1
  4350              		.global	HAL_TIMEx_OnePulseN_Stop_IT
@@ -8351,7 +8351,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4353              		.thumb_func
  4355              	HAL_TIMEx_OnePulseN_Stop_IT:
  4356              	.LVL312:
- 4357              	.LFB159:
+ 4357              	.LFB264:
 1714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
  4358              		.loc 1 1714 1 is_stmt 1 view -0
  4359              		.cfi_startproc
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4392 0020 2068     		ldr	r0, [r4]
  4393              	.LVL314:
 1727:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CCxChannelCmd(htim->Instance, input_channel, TIM_CCx_DISABLE);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 141
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 141
 
 
  4394              		.loc 1 1727 3 is_stmt 0 view .LVU1258
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1734:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4438              		.loc 1 1734 3 view .LVU1269
 1737:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 142
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 142
 
 
  4439              		.loc 1 1737 3 view .LVU1270
@@ -8486,7 +8486,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4455 0082 0025     		movs	r5, #0
  4456 0084 C1E7     		b	.L347
  4457              		.cfi_endproc
- 4458              	.LFE159:
+ 4458              	.LFE264:
  4460              		.section	.text.HAL_TIMEx_ConfigCommutEvent,"ax",%progbits
  4461              		.align	1
  4462              		.global	HAL_TIMEx_ConfigCommutEvent
@@ -8495,7 +8495,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4465              		.thumb_func
  4467              	HAL_TIMEx_ConfigCommutEvent:
  4468              	.LVL318:
- 4469              	.LFB160:
+ 4469              	.LFB265:
 1794:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  4470              		.loc 1 1794 1 is_stmt 1 view -0
  4471              		.cfi_startproc
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1799:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4483              		.loc 1 1799 3 is_stmt 0 view .LVU1283
  4484 0006 0128     		cmp	r0, #1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 143
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 143
 
 
  4485 0008 33D0     		beq	.L357
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4524 0030 1868     		ldr	r0, [r3]
 1810:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Select the Commutation event source */
  4525              		.loc 1 1810 17 view .LVU1299
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 144
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 144
 
 
  4526 0032 4168     		ldr	r1, [r0, #4]
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1824:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4564              		.loc 1 1824 1 is_stmt 0 view .LVU1316
  4565 0066 5DF8044B 		ldr	r4, [sp], #4
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 145
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 145
 
 
  4566 006a 7047     		bx	lr
@@ -8660,7 +8660,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4579              		.loc 1 1824 1 view .LVU1319
  4580 0074 7047     		bx	lr
  4581              		.cfi_endproc
- 4582              	.LFE160:
+ 4582              	.LFE265:
  4584              		.section	.text.HAL_TIMEx_ConfigCommutEvent_IT,"ax",%progbits
  4585              		.align	1
  4586              		.global	HAL_TIMEx_ConfigCommutEvent_IT
@@ -8669,7 +8669,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4589              		.thumb_func
  4591              	HAL_TIMEx_ConfigCommutEvent_IT:
  4592              	.LVL323:
- 4593              	.LFB161:
+ 4593              	.LFB266:
 1850:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  4594              		.loc 1 1850 1 is_stmt 1 view -0
  4595              		.cfi_startproc
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4611 000a 10B4     		push	{r4}
  4612              	.LCFI32:
  4613              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 146
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 146
 
 
  4614              		.cfi_offset 4, -4
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4652 0034 41F00101 		orr	r1, r1, #1
  4653 0038 4160     		str	r1, [r0, #4]
 1868:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 147
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 147
 
 
  4654              		.loc 1 1868 3 is_stmt 1 view .LVU1344
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
 1880:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  4693              		.loc 1 1880 1 view .LVU1360
  4694 006c 3029     		cmp	r1, #48
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 148
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 148
 
 
  4695 006e DFD1     		bne	.L366
@@ -8834,7 +8834,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4703              		.loc 1 1880 1 view .LVU1362
  4704 0074 7047     		bx	lr
  4705              		.cfi_endproc
- 4706              	.LFE161:
+ 4706              	.LFE266:
  4708              		.section	.text.HAL_TIMEx_ConfigCommutEvent_DMA,"ax",%progbits
  4709              		.align	1
  4710              		.global	HAL_TIMEx_ConfigCommutEvent_DMA
@@ -8843,7 +8843,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4713              		.thumb_func
  4715              	HAL_TIMEx_ConfigCommutEvent_DMA:
  4716              	.LVL328:
- 4717              	.LFB162:
+ 4717              	.LFB267:
 1907:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check the parameters */
  4718              		.loc 1 1907 1 is_stmt 1 view -0
  4719              		.cfi_startproc
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4740 000c 0120     		movs	r0, #1
  4741 000e 83F83C00 		strb	r0, [r3, #60]
 1912:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 149
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 149
 
 
  4742              		.loc 1 1912 3 view .LVU1372
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4780 003a 1868     		ldr	r0, [r3]
 1925:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  4781              		.loc 1 1925 17 view .LVU1389
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 150
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 150
 
 
  4782 003c 4168     		ldr	r1, [r0, #4]
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4819              		.loc 1 1939 3 view .LVU1406
  4820 0068 1968     		ldr	r1, [r3]
  4821 006a CA68     		ldr	r2, [r1, #12]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 151
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 151
 
 
  4822 006c 42F40052 		orr	r2, r2, #8192
@@ -9041,7 +9041,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4851 008c 00000000 		.word	TIMEx_DMACommutationHalfCplt
  4852 0090 00000000 		.word	TIM_DMAError
  4853              		.cfi_endproc
- 4854              	.LFE162:
+ 4854              	.LFE267:
  4856              		.section	.text.HAL_TIMEx_MasterConfigSynchronization,"ax",%progbits
  4857              		.align	1
  4858              		.global	HAL_TIMEx_MasterConfigSynchronization
@@ -9050,7 +9050,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4861              		.thumb_func
  4863              	HAL_TIMEx_MasterConfigSynchronization:
  4864              	.LVL333:
- 4865              	.LFB163:
+ 4865              	.LFB268:
 1956:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpcr2;
  4866              		.loc 1 1956 1 is_stmt 1 view -0
  4867              		.cfi_startproc
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4869              		@ frame_needed = 0, uses_anonymous_args = 0
  4870              		@ link register save eliminated.
 1957:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 152
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 152
 
 
  4871              		.loc 1 1957 3 view .LVU1416
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4907 001e 20F0700C 		bic	ip, r0, #112
  4908              	.LVL336:
 1980:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 153
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 153
 
 
  4909              		.loc 1 1980 3 is_stmt 1 view .LVU1435
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4949 005e 03D0     		beq	.L386
 1985:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   {
  4950              		.loc 1 1985 7 discriminator 7 view .LVU1450
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 154
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 154
 
 
  4951 0060 A0F59430 		sub	r0, r0, #75776
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4990 0084 0220     		movs	r0, #2
  4991              	.LVL344:
 2002:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 155
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 155
 
 
  4992              		.loc 1 2002 1 view .LVU1466
@@ -9248,7 +9248,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  4996              	.L393:
  4997 0088 00000140 		.word	1073807360
  4998              		.cfi_endproc
- 4999              	.LFE163:
+ 4999              	.LFE268:
  5001              		.section	.text.HAL_TIMEx_ConfigBreakDeadTime,"ax",%progbits
  5002              		.align	1
  5003              		.global	HAL_TIMEx_ConfigBreakDeadTime
@@ -9257,7 +9257,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5006              		.thumb_func
  5008              	HAL_TIMEx_ConfigBreakDeadTime:
  5009              	.LVL345:
- 5010              	.LFB164:
+ 5010              	.LFB269:
 2017:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Keep this variable initialized to 0 as it is used to configure BDTR register */
  5011              		.loc 1 2017 1 is_stmt 1 view -0
  5012              		.cfi_startproc
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5034 000a 0123     		movs	r3, #1
  5035 000c 80F83C30 		strb	r3, [r0, #60]
 2032:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 156
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 156
 
 
  5036              		.loc 1 2032 3 view .LVU1481
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5076              		.loc 1 2043 3 is_stmt 1 view .LVU1495
  5077 0032 23F40053 		bic	r3, r3, #8192
  5078              	.LVL360:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 157
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 157
 
 
 2043:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_AOE, sBreakDeadTimeConfig->AutomaticOutput);
@@ -9412,19 +9412,19 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5112              		.loc 1 2053 1 view .LVU1510
  5113 0050 7047     		bx	lr
  5114              		.cfi_endproc
- 5115              	.LFE164:
+ 5115              	.LFE269:
  5117              		.section	.text.HAL_TIMEx_RemapConfig,"ax",%progbits
  5118              		.align	1
  5119              		.global	HAL_TIMEx_RemapConfig
  5120              		.syntax unified
  5121              		.thumb
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 158
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 158
 
 
  5122              		.thumb_func
  5124              	HAL_TIMEx_RemapConfig:
  5125              	.LVL368:
- 5126              	.LFB165:
+ 5126              	.LFB270:
 2092:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Check parameters */
  5127              		.loc 1 2092 1 is_stmt 1 view -0
  5128              		.cfi_startproc
@@ -9477,8 +9477,8 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5161              		.loc 1 2120 1 view .LVU1525
  5162 001e 7047     		bx	lr
  5163              		.cfi_endproc
- 5164              	.LFE165:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 159
+ 5164              	.LFE270:
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 159
 
 
  5166              		.section	.text.HAL_TIMEx_CommutCallback,"ax",%progbits
@@ -9489,7 +9489,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5171              		.thumb_func
  5173              	HAL_TIMEx_CommutCallback:
  5174              	.LVL372:
- 5175              	.LFB166:
+ 5175              	.LFB271:
 2148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  5176              		.loc 1 2148 1 is_stmt 1 view -0
  5177              		.cfi_startproc
@@ -9502,7 +9502,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5182              		.loc 1 2155 1 is_stmt 0 view .LVU1528
  5183 0000 7047     		bx	lr
  5184              		.cfi_endproc
- 5185              	.LFE166:
+ 5185              	.LFE271:
  5187              		.section	.text.TIMEx_DMACommutationCplt,"ax",%progbits
  5188              		.align	1
  5189              		.global	TIMEx_DMACommutationCplt
@@ -9511,7 +9511,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5192              		.thumb_func
  5194              	TIMEx_DMACommutationCplt:
  5195              	.LVL373:
- 5196              	.LFB171:
+ 5196              	.LFB276:
 2254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
  5197              		.loc 1 2254 1 is_stmt 1 view -0
  5198              		.cfi_startproc
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5214 0006 80F83D30 		strb	r3, [r0, #61]
 2263:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
  5215              		.loc 1 2263 3 is_stmt 1 view .LVU1535
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 160
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 160
 
 
  5216 000a FFF7FEFF 		bl	HAL_TIMEx_CommutCallback
@@ -9547,7 +9547,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5218              		.loc 1 2265 1 is_stmt 0 view .LVU1536
  5219 000e 08BD     		pop	{r3, pc}
  5220              		.cfi_endproc
- 5221              	.LFE171:
+ 5221              	.LFE276:
  5223              		.section	.text.HAL_TIMEx_CommutHalfCpltCallback,"ax",%progbits
  5224              		.align	1
  5225              		.weak	HAL_TIMEx_CommutHalfCpltCallback
@@ -9556,7 +9556,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5228              		.thumb_func
  5230              	HAL_TIMEx_CommutHalfCpltCallback:
  5231              	.LVL376:
- 5232              	.LFB167:
+ 5232              	.LFB272:
 2162:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  5233              		.loc 1 2162 1 is_stmt 1 view -0
  5234              		.cfi_startproc
@@ -9569,7 +9569,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5239              		.loc 1 2169 1 is_stmt 0 view .LVU1539
  5240 0000 7047     		bx	lr
  5241              		.cfi_endproc
- 5242              	.LFE167:
+ 5242              	.LFE272:
  5244              		.section	.text.TIMEx_DMACommutationHalfCplt,"ax",%progbits
  5245              		.align	1
  5246              		.global	TIMEx_DMACommutationHalfCplt
@@ -9578,7 +9578,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5249              		.thumb_func
  5251              	TIMEx_DMACommutationHalfCplt:
  5252              	.LVL377:
- 5253              	.LFB172:
+ 5253              	.LFB277:
 2273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
  5254              		.loc 1 2273 1 is_stmt 1 view -0
  5255              		.cfi_startproc
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5266 0002 806B     		ldr	r0, [r0, #56]
  5267              	.LVL378:
 2277:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 161
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 161
 
 
  5268              		.loc 1 2277 3 is_stmt 1 view .LVU1544
@@ -9614,7 +9614,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5275              		.loc 1 2284 1 is_stmt 0 view .LVU1547
  5276 000e 08BD     		pop	{r3, pc}
  5277              		.cfi_endproc
- 5278              	.LFE172:
+ 5278              	.LFE277:
  5280              		.section	.text.HAL_TIMEx_BreakCallback,"ax",%progbits
  5281              		.align	1
  5282              		.weak	HAL_TIMEx_BreakCallback
@@ -9623,7 +9623,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5285              		.thumb_func
  5287              	HAL_TIMEx_BreakCallback:
  5288              	.LVL380:
- 5289              	.LFB168:
+ 5289              	.LFB273:
 2177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  5290              		.loc 1 2177 1 is_stmt 1 view -0
  5291              		.cfi_startproc
@@ -9636,7 +9636,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5296              		.loc 1 2184 1 is_stmt 0 view .LVU1550
  5297 0000 7047     		bx	lr
  5298              		.cfi_endproc
- 5299              	.LFE168:
+ 5299              	.LFE273:
  5301              		.section	.text.HAL_TIMEx_HallSensor_GetState,"ax",%progbits
  5302              		.align	1
  5303              		.global	HAL_TIMEx_HallSensor_GetState
@@ -9645,7 +9645,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5306              		.thumb_func
  5308              	HAL_TIMEx_HallSensor_GetState:
  5309              	.LVL381:
- 5310              	.LFB169:
+ 5310              	.LFB274:
 2210:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   return htim->State;
  5311              		.loc 1 2210 1 is_stmt 1 view -0
  5312              		.cfi_startproc
@@ -9658,14 +9658,14 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5317              		.loc 1 2211 14 is_stmt 0 view .LVU1553
  5318 0000 90F83D00 		ldrb	r0, [r0, #61]	@ zero_extendqisi2
  5319              	.LVL382:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 162
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 162
 
 
 2212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** 
  5320              		.loc 1 2212 1 view .LVU1554
  5321 0004 7047     		bx	lr
  5322              		.cfi_endproc
- 5323              	.LFE169:
+ 5323              	.LFE274:
  5325              		.section	.text.HAL_TIMEx_GetChannelNState,"ax",%progbits
  5326              		.align	1
  5327              		.global	HAL_TIMEx_GetChannelNState
@@ -9674,7 +9674,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5330              		.thumb_func
  5332              	HAL_TIMEx_GetChannelNState:
  5333              	.LVL383:
- 5334              	.LFB170:
+ 5334              	.LFB275:
 2225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_state;
  5335              		.loc 1 2225 1 is_stmt 1 view -0
  5336              		.cfi_startproc
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5364              	.LVL387:
 2233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** }
  5365              		.loc 1 2233 3 is_stmt 1 view .LVU1566
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 163
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 163
 
 
 2234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c **** /**
@@ -9745,7 +9745,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5382 0026 C0B2     		uxtb	r0, r0
  5383 0028 7047     		bx	lr
  5384              		.cfi_endproc
- 5385              	.LFE170:
+ 5385              	.LFE275:
  5387              		.text
  5388              	.Letext0:
  5389              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
@@ -9756,109 +9756,109 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 1
  5394              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  5395              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
  5396              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 164
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 164
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_tim_ex.c
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:149    .text.TIM_DMADelayPulseNCplt:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:154    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:253    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:259    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:274    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:280    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:497    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:503    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:518    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:524    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:594    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:600    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:757    .text.HAL_TIMEx_HallSensor_Start:000000bc $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:762    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:768    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:827    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:833    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:998    .text.HAL_TIMEx_HallSensor_Start_IT:000000c8 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1003   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1009   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1073   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1079   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1278   .text.HAL_TIMEx_HallSensor_Start_DMA:000000e0 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1286   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1292   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1357   .text.HAL_TIMEx_OCN_Start:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1363   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1550   .text.HAL_TIMEx_OCN_Start:000000ec $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1555   .text.HAL_TIMEx_OCN_Stop:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1561   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1658   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1664   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1894   .text.HAL_TIMEx_OCN_Start_IT:00000120 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1899   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:1905   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2071   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2077   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2486   .text.HAL_TIMEx_OCN_Start_DMA:00000204 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2494   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2500   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2664   .text.HAL_TIMEx_PWMN_Start:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2670   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2857   .text.HAL_TIMEx_PWMN_Start:000000ec $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2862   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2868   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2965   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:2971   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3201   .text.HAL_TIMEx_PWMN_Start_IT:00000120 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3206   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3212   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3378   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s 			page 165
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:149    .text.TIM_DMADelayPulseNCplt:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:154    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:253    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:259    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:274    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:280    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:497    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:503    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:518    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:524    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:594    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:600    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:757    .text.HAL_TIMEx_HallSensor_Start:000000bc $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:762    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:768    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:827    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:833    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:998    .text.HAL_TIMEx_HallSensor_Start_IT:000000c8 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1003   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1009   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1073   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1079   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1278   .text.HAL_TIMEx_HallSensor_Start_DMA:000000e0 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1286   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1292   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1357   .text.HAL_TIMEx_OCN_Start:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1363   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1550   .text.HAL_TIMEx_OCN_Start:000000ec $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1555   .text.HAL_TIMEx_OCN_Stop:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1561   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1658   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1664   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1894   .text.HAL_TIMEx_OCN_Start_IT:00000120 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1899   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:1905   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2071   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2077   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2486   .text.HAL_TIMEx_OCN_Start_DMA:00000204 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2494   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2500   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2664   .text.HAL_TIMEx_PWMN_Start:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2670   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2857   .text.HAL_TIMEx_PWMN_Start:000000ec $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2862   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2868   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2965   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:2971   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3201   .text.HAL_TIMEx_PWMN_Start_IT:00000120 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3206   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3212   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3378   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s 			page 165
 
 
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3384   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3793   .text.HAL_TIMEx_PWMN_Start_DMA:00000204 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3801   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3807   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3971   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:3977   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4104   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4110   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4206   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4212   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4349   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4355   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4461   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4467   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4585   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4591   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4709   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4715   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4850   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000088 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5194   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5251   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4857   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4863   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:4997   .text.HAL_TIMEx_MasterConfigSynchronization:00000088 $d
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5002   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5008   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5118   .text.HAL_TIMEx_RemapConfig:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5124   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5167   .text.HAL_TIMEx_CommutCallback:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5173   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5188   .text.TIMEx_DMACommutationCplt:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5224   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5230   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5245   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5281   .text.HAL_TIMEx_BreakCallback:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5287   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5302   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5308   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5326   .text.HAL_TIMEx_GetChannelNState:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccGWWTus.s:5332   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3384   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3793   .text.HAL_TIMEx_PWMN_Start_DMA:00000204 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3801   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3807   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3971   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:3977   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4104   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4110   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4206   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4212   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4349   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4355   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4461   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4467   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4585   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4591   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4709   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4715   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4850   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000088 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5194   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5251   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4857   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4863   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:4997   .text.HAL_TIMEx_MasterConfigSynchronization:00000088 $d
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5002   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5008   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5118   .text.HAL_TIMEx_RemapConfig:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5124   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5167   .text.HAL_TIMEx_CommutCallback:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5173   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5188   .text.TIMEx_DMACommutationCplt:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5224   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5230   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5245   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5281   .text.HAL_TIMEx_BreakCallback:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5287   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5302   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5308   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5326   .text.HAL_TIMEx_GetChannelNState:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccXY3RuA.s:5332   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
 
 UNDEFINED SYMBOLS
 HAL_TIM_ErrorCallback

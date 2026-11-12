@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
   24              		.thumb
   25              		.thumb_func
   27              	QtMotor:
-  28              	.LFB167:
+  28              	.LFB272:
    1:APP/Motor/motor_ctrl.c **** #include "motor_ctrl.h"
    2:APP/Motor/motor_ctrl.c **** #include "motor_para.h"
    3:APP/Motor/motor_ctrl.c **** #include "foc.h"
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
   15:APP/Motor/motor_ctrl.c **** 	if (Para.IfFrq == QT_FRQ) // 强拖频率
   42              		.loc 1 15 2 is_stmt 1 view .LVU4
   43              		.loc 1 15 5 is_stmt 0 view .LVU5
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 2
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 2
 
 
   44 000a 142B     		cmp	r3, #20
@@ -71,9 +71,10 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
   20:APP/Motor/motor_ctrl.c **** 		Para.IfAngle++;
   21:APP/Motor/motor_ctrl.c **** 		if (Para.IfAngle > 359)
   22:APP/Motor/motor_ctrl.c **** 			Para.IfAngle = 0;
-  23:APP/Motor/motor_ctrl.c **** 	}
-  24:APP/Motor/motor_ctrl.c **** }
-  47              		.loc 1 24 1 view .LVU6
+  23:APP/Motor/motor_ctrl.c **** 
+  24:APP/Motor/motor_ctrl.c **** 	}
+  25:APP/Motor/motor_ctrl.c **** }
+  47              		.loc 1 25 1 view .LVU6
   48 000e 7047     		bx	lr
   49              	.L3:
   17:APP/Motor/motor_ctrl.c **** 		Ipark.Alpha = ualpha_tab[Para.IfAngle];
@@ -117,19 +118,19 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
   76              		.loc 1 21 3 is_stmt 1 view .LVU18
   21:APP/Motor/motor_ctrl.c **** 			Para.IfAngle = 0;
   77              		.loc 1 21 6 is_stmt 0 view .LVU19
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 3
+
+
   78 0032 B3F5B47F 		cmp	r3, #360
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 3
-
-
   79 0036 EAD3     		bcc	.L1
-  22:APP/Motor/motor_ctrl.c **** 	}
+  22:APP/Motor/motor_ctrl.c **** 
   80              		.loc 1 22 4 is_stmt 1 view .LVU20
-  22:APP/Motor/motor_ctrl.c **** 	}
+  22:APP/Motor/motor_ctrl.c **** 
   81              		.loc 1 22 17 is_stmt 0 view .LVU21
   82 0038 1346     		mov	r3, r2
   83 003a 0022     		movs	r2, #0
   84 003c 5A80     		strh	r2, [r3, #2]	@ movhi
-  85              		.loc 1 24 1 view .LVU22
+  85              		.loc 1 25 1 view .LVU22
   86 003e E6E7     		b	.L1
   87              	.L5:
   88              		.align	2
@@ -139,7 +140,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
   92 0048 00000000 		.word	Ipark
   93 004c 00000000 		.word	ubeta_tab
   94              		.cfi_endproc
-  95              	.LFE167:
+  95              	.LFE272:
   97              		.section	.text.FocSvpwm,"ax",%progbits
   98              		.align	1
   99              		.global	FocSvpwm
@@ -147,11 +148,11 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
  101              		.thumb
  102              		.thumb_func
  104              	FocSvpwm:
- 105              	.LFB168:
-  25:APP/Motor/motor_ctrl.c **** // SVPWM计算
-  26:APP/Motor/motor_ctrl.c **** void FocSvpwm(void)
-  27:APP/Motor/motor_ctrl.c **** {
- 106              		.loc 1 27 1 is_stmt 1 view -0
+ 105              	.LFB273:
+  26:APP/Motor/motor_ctrl.c **** // SVPWM计算
+  27:APP/Motor/motor_ctrl.c **** void FocSvpwm(void)
+  28:APP/Motor/motor_ctrl.c **** {
+ 106              		.loc 1 28 1 is_stmt 1 view -0
  107              		.cfi_startproc
  108              		@ args = 0, pretend = 0, frame = 0
  109              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -160,30 +161,30 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
  112              		.cfi_def_cfa_offset 8
  113              		.cfi_offset 3, -8
  114              		.cfi_offset 14, -4
-  28:APP/Motor/motor_ctrl.c **** 	// 电流环输出的 d/q 电压经 IPark 后送入 SVPWM 更新三相占空比
-  29:APP/Motor/motor_ctrl.c **** 	Svpwm.Ualpha = Ipark.Alpha; // IPARK的数据传入SVPWM
- 115              		.loc 1 29 2 view .LVU24
- 116              		.loc 1 29 22 is_stmt 0 view .LVU25
+  29:APP/Motor/motor_ctrl.c **** 	// 电流环输出的 d/q 电压经 IPark 后送入 SVPWM 更新三相占空比
+  30:APP/Motor/motor_ctrl.c **** 	Svpwm.Ualpha = Ipark.Alpha; // IPARK的数据传入SVPWM
+ 115              		.loc 1 30 2 view .LVU24
+ 116              		.loc 1 30 22 is_stmt 0 view .LVU25
  117 0002 044B     		ldr	r3, .L8
  118 0004 1A68     		ldr	r2, [r3]	@ float
- 119              		.loc 1 29 15 view .LVU26
+ 119              		.loc 1 30 15 view .LVU26
  120 0006 0448     		ldr	r0, .L8+4
  121 0008 0260     		str	r2, [r0]	@ float
-  30:APP/Motor/motor_ctrl.c **** 	Svpwm.Ubeta = Ipark.Beta;
- 122              		.loc 1 30 2 is_stmt 1 view .LVU27
- 123              		.loc 1 30 21 is_stmt 0 view .LVU28
+  31:APP/Motor/motor_ctrl.c **** 	Svpwm.Ubeta = Ipark.Beta;
+ 122              		.loc 1 31 2 is_stmt 1 view .LVU27
+ 123              		.loc 1 31 21 is_stmt 0 view .LVU28
  124 000a 5B68     		ldr	r3, [r3, #4]	@ float
- 125              		.loc 1 30 14 view .LVU29
+ 125              		.loc 1 31 14 view .LVU29
  126 000c 4360     		str	r3, [r0, #4]	@ float
-  31:APP/Motor/motor_ctrl.c **** 	SvpwmCal((M_SVPWM)&Svpwm); // 将Alpha和Beta电压带入计算SVPWM的占空比
- 127              		.loc 1 31 2 is_stmt 1 view .LVU30
+  32:APP/Motor/motor_ctrl.c **** 	SvpwmCal((M_SVPWM)&Svpwm); // 将Alpha和Beta电压带入计算SVPWM的占空比
+ 127              		.loc 1 32 2 is_stmt 1 view .LVU30
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 4
+
+
  128 000e FFF7FEFF 		bl	SvpwmCal
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 4
-
-
  129              	.LVL0:
-  32:APP/Motor/motor_ctrl.c **** }
- 130              		.loc 1 32 1 is_stmt 0 view .LVU31
+  33:APP/Motor/motor_ctrl.c **** }
+ 130              		.loc 1 33 1 is_stmt 0 view .LVU31
  131 0012 08BD     		pop	{r3, pc}
  132              	.L9:
  133              		.align	2
@@ -191,7 +192,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
  135 0014 00000000 		.word	Ipark
  136 0018 00000000 		.word	Svpwm
  137              		.cfi_endproc
- 138              	.LFE168:
+ 138              	.LFE273:
  140              		.section	.text.MotorRun,"ax",%progbits
  141              		.align	1
  142              		.global	MotorRun
@@ -199,168 +200,177 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 1
  144              		.thumb
  145              		.thumb_func
  147              	MotorRun:
- 148              	.LFB169:
-  33:APP/Motor/motor_ctrl.c **** // 启动电机
-  34:APP/Motor/motor_ctrl.c **** void MotorRun(void)
-  35:APP/Motor/motor_ctrl.c **** {
- 149              		.loc 1 35 1 is_stmt 1 view -0
+ 148              	.LFB274:
+  34:APP/Motor/motor_ctrl.c **** // 启动电机
+  35:APP/Motor/motor_ctrl.c **** void MotorRun(void)
+  36:APP/Motor/motor_ctrl.c **** {
+ 149              		.loc 1 36 1 is_stmt 1 view -0
  150              		.cfi_startproc
  151              		@ args = 0, pretend = 0, frame = 0
  152              		@ frame_needed = 0, uses_anonymous_args = 0
- 153 0000 38B5     		push	{r3, r4, r5, lr}
+ 153 0000 10B5     		push	{r4, lr}
  154              	.LCFI1:
- 155              		.cfi_def_cfa_offset 16
- 156              		.cfi_offset 3, -16
- 157              		.cfi_offset 4, -12
- 158              		.cfi_offset 5, -8
- 159              		.cfi_offset 14, -4
-  36:APP/Motor/motor_ctrl.c **** 	// Fault_Detection();				//启动前先进行故障检测
-  37:APP/Motor/motor_ctrl.c **** 	// 使能三相上下桥 PWM 输出，后续占空比由 SVPWM 更新
-  38:APP/Motor/motor_ctrl.c **** 	TIM1->CCER |= 0x5555;
- 160              		.loc 1 38 2 view .LVU33
- 161              		.loc 1 38 6 is_stmt 0 view .LVU34
- 162 0002 134D     		ldr	r5, .L12
- 163 0004 2B6A     		ldr	r3, [r5, #32]
- 164              		.loc 1 38 13 view .LVU35
- 165 0006 43F4AA43 		orr	r3, r3, #21760
- 166 000a 43F05503 		orr	r3, r3, #85
- 167 000e 2B62     		str	r3, [r5, #32]
-  39:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
- 168              		.loc 1 39 2 is_stmt 1 view .LVU36
- 169 0010 104C     		ldr	r4, .L12+4
- 170 0012 0021     		movs	r1, #0
- 171 0014 2046     		mov	r0, r4
- 172 0016 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 173              	.LVL1:
-  40:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
- 174              		.loc 1 40 2 view .LVU37
- 175 001a 0421     		movs	r1, #4
- 176 001c 2046     		mov	r0, r4
- 177 001e FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 178              	.LVL2:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 5
+ 155              		.cfi_def_cfa_offset 8
+ 156              		.cfi_offset 4, -8
+ 157              		.cfi_offset 14, -4
+  37:APP/Motor/motor_ctrl.c **** 	// Fault_Detection();				//启动前先进行故障检测
+  38:APP/Motor/motor_ctrl.c **** 	// 使能三相上下桥 PWM 输出，后续占空比由 SVPWM 更新
+  39:APP/Motor/motor_ctrl.c **** 	TIM1->CCR1 = (uint16_t)(TIM1_PERIOD_HALF);
+ 158              		.loc 1 39 2 view .LVU33
+ 159              		.loc 1 39 13 is_stmt 0 view .LVU34
+ 160 0002 164B     		ldr	r3, .L12
+ 161 0004 41F26802 		movw	r2, #4200
+ 162 0008 5A63     		str	r2, [r3, #52]
+  40:APP/Motor/motor_ctrl.c **** 	TIM1->CCR2 = (uint16_t)(TIM1_PERIOD_HALF);
+ 163              		.loc 1 40 2 is_stmt 1 view .LVU35
+ 164              		.loc 1 40 13 is_stmt 0 view .LVU36
+ 165 000a 9A63     		str	r2, [r3, #56]
+  41:APP/Motor/motor_ctrl.c **** 	TIM1->CCR3 = (uint16_t)(TIM1_PERIOD_HALF);
+ 166              		.loc 1 41 2 is_stmt 1 view .LVU37
+ 167              		.loc 1 41 13 is_stmt 0 view .LVU38
+ 168 000c DA63     		str	r2, [r3, #60]
+  42:APP/Motor/motor_ctrl.c **** 	TIM1->EGR = TIM_EGR_UG;
+ 169              		.loc 1 42 2 is_stmt 1 view .LVU39
+ 170              		.loc 1 42 12 is_stmt 0 view .LVU40
+ 171 000e 0122     		movs	r2, #1
+ 172 0010 5A61     		str	r2, [r3, #20]
+  43:APP/Motor/motor_ctrl.c ****     __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
+ 173              		.loc 1 43 5 is_stmt 1 view .LVU41
+ 174 0012 134C     		ldr	r4, .L12+4
+ 175 0014 2268     		ldr	r2, [r4]
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 5
 
 
-  41:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
- 179              		.loc 1 41 2 view .LVU38
- 180 0022 0821     		movs	r1, #8
- 181 0024 2046     		mov	r0, r4
- 182 0026 FFF7FEFF 		bl	HAL_TIM_PWM_Start
- 183              	.LVL3:
-  42:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
- 184              		.loc 1 42 2 view .LVU39
- 185 002a 0021     		movs	r1, #0
- 186 002c 2046     		mov	r0, r4
- 187 002e FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
- 188              	.LVL4:
-  43:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
- 189              		.loc 1 43 2 view .LVU40
- 190 0032 0421     		movs	r1, #4
- 191 0034 2046     		mov	r0, r4
- 192 0036 FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
- 193              	.LVL5:
-  44:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
- 194              		.loc 1 44 2 view .LVU41
- 195 003a 0821     		movs	r1, #8
- 196 003c 2046     		mov	r0, r4
- 197 003e FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
- 198              	.LVL6:
-  45:APP/Motor/motor_ctrl.c **** 	TIM1->CCR1 = (uint16_t)(TIM1_PERIOD_HALF);
- 199              		.loc 1 45 2 view .LVU42
- 200              		.loc 1 45 13 is_stmt 0 view .LVU43
- 201 0042 41F26803 		movw	r3, #4200
- 202 0046 6B63     		str	r3, [r5, #52]
-  46:APP/Motor/motor_ctrl.c **** 	TIM1->CCR2 = (uint16_t)(TIM1_PERIOD_HALF);
- 203              		.loc 1 46 2 is_stmt 1 view .LVU44
- 204              		.loc 1 46 13 is_stmt 0 view .LVU45
- 205 0048 AB63     		str	r3, [r5, #56]
-  47:APP/Motor/motor_ctrl.c **** 	TIM1->CCR3 = (uint16_t)(TIM1_PERIOD_HALF);
- 206              		.loc 1 47 2 is_stmt 1 view .LVU46
- 207              		.loc 1 47 13 is_stmt 0 view .LVU47
- 208 004a EB63     		str	r3, [r5, #60]
-  48:APP/Motor/motor_ctrl.c **** }
- 209              		.loc 1 48 1 view .LVU48
- 210 004c 38BD     		pop	{r3, r4, r5, pc}
- 211              	.L13:
- 212 004e 00BF     		.align	2
- 213              	.L12:
- 214 0050 00000140 		.word	1073807360
- 215 0054 00000000 		.word	htim1
- 216              		.cfi_endproc
- 217              	.LFE169:
- 219              		.global	Svpwm
- 220              		.section	.bss.Svpwm,"aw",%nobits
- 221              		.align	2
- 224              	Svpwm:
- 225 0000 00000000 		.space	40
- 225      00000000 
- 225      00000000 
- 225      00000000 
- 225      00000000 
- 226              		.global	Para
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 6
+ 176 0016 6FF00101 		mvn	r1, #1
+ 177 001a 1161     		str	r1, [r2, #16]
+  44:APP/Motor/motor_ctrl.c **** 	TIM1->CCER |= 0x5555;
+ 178              		.loc 1 44 2 view .LVU42
+ 179              		.loc 1 44 6 is_stmt 0 view .LVU43
+ 180 001c 1A6A     		ldr	r2, [r3, #32]
+ 181              		.loc 1 44 13 view .LVU44
+ 182 001e 42F4AA42 		orr	r2, r2, #21760
+ 183 0022 42F05502 		orr	r2, r2, #85
+ 184 0026 1A62     		str	r2, [r3, #32]
+  45:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+ 185              		.loc 1 45 2 is_stmt 1 view .LVU45
+ 186 0028 0021     		movs	r1, #0
+ 187 002a 2046     		mov	r0, r4
+ 188 002c FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 189              	.LVL1:
+  46:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+ 190              		.loc 1 46 2 view .LVU46
+ 191 0030 0421     		movs	r1, #4
+ 192 0032 2046     		mov	r0, r4
+ 193 0034 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 194              	.LVL2:
+  47:APP/Motor/motor_ctrl.c **** 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+ 195              		.loc 1 47 2 view .LVU47
+ 196 0038 0821     		movs	r1, #8
+ 197 003a 2046     		mov	r0, r4
+ 198 003c FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 199              	.LVL3:
+  48:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+ 200              		.loc 1 48 2 view .LVU48
+ 201 0040 0021     		movs	r1, #0
+ 202 0042 2046     		mov	r0, r4
+ 203 0044 FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
+ 204              	.LVL4:
+  49:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+ 205              		.loc 1 49 2 view .LVU49
+ 206 0048 0421     		movs	r1, #4
+ 207 004a 2046     		mov	r0, r4
+ 208 004c FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
+ 209              	.LVL5:
+  50:APP/Motor/motor_ctrl.c **** 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+ 210              		.loc 1 50 2 view .LVU50
+ 211 0050 0821     		movs	r1, #8
+ 212 0052 2046     		mov	r0, r4
+ 213 0054 FFF7FEFF 		bl	HAL_TIMEx_PWMN_Start
+ 214              	.LVL6:
+  51:APP/Motor/motor_ctrl.c **** 
+  52:APP/Motor/motor_ctrl.c **** }
+ 215              		.loc 1 52 1 is_stmt 0 view .LVU51
+ 216 0058 10BD     		pop	{r4, pc}
+ 217              	.L13:
+ 218 005a 00BF     		.align	2
+ 219              	.L12:
+ 220 005c 00000140 		.word	1073807360
+ 221 0060 00000000 		.word	htim1
+ 222              		.cfi_endproc
+ 223              	.LFE274:
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 6
 
 
- 227              		.section	.bss.Para,"aw",%nobits
- 228              		.align	3
- 231              	Para:
- 232 0000 00000000 		.space	80
- 232      00000000 
- 232      00000000 
- 232      00000000 
- 232      00000000 
- 233              		.global	Motor
- 234              		.section	.bss.Motor,"aw",%nobits
- 235              		.align	2
- 238              	Motor:
- 239 0000 00000000 		.space	40
- 239      00000000 
- 239      00000000 
- 239      00000000 
- 239      00000000 
- 240              		.global	Ipark
- 241              		.section	.bss.Ipark,"aw",%nobits
- 242              		.align	2
- 245              	Ipark:
- 246 0000 00000000 		.space	20
- 246      00000000 
- 246      00000000 
- 246      00000000 
- 246      00000000 
- 247              		.text
- 248              	.Letext0:
- 249              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
- 250              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
- 251              		.file 4 "APP/Motor/motor_ctrl.h"
- 252              		.file 5 "APP/Motor/foc.h"
- 253              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 254              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 255              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 256              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
- 257              		.file 10 "Core/Inc/tim.h"
- 258              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s 			page 7
+ 225              		.global	Svpwm
+ 226              		.section	.bss.Svpwm,"aw",%nobits
+ 227              		.align	2
+ 230              	Svpwm:
+ 231 0000 00000000 		.space	40
+ 231      00000000 
+ 231      00000000 
+ 231      00000000 
+ 231      00000000 
+ 232              		.global	Para
+ 233              		.section	.bss.Para,"aw",%nobits
+ 234              		.align	3
+ 237              	Para:
+ 238 0000 00000000 		.space	80
+ 238      00000000 
+ 238      00000000 
+ 238      00000000 
+ 238      00000000 
+ 239              		.global	Motor
+ 240              		.section	.bss.Motor,"aw",%nobits
+ 241              		.align	2
+ 244              	Motor:
+ 245 0000 00000000 		.space	40
+ 245      00000000 
+ 245      00000000 
+ 245      00000000 
+ 245      00000000 
+ 246              		.global	Ipark
+ 247              		.section	.bss.Ipark,"aw",%nobits
+ 248              		.align	2
+ 251              	Ipark:
+ 252 0000 00000000 		.space	20
+ 252      00000000 
+ 252      00000000 
+ 252      00000000 
+ 252      00000000 
+ 253              		.text
+ 254              	.Letext0:
+ 255              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 256              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 257              		.file 4 "APP/Motor/motor_ctrl.h"
+ 258              		.file 5 "APP/Motor/foc.h"
+ 259              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 260              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 261              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 262              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 263              		.file 10 "Core/Inc/tim.h"
+ 264              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 motor_ctrl.c
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:21     .text.QtMotor:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:27     .text.QtMotor:00000000 QtMotor
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:90     .text.QtMotor:00000040 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:231    .bss.Para:00000000 Para
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:245    .bss.Ipark:00000000 Ipark
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:98     .text.FocSvpwm:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:104    .text.FocSvpwm:00000000 FocSvpwm
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:135    .text.FocSvpwm:00000014 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:224    .bss.Svpwm:00000000 Svpwm
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:141    .text.MotorRun:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:147    .text.MotorRun:00000000 MotorRun
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:214    .text.MotorRun:00000050 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:221    .bss.Svpwm:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:228    .bss.Para:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:238    .bss.Motor:00000000 Motor
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:235    .bss.Motor:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\ccwzCO4z.s:242    .bss.Ipark:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:21     .text.QtMotor:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:27     .text.QtMotor:00000000 QtMotor
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:90     .text.QtMotor:00000040 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:237    .bss.Para:00000000 Para
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:251    .bss.Ipark:00000000 Ipark
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:98     .text.FocSvpwm:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:104    .text.FocSvpwm:00000000 FocSvpwm
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:135    .text.FocSvpwm:00000014 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:230    .bss.Svpwm:00000000 Svpwm
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:141    .text.MotorRun:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:147    .text.MotorRun:00000000 MotorRun
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:220    .text.MotorRun:0000005c $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:227    .bss.Svpwm:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:234    .bss.Para:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:244    .bss.Motor:00000000 Motor
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:241    .bss.Motor:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccPmQ3gO.s:248    .bss.Ipark:00000000 $d
 
 UNDEFINED SYMBOLS
 ualpha_tab

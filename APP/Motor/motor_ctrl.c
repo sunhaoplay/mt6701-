@@ -20,6 +20,7 @@ void QtMotor(void)
 		Para.IfAngle++;
 		if (Para.IfAngle > 359)
 			Para.IfAngle = 0;
+
 	}
 }
 // SVPWM计算
@@ -35,6 +36,11 @@ void MotorRun(void)
 {
 	// Fault_Detection();				//启动前先进行故障检测
 	// 使能三相上下桥 PWM 输出，后续占空比由 SVPWM 更新
+	TIM1->CCR1 = (uint16_t)(TIM1_PERIOD_HALF);
+	TIM1->CCR2 = (uint16_t)(TIM1_PERIOD_HALF);
+	TIM1->CCR3 = (uint16_t)(TIM1_PERIOD_HALF);
+	TIM1->EGR = TIM_EGR_UG;
+    __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
 	TIM1->CCER |= 0x5555;
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
@@ -42,7 +48,5 @@ void MotorRun(void)
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
-	TIM1->CCR1 = (uint16_t)(TIM1_PERIOD_HALF);
-	TIM1->CCR2 = (uint16_t)(TIM1_PERIOD_HALF);
-	TIM1->CCR3 = (uint16_t)(TIM1_PERIOD_HALF);
+
 }

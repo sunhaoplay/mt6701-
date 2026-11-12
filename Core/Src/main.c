@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -29,6 +31,8 @@
 #include "foc.h"
 #include "motor_para.h"
 #include "motor_ctrl.h"
+#include "init.h"
+#include "adc_drv.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,25 +101,13 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM3_Init();
   MX_USART3_UART_Init();
   MX_TIM1_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-/* 上电时先以当前位置为临时零点 */
-__HAL_TIM_SET_COUNTER(&htim3, 0);
-/* 清除可能遗留的 CH3 捕获标志 */
-__HAL_TIM_CLEAR_FLAG(&htim3,TIM_FLAG_CC3 | TIM_FLAG_CC3OF);
-/* 启动 A/B 硬件计数 */
-if (HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL) != HAL_OK)
-{
-    Error_Handler();
-}
-/* 启动 Z 相输入捕获中断 */
-if (HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3) != HAL_OK)
-{
-    Error_Handler();
-}
-  MotorRun(); // 启动电机
+  ALL_Init();
   __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
 if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
 {
@@ -131,7 +123,13 @@ if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
 
     /* USER CODE BEGIN 3 */
     LED_B_Toggle();
-    App_EncoderReport();
+    // App_EncoderReport();
+    // shell_send("U:%fV:%fW:%f\r\n",
+    //              AdcFilPara.CurU,
+    //              AdcFilPara.CurV,
+    //              AdcFilPara.CurW);
+    shell_send("Raw ADC: %d, %d, %d, %d\r\n", ADC_Value[0], ADC_Value[1], ADC_Value[2], ADC_Value[3]);
+    HAL_Delay(200);
   }
   /* USER CODE END 3 */
 }

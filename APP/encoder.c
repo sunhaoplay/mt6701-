@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "tim.h"
 #include "usart.h"
+#include "adc_drv.h"      /* AdcFilPara.OffsetCurU */
 /* 外部共享变量(由 Z 相捕获中断更新) */
 extern volatile uint8_t  encoder_z_found;
 extern volatile uint16_t encoder_z_offset;
@@ -57,18 +58,22 @@ int Encoder_Format(char *buf, size_t size,
                    const EncoderSnapshot_t *snap,
                    const EncoderResult_t *res)
 {
-    return snprintf(
+    // return snprintf(
+    //     buf, size,
+    //     "REF=%u CNT=%u POS=%u ANG=%lu.%02lu Z=%lu ZCAP=%u\r\n",
+    //     (unsigned)snap->referenced,
+    //     (unsigned)snap->raw,
+    //     (unsigned)res->position,
+    //     (unsigned long)(res->angle_x100 / 100U),
+    //     (unsigned long)(res->angle_x100 % 100U),
+    //     (unsigned long)snap->z_events,
+    //     (unsigned)snap->z_capture);
+        return snprintf(
         buf, size,
-        "REF=%u CNT=%u POS=%u ANG=%lu.%02lu Z=%lu ZCAP=%u\r\n",
-        (unsigned)snap->referenced,
-        (unsigned)snap->raw,
-        (unsigned)res->position,
+        "%lu.%02lu\r\n",
         (unsigned long)(res->angle_x100 / 100U),
-        (unsigned long)(res->angle_x100 % 100U),
-        (unsigned long)snap->z_events,
-        (unsigned)snap->z_capture);
+        (unsigned long)(res->angle_x100 % 100U)); 
 }
-
 /* ---------- 入口:主循环只调这个 ---------- */
 void App_EncoderReport(void)
 {
@@ -87,5 +92,5 @@ void App_EncoderReport(void)
                           (uint16_t)len, 100);
     }
 
-    HAL_Delay(200);
+    HAL_Delay(50);
 }

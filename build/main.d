@@ -17,6 +17,9 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
@@ -24,9 +27,9 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h Core/Inc/tim.h \
- Core/Inc/main.h Core/Inc/usart.h Core/Inc/gpio.h APP/encoder.h \
- APP/Motor/foc.h APP/Motor/motor_para.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h Core/Inc/adc.h \
+ Core/Inc/main.h Core/Inc/dma.h Core/Inc/tim.h Core/Inc/usart.h \
+ Core/Inc/gpio.h APP/encoder.h APP/Motor/foc.h APP/Motor/motor_para.h \
  Drivers/CMSIS/DSP/Include/arm_math.h \
  Drivers/CMSIS/DSP/Include/arm_math_types.h \
  Drivers/CMSIS/Include/cmsis_compiler.h \
@@ -57,7 +60,7 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/CMSIS/DSP/Include/dsp/filtering_functions.h \
  Drivers/CMSIS/DSP/Include/dsp/support_functions.h \
  Drivers/CMSIS/DSP/Include/dsp/quaternion_math_functions.h \
- APP/Motor/motor_ctrl.h
+ APP/Motor/motor_ctrl.h APP/init.h APP/Motor/adc_drv.h
 Core/Inc/main.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 Core/Inc/stm32f4xx_hal_conf.h:
@@ -79,6 +82,9 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
@@ -87,8 +93,10 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-Core/Inc/tim.h:
+Core/Inc/adc.h:
 Core/Inc/main.h:
+Core/Inc/dma.h:
+Core/Inc/tim.h:
 Core/Inc/usart.h:
 Core/Inc/gpio.h:
 APP/encoder.h:
@@ -125,3 +133,5 @@ Drivers/CMSIS/DSP/Include/dsp/filtering_functions.h:
 Drivers/CMSIS/DSP/Include/dsp/support_functions.h:
 Drivers/CMSIS/DSP/Include/dsp/quaternion_math_functions.h:
 APP/Motor/motor_ctrl.h:
+APP/init.h:
+APP/Motor/adc_drv.h:
