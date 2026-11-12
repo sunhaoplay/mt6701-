@@ -46,8 +46,10 @@ typedef struct
 } V_Comp, *P_Vcomp;
 
 #define Voltage_Compensation_DEFAULTS {0, 0, 0, 0, 0}
+extern uint16_t Slow_ADC[3];             
+extern volatile uint16_t Inj_Current[2]; 
 
-extern uint16_t ADC_Value[5]; 
+// extern uint16_t ADC_Value[5]; 
 extern uint8_t NTC_ERROR;	  
 
 extern ADC_Sample AdcPara;

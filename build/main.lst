@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
   28:Core/Src/main.c **** /* USER CODE BEGIN Includes */
   29:Core/Src/main.c **** #include <stdio.h>
   30:Core/Src/main.c **** #include "encoder.h"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 2
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 2
 
 
   31:Core/Src/main.c **** #include "foc.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
   85:Core/Src/main.c **** 
   86:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
   87:Core/Src/main.c **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 3
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 3
 
 
   88:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  128:Core/Src/main.c ****     //              AdcFilPara.CurU,
  129:Core/Src/main.c ****     //              AdcFilPara.CurV,
  130:Core/Src/main.c ****     //              AdcFilPara.CurW);
- 131:Core/Src/main.c ****     shell_send("Raw ADC: %d, %d, %d, %d\r\n", ADC_Value[0], ADC_Value[1], ADC_Value[2], ADC_Value[3
+ 131:Core/Src/main.c ****     shell_send("%d, %d, %d, %d\r\n", Inj_Current[0], Inj_Current[1], Slow_ADC[0], Inj_Current[1]);
  132:Core/Src/main.c ****     HAL_Delay(200);
  133:Core/Src/main.c ****   }
  134:Core/Src/main.c ****   /* USER CODE END 3 */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  142:Core/Src/main.c **** {
  143:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
  144:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 4
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 4
 
 
  145:Core/Src/main.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  193:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
  194:Core/Src/main.c ****   __disable_irq();
   35              		.loc 1 194 3 view .LVU1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 5
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 5
 
 
   36              	.LBB4:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
   52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
   53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
   54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 6
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 6
 
 
   55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
  111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 7
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 7
 
 
  112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  166:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
  167:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  168:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 8
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 8
 
 
  169:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __INITIAL_SP
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  223:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  224:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  225:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   No Operation
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 9
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 9
 
 
  226:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details No Operation does nothing. This instruction can be used for code alignment purposes.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  280:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __DMB(void)
  281:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  282:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dmb 0xF":::"memory");
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 10
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 10
 
 
  283:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  337:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  338:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  339:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 11
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 11
 
 
  340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Rotate Right in unsigned value (32 bit)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  394:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  395:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  396:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 12
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 12
 
 
  397:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  451:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
  452:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint16_t at (*ptr)
  453:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 13
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 13
 
 
  454:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint16_t __LDREXH(volatile uint16_t *addr)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  508:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
  509:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  510:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STREXH(uint16_t value, volatile uint16_t *addr)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 14
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 14
 
 
  511:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  565:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("ssat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) : "cc" ); \
  566:Drivers/CMSIS/Include/cmsis_gcc.h ****   __RES; \
  567:Drivers/CMSIS/Include/cmsis_gcc.h ****  })
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 15
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 15
 
 
  568:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  622:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  623:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  624:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 16
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 16
 
 
  625:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   LDRT Unprivileged (16 bit)
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  679:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __STRHT(uint16_t value, volatile uint16_t *ptr)
  680:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  681:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("strht %1, %0" : "=Q" (*ptr) : "r" ((uint32_t)value) );
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 17
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 17
 
 
  682:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  736:Drivers/CMSIS/Include/cmsis_gcc.h ****     const uint32_t max = ((1U << sat) - 1U);
  737:Drivers/CMSIS/Include/cmsis_gcc.h ****     if (val > (int32_t)max)
  738:Drivers/CMSIS/Include/cmsis_gcc.h ****     {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 18
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 18
 
 
  739:Drivers/CMSIS/Include/cmsis_gcc.h ****       return max;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  793:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  794:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
  795:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 19
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 19
 
 
  796:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("lda %0, %1" : "=r" (result) : "Q" (*ptr) : "memory" );
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  850:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  851:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  852:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 20
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 20
 
 
  853:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire Exclusive (16 bit)
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  907:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STLEXH(uint16_t value, volatile uint16_t *ptr)
  908:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  909:Drivers/CMSIS/Include/cmsis_gcc.h ****    uint32_t result;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 21
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 21
 
 
  910:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  962:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
   41              		.loc 2 962 3 view .LVU3
   42              		.syntax unified
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 22
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 22
 
 
   43              	@ 962 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
   90 0012 0393     		str	r3, [sp, #12]
   91 0014 0493     		str	r3, [sp, #16]
   92 0016 0593     		str	r3, [sp, #20]
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 23
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 23
 
 
   93 0018 0693     		str	r3, [sp, #24]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  155:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
  133              		.loc 1 155 3 is_stmt 1 view .LVU26
  155:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 24
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 24
 
 
  134              		.loc 1 155 30 is_stmt 0 view .LVU27
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  171:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  171              		.loc 1 171 3 is_stmt 1 view .LVU45
  171:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 25
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 25
 
 
  172              		.loc 1 171 34 is_stmt 0 view .LVU46
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  214              	.L9:
  215 00a0 00380240 		.word	1073887232
  216 00a4 00700040 		.word	1073770496
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 26
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 26
 
 
  217              		.cfi_endproc
@@ -1506,11 +1506,11 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  220              		.section	.rodata.main.str1.4,"aMS",%progbits,1
  221              		.align	2
  222              	.LC0:
- 223 0000 52617720 		.ascii	"Raw ADC: %d, %d, %d, %d\015\012\000"
- 223      4144433A 
- 223      2025642C 
- 223      2025642C 
- 223      2025642C 
+ 223 0000 25642C20 		.ascii	"%d, %d, %d, %d\015\012\000"
+ 223      25642C20 
+ 223      25642C20 
+ 223      25640D0A 
+ 223      00
  224              		.section	.text.main,"ax",%progbits
  225              		.align	1
  226              		.global	main
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  262              	.LVL10:
  107:Core/Src/main.c ****   MX_ADC1_Init();
  263              		.loc 1 107 3 view .LVU66
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 27
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 27
 
 
  264 001c FFF7FEFF 		bl	MX_TIM1_Init
@@ -1573,7 +1573,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  271              	.LVL13:
  111:Core/Src/main.c **** if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
  272              		.loc 1 111 3 view .LVU69
- 273 0028 0C48     		ldr	r0, .L15
+ 273 0028 0E48     		ldr	r0, .L15
  274 002a 0368     		ldr	r3, [r0]
  275 002c 6FF00102 		mvn	r2, #1
  276 0030 1A61     		str	r2, [r3, #16]
@@ -1585,7 +1585,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  280              	.LVL14:
  112:Core/Src/main.c **** {
  281              		.loc 1 112 4 discriminator 1 view .LVU72
- 282 0036 70B9     		cbnz	r0, .L14
+ 282 0036 90B9     		cbnz	r0, .L14
  283              	.L12:
  120:Core/Src/main.c ****   {
  284              		.loc 1 120 3 is_stmt 1 view .LVU73
@@ -1596,105 +1596,115 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 1
  131:Core/Src/main.c ****     HAL_Delay(200);
  288              		.loc 1 131 5 view .LVU75
  131:Core/Src/main.c ****     HAL_Delay(200);
- 289              		.loc 1 131 56 is_stmt 0 view .LVU76
- 290 003c 0849     		ldr	r1, .L15+4
+ 289              		.loc 1 131 49 is_stmt 0 view .LVU76
+ 290 003c 0A4B     		ldr	r3, .L15+4
+ 291 003e 1988     		ldrh	r1, [r3]
  131:Core/Src/main.c ****     HAL_Delay(200);
- 291              		.loc 1 131 98 view .LVU77
- 292 003e CB88     		ldrh	r3, [r1, #6]
+ 292              		.loc 1 131 65 view .LVU77
+ 293 0040 5A88     		ldrh	r2, [r3, #2]
  131:Core/Src/main.c ****     HAL_Delay(200);
- 293              		.loc 1 131 5 view .LVU78
- 294 0040 0093     		str	r3, [sp]
- 295 0042 8B88     		ldrh	r3, [r1, #4]
- 296 0044 4A88     		ldrh	r2, [r1, #2]
- 297 0046 0988     		ldrh	r1, [r1]
- 298 0048 0648     		ldr	r0, .L15+8
- 299 004a FFF7FEFF 		bl	shell_send
- 300              	.LVL16:
+ 294              		.loc 1 131 94 view .LVU78
+ 295 0042 5B88     		ldrh	r3, [r3, #2]
+ 296 0044 9BB2     		uxth	r3, r3
+ 131:Core/Src/main.c ****     HAL_Delay(200);
+ 297              		.loc 1 131 5 view .LVU79
+ 298 0046 0093     		str	r3, [sp]
+ 299 0048 084B     		ldr	r3, .L15+8
+ 300 004a 1B88     		ldrh	r3, [r3]
+ 301 004c 92B2     		uxth	r2, r2
+ 302 004e 89B2     		uxth	r1, r1
+ 303 0050 0748     		ldr	r0, .L15+12
+ 304 0052 FFF7FEFF 		bl	shell_send
+ 305              	.LVL16:
  132:Core/Src/main.c ****   }
- 301              		.loc 1 132 5 is_stmt 1 discriminator 1 view .LVU79
- 302 004e C820     		movs	r0, #200
- 303 0050 FFF7FEFF 		bl	HAL_Delay
- 304              	.LVL17:
+ 306              		.loc 1 132 5 is_stmt 1 discriminator 1 view .LVU80
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 28
+
+
+ 307 0056 C820     		movs	r0, #200
+ 308 0058 FFF7FEFF 		bl	HAL_Delay
+ 309              	.LVL17:
  120:Core/Src/main.c ****   {
- 305              		.loc 1 120 9 view .LVU80
- 306 0054 F0E7     		b	.L12
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 28
-
-
- 307              	.L14:
+ 310              		.loc 1 120 9 view .LVU81
+ 311 005c ECE7     		b	.L12
+ 312              	.L14:
  114:Core/Src/main.c **** }
- 308              		.loc 1 114 5 view .LVU81
- 309 0056 FFF7FEFF 		bl	Error_Handler
- 310              	.LVL18:
- 311              	.L16:
- 312 005a 00BF     		.align	2
- 313              	.L15:
- 314 005c 00000000 		.word	htim1
- 315 0060 00000000 		.word	ADC_Value
- 316 0064 00000000 		.word	.LC0
- 317              		.cfi_endproc
- 318              	.LFE275:
- 320              		.global	encoder_z_events
- 321              		.section	.bss.encoder_z_events,"aw",%nobits
- 322              		.align	2
- 325              	encoder_z_events:
- 326 0000 00000000 		.space	4
- 327              		.global	encoder_z_last_capture
- 328              		.section	.bss.encoder_z_last_capture,"aw",%nobits
- 329              		.align	1
- 332              	encoder_z_last_capture:
- 333 0000 0000     		.space	2
- 334              		.global	encoder_z_offset
- 335              		.section	.bss.encoder_z_offset,"aw",%nobits
- 336              		.align	1
- 339              	encoder_z_offset:
- 340 0000 0000     		.space	2
- 341              		.global	encoder_z_found
- 342              		.section	.bss.encoder_z_found,"aw",%nobits
- 345              	encoder_z_found:
- 346 0000 00       		.space	1
- 347              		.text
- 348              	.Letext0:
- 349              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
- 350              		.file 4 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
- 351              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 352              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 353              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
- 354              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
- 355              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 356              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
- 357              		.file 11 "Core/Inc/main.h"
- 358              		.file 12 "Core/Inc/tim.h"
- 359              		.file 13 "APP/Motor/adc_drv.h"
- 360              		.file 14 "Core/Inc/usart.h"
- 361              		.file 15 "Core/Inc/gpio.h"
- 362              		.file 16 "APP/init.h"
- 363              		.file 17 "Core/Inc/adc.h"
- 364              		.file 18 "Core/Inc/dma.h"
- 365              		.file 19 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 366              		.file 20 "<built-in>"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s 			page 29
+ 313              		.loc 1 114 5 view .LVU82
+ 314 005e FFF7FEFF 		bl	Error_Handler
+ 315              	.LVL18:
+ 316              	.L16:
+ 317 0062 00BF     		.align	2
+ 318              	.L15:
+ 319 0064 00000000 		.word	htim1
+ 320 0068 00000000 		.word	Inj_Current
+ 321 006c 00000000 		.word	Slow_ADC
+ 322 0070 00000000 		.word	.LC0
+ 323              		.cfi_endproc
+ 324              	.LFE275:
+ 326              		.global	encoder_z_events
+ 327              		.section	.bss.encoder_z_events,"aw",%nobits
+ 328              		.align	2
+ 331              	encoder_z_events:
+ 332 0000 00000000 		.space	4
+ 333              		.global	encoder_z_last_capture
+ 334              		.section	.bss.encoder_z_last_capture,"aw",%nobits
+ 335              		.align	1
+ 338              	encoder_z_last_capture:
+ 339 0000 0000     		.space	2
+ 340              		.global	encoder_z_offset
+ 341              		.section	.bss.encoder_z_offset,"aw",%nobits
+ 342              		.align	1
+ 345              	encoder_z_offset:
+ 346 0000 0000     		.space	2
+ 347              		.global	encoder_z_found
+ 348              		.section	.bss.encoder_z_found,"aw",%nobits
+ 351              	encoder_z_found:
+ 352 0000 00       		.space	1
+ 353              		.text
+ 354              	.Letext0:
+ 355              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 356              		.file 4 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
+ 357              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 358              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 359              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 360              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 361              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 362              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 363              		.file 11 "Core/Inc/main.h"
+ 364              		.file 12 "Core/Inc/tim.h"
+ 365              		.file 13 "APP/Motor/adc_drv.h"
+ 366              		.file 14 "Core/Inc/usart.h"
+ 367              		.file 15 "Core/Inc/gpio.h"
+ 368              		.file 16 "APP/init.h"
+ 369              		.file 17 "Core/Inc/adc.h"
+ 370              		.file 18 "Core/Inc/dma.h"
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 29
+
+
+ 371              		.file 19 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 372              		.file 20 "<built-in>"
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:21     .text.Error_Handler:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:27     .text.Error_Handler:00000000 Error_Handler
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:59     .text.SystemClock_Config:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:65     .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:215    .text.SystemClock_Config:000000a0 $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:221    .rodata.main.str1.4:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:225    .text.main:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:231    .text.main:00000000 main
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:314    .text.main:0000005c $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:325    .bss.encoder_z_events:00000000 encoder_z_events
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:322    .bss.encoder_z_events:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:332    .bss.encoder_z_last_capture:00000000 encoder_z_last_capture
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:329    .bss.encoder_z_last_capture:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:339    .bss.encoder_z_offset:00000000 encoder_z_offset
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:336    .bss.encoder_z_offset:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:345    .bss.encoder_z_found:00000000 encoder_z_found
-C:\Users\sunhao\AppData\Local\Temp\cct4LWtH.s:346    .bss.encoder_z_found:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:21     .text.Error_Handler:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:27     .text.Error_Handler:00000000 Error_Handler
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:59     .text.SystemClock_Config:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:65     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:215    .text.SystemClock_Config:000000a0 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:221    .rodata.main.str1.4:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:225    .text.main:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:231    .text.main:00000000 main
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:319    .text.main:00000064 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:331    .bss.encoder_z_events:00000000 encoder_z_events
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:328    .bss.encoder_z_events:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:338    .bss.encoder_z_last_capture:00000000 encoder_z_last_capture
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:335    .bss.encoder_z_last_capture:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:345    .bss.encoder_z_offset:00000000 encoder_z_offset
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:342    .bss.encoder_z_offset:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:351    .bss.encoder_z_found:00000000 encoder_z_found
+C:\Users\sunhao\AppData\Local\Temp\ccqzKqnw.s:352    .bss.encoder_z_found:00000000 $d
 
 UNDEFINED SYMBOLS
 memset
@@ -1713,4 +1723,5 @@ LED_B_Toggle
 shell_send
 HAL_Delay
 htim1
-ADC_Value
+Inj_Current
+Slow_ADC

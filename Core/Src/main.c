@@ -128,7 +128,7 @@ if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
     //              AdcFilPara.CurU,
     //              AdcFilPara.CurV,
     //              AdcFilPara.CurW);
-    shell_send("Raw ADC: %d, %d, %d, %d\r\n", ADC_Value[0], ADC_Value[1], ADC_Value[2], ADC_Value[3]);
+    shell_send("%d, %d, %d, %d\r\n", Inj_Current[0], Inj_Current[1], Slow_ADC[0], Inj_Current[1]);
     HAL_Delay(200);
   }
   /* USER CODE END 3 */
