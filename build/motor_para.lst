@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
   27:APP/Motor/motor_para.c **** 	-0.433013f, -0.428584f, -0.424024f, -0.419335f, -0.414519f, -0.409576f, -0.404509f, -0.399318f, -0
   28:APP/Motor/motor_para.c **** 	-0.383022f, -0.377355f, -0.371572f, -0.365677f, -0.359670f, -0.353553f, -0.347329f, -0.340999f, -0
   29:APP/Motor/motor_para.c **** 	-0.321394f, -0.314660f, -0.307831f, -0.300908f, -0.293893f, -0.286788f, -0.279596f, -0.272320f, -0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 2
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 2
 
 
   30:APP/Motor/motor_para.c **** 	-0.250000f, -0.242405f, -0.234736f, -0.226995f, -0.219186f, -0.211309f, -0.203368f, -0.195366f, -0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
   84:APP/Motor/motor_para.c **** 	0.019567f, 0.021523f, 0.023479f, 0.025435f, 0.027390f, 0.029346f, 0.031301f, 0.033256f, 0.035210f,
   85:APP/Motor/motor_para.c **** 	0.039119f, 0.041073f, 0.043026f, 0.044979f, 0.046932f, 0.048885f, 0.050837f, 0.052788f, 0.054740f,
   86:APP/Motor/motor_para.c **** 	0.058641f, 0.060591f, 0.062541f, 0.064490f, 0.066438f, 0.068386f, 0.070334f, 0.072281f, 0.074227f,
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 3
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 3
 
 
   87:APP/Motor/motor_para.c **** 	0.078119f, 0.080063f, 0.082007f, 0.083951f, 0.085894f, 0.087836f, 0.089778f, 0.091718f, 0.093659f,
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
   35              		.loc 1 137 1 is_stmt 0 view .LVU1
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 4
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 4
 
 
   36 0000 B0EE407A 		vmov.f32	s14, s0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  148:APP/Motor/motor_para.c **** 	{
  149:APP/Motor/motor_para.c **** 		idx = 512 * k;
  150:APP/Motor/motor_para.c **** 		atan_val = atanTab[idx];
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 5
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 5
 
 
  151:APP/Motor/motor_para.c **** 	}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  152:APP/Motor/motor_para.c **** 	{
  107              		.loc 1 152 7 is_stmt 1 view .LVU27
  152:APP/Motor/motor_para.c **** 	{
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 6
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 6
 
 
  108              		.loc 1 152 10 is_stmt 0 view .LVU28
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  149              	.LVL14:
  160:APP/Motor/motor_para.c **** 	}
  150              		.loc 1 160 12 view .LVU42
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 7
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 7
 
 
  151 00c4 37EEE60A 		vsub.f32	s0, s15, s13
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  192 00fc 02EB8303 		add	r3, r2, r3, lsl #2
  193              	.LVL24:
  155:APP/Motor/motor_para.c **** 	}
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 8
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 8
 
 
  194              		.loc 1 155 22 view .LVU56
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  176:APP/Motor/motor_para.c **** 
  177:APP/Motor/motor_para.c **** float my_atan(float x)
  178:APP/Motor/motor_para.c **** {
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 9
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 9
 
 
  241              		.loc 1 178 1 is_stmt 1 view -0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  187:APP/Motor/motor_para.c **** 	else if (x >= 0 && x <= 1)
  287              		.loc 1 187 7 is_stmt 1 view .LVU82
  288              		.loc 1 187 10 is_stmt 0 view .LVU83
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 10
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 10
 
 
  289 0040 B5EEC00A 		vcmpe.f32	s0, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  330 0098 02EB8303 		add	r3, r2, r3, lsl #2
  331              	.LVL39:
  332              		.loc 1 200 22 view .LVU97
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 11
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 11
 
 
  333 009c 93ED000A 		vldr.32	s0, [r3]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  374              	.LVL49:
  194:APP/Motor/motor_para.c **** 		atan_val = -atanTab[idx];
  375              		.loc 1 194 7 view .LVU112
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 12
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 12
 
 
  376 00d4 BCEEC00A 		vcvt.u32.f32	s0, s0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  210:APP/Motor/motor_para.c **** 	else if (x < 0)
  422              		.loc 1 210 7 is_stmt 1 view .LVU121
  423              		.loc 1 210 10 is_stmt 0 view .LVU122
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 13
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 13
 
 
  424 000a 01D4     		bmi	.L55
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  466              		.loc 1 220 3 is_stmt 1 view .LVU131
  220:APP/Motor/motor_para.c **** }
  467              		.loc 1 220 10 is_stmt 0 view .LVU132
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 14
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 14
 
 
  468 000c B1EE400A 		vneg.f32	s0, s0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  514              	.LVL62:
  225:APP/Motor/motor_para.c **** 		return 1;
  515              		.loc 1 225 10 view .LVU145
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 15
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 15
 
 
  516 0026 7047     		bx	lr
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  563              		.thumb
  564              		.thumb_func
  566              	MotorInit:
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 16
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 16
 
 
  567              	.LFB145:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  590 0018 535D403C 		.word	1010851155
  591 001c 946D603C 		.word	1012952468
  592 0020 D13C803C 		.word	1015037137
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 17
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 17
 
 
  593 0024 F244903C 		.word	1016087794
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  647 00fc E239FB3D 		.word	1039874530
  648 0100 302CFF3D 		.word	1040133168
  649 0104 FC8E013E 		.word	1040289532
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 18
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 18
 
 
  650 0108 9C87033E 		.word	1040418716
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  704 01e0 90306C3E 		.word	1047277712
  705 01e4 94166E3E 		.word	1047402132
  706 01e8 11FC6F3E 		.word	1047526417
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 19
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 19
 
 
  707 01ec 4CE1713E 		.word	1047650636
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  761 02c4 6FB9AA3E 		.word	1051375983
  762 02c8 499EAB3E 		.word	1051434569
  763 02cc E082AC3E 		.word	1051493088
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 20
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 20
 
 
  764 02d0 3467AD3E 		.word	1051551540
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  818 03a8 98DDDB3E 		.word	1054596504
  819 03ac 89B1DC3E 		.word	1054650761
  820 03b0 1685DD3E 		.word	1054704918
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 21
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 21
 
 
  821 03b4 6058DE3E 		.word	1054759008
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  875 048c 0586043F 		.word	1057261061
  876 0490 C1E6043F 		.word	1057285825
  877 0494 5A47053F 		.word	1057310554
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 22
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 22
 
 
  878 0498 D2A7053F 		.word	1057335250
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  932 0570 240E193F 		.word	1058606628
  933 0574 B265193F 		.word	1058629042
  934 0578 0EBD193F 		.word	1058651406
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 23
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 23
 
 
  935 057c 49141A3F 		.word	1058673737
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  989 0654 92912B3F 		.word	1059819922
  990 0658 48E02B3F 		.word	1059840072
  991 065c CB2E2C3F 		.word	1059860171
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 24
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 24
 
 
  992 0660 3D7D2C3F 		.word	1059880253
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1046 0738 452E3C3F 		.word	1060908613
  1047 073c C9743C3F 		.word	1060926665
  1048 0740 1BBB3C3F 		.word	1060944667
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 25
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 25
 
 
  1049 0744 5C013D3F 		.word	1060962652
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1105 000c 465ED63C 		.word	1020681798
  1106 0010 3CDC0E3D 		.word	1024384060
  1107 0014 D87E323D 		.word	1026719448
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 26
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 26
 
 
  1108 0018 C712563D 		.word	1029051079
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1162 00f0 E1B3DD3E 		.word	1054716897
  1163 00f4 19E7DF3E 		.word	1054861081
  1164 00f8 E108E23E 		.word	1055000801
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 27
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 27
 
 
  1165 00fc F818E43E 		.word	1055135992
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1219 01d4 F818E43E 		.word	1055135992
  1220 01d8 E108E23E 		.word	1055000801
  1221 01dc 19E7DF3E 		.word	1054861081
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 28
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 28
 
 
  1222 01e0 E1B3DD3E 		.word	1054716897
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1276 02b8 C712563D 		.word	1029051079
  1277 02bc D87E323D 		.word	1026719448
  1278 02c0 3CDC0E3D 		.word	1024384060
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 29
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 29
 
 
  1279 02c4 465ED63C 		.word	1020681798
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1333 039c 0AF3C6BE 		.word	-1094257910
  1334 03a0 06BBC9BE 		.word	-1094075642
  1335 03a4 6973CCBE 		.word	-1093897367
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 30
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 30
 
 
  1336 03a8 CE1BCFBE 		.word	-1093723186
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1390 0480 6878F3BE 		.word	-1091340184
  1391 0484 780DF2BE 		.word	-1091433096
  1392 0488 A88FF0BE 		.word	-1091530840
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 31
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 31
 
 
  1393 048c 19FFEEBE 		.word	-1091633383
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1447 0564 0E8404BE 		.word	-1107000306
  1448 0568 67BAF7BD 		.word	-1107838361
  1449 056c D159E6BD 		.word	-1108977199
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 32
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 32
 
 
  1450 0570 E2E6D4BD 		.word	-1110120734
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1506 0098 06BBC93E 		.word	1053408006
  1507 009c 0AF3C63E 		.word	1053225738
  1508 00a0 761BC43E 		.word	1053039478
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 33
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 33
 
 
  1509 00a4 AD34C13E 		.word	1052849325
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1563 017c D87E32BD 		.word	-1120764200
  1564 0180 C71256BD 		.word	-1118432569
  1565 0184 FB9679BD 		.word	-1116104965
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 34
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 34
 
 
  1566 0188 A1838EBD 		.word	-1114733663
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1620 0260 E108E2BE 		.word	-1092482847
  1621 0264 F818E4BE 		.word	-1092347656
  1622 0268 5D17E6BE 		.word	-1092216995
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 35
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 35
 
 
  1623 026c CD03E8BE 		.word	-1092090931
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1677 0344 19E7DFBE 		.word	-1092622567
  1678 0348 E1B3DDBE 		.word	-1092766751
  1679 034c 5D6FDBBE 		.word	-1092915363
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 36
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 36
 
 
  1680 0350 AC19D9BE 		.word	-1093068372
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1734 0428 3CDC0EBD 		.word	-1123099588
  1735 042c 465ED6BC 		.word	-1126801850
  1736 0430 4DF38EBC 		.word	-1131482291
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 37
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 37
 
 
  1737 0434 7FF70EBC 		.word	-1139869825
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1791 050c 6973CC3E 		.word	1053586281
  1792 0510 CE1BCF3E 		.word	1053760462
  1793 0514 F2B3D13E 		.word	1053930482
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 38
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 38
 
 
  1794 0518 D63BD43E 		.word	1054096342
@@ -2259,32 +2259,32 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 1
  1829              	.Letext0:
  1830              		.file 2 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
  1831              		.file 3 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s 			page 39
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 motor_para.c
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:21     .text.my_atan2:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:27     .text.my_atan2:00000000 my_atan2
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:223    .text.my_atan2:00000120 $d
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:583    .rodata.atanTab:00000000 atanTab
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:232    .text.my_atan:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:238    .text.my_atan:00000000 my_atan
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:396    .text.my_atan:000000f0 $d
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:403    .text.Sign:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:409    .text.Sign:00000000 Sign
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:441    .text.my_abs:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:447    .text.my_abs:00000000 my_abs
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:476    .text.Sat:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:482    .text.Sat:00000000 Sat
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:528    .text.my_max:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:534    .text.my_max:00000000 my_max
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:560    .text.MotorInit:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:566    .text.MotorInit:00000000 MotorInit
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:580    .rodata.atanTab:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:1101   .rodata.ubeta_tab:00000000 ubeta_tab
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:1098   .rodata.ubeta_tab:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:1467   .rodata.ualpha_tab:00000000 ualpha_tab
-C:\Users\sunhao\AppData\Local\Temp\ccNh3B5z.s:1464   .rodata.ualpha_tab:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:21     .text.my_atan2:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:27     .text.my_atan2:00000000 my_atan2
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:223    .text.my_atan2:00000120 $d
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:583    .rodata.atanTab:00000000 atanTab
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:232    .text.my_atan:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:238    .text.my_atan:00000000 my_atan
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:396    .text.my_atan:000000f0 $d
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:403    .text.Sign:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:409    .text.Sign:00000000 Sign
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:441    .text.my_abs:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:447    .text.my_abs:00000000 my_abs
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:476    .text.Sat:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:482    .text.Sat:00000000 Sat
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:528    .text.my_max:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:534    .text.my_max:00000000 my_max
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:560    .text.MotorInit:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:566    .text.MotorInit:00000000 MotorInit
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:580    .rodata.atanTab:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:1101   .rodata.ubeta_tab:00000000 ubeta_tab
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:1098   .rodata.ubeta_tab:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:1467   .rodata.ualpha_tab:00000000 ualpha_tab
+C:\Users\sunhao\AppData\Local\Temp\ccCwhtv1.s:1464   .rodata.ualpha_tab:00000000 $d
 
 NO UNDEFINED SYMBOLS

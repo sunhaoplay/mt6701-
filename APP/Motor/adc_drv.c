@@ -83,9 +83,6 @@ void GetAdc(void)
 	AdcSample();
 	AdcSampleDeal();
 }
-// 存放注入组相电流的全局变量，一定要加 volatile
-volatile uint16_t Inj_Current[2]; 
-
 void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     if (hadc->Instance == ADC1)

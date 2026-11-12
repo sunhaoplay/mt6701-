@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
   27:APP/encoder.c **** void Encoder_Snapshot(EncoderSnapshot_t *snap)
   28:APP/encoder.c **** {
   30              		.loc 1 28 1 view -0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 2
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 2
 
 
   31              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
   46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
   47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
   48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 3
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 3
 
 
   49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
  104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
  105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 4
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 4
 
 
  106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  160:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
  161:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
  162:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 5
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 5
 
 
  163:Drivers/CMSIS/Include/cmsis_gcc.h ****   _start();
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  217:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
  218:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  219:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 6
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 6
 
 
  220:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+r" (r)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  274:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  275:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  276:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Memory Barrier
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 7
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 7
 
 
  277:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Ensures the apparent order of the explicit memory operations before
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  331:Drivers/CMSIS/Include/cmsis_gcc.h ****   int16_t result;
  332:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  333:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM ("revsh %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 8
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 8
 
 
  334:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  388:Drivers/CMSIS/Include/cmsis_gcc.h ****     result |= value & 1U;
  389:Drivers/CMSIS/Include/cmsis_gcc.h ****     s--;
  390:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 9
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 9
 
 
  391:Drivers/CMSIS/Include/cmsis_gcc.h ****   result <<= s;                        /* shift when v's highest bits are zero */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  445:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  446:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  447:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 10
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 10
 
 
  448:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  502:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  503:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STR Exclusive (16 bit)
  504:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a exclusive STR instruction for 16 bit values.
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 11
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 11
 
 
  505:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  559:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             Saturated value
  560:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  561:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __SSAT(ARG1, ARG2) \
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 12
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 12
 
 
  562:Drivers/CMSIS/Include/cmsis_gcc.h **** __extension__ \
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  616:Drivers/CMSIS/Include/cmsis_gcc.h ****        accepted by assembler. So has to use following less efficient pattern.
  617:Drivers/CMSIS/Include/cmsis_gcc.h ****     */
  618:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrbt %0, [%1]" : "=r" (result) : "r" (ptr) : "memory" );
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 13
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 13
 
 
  619:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  673:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  674:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STRT Unprivileged (16 bit)
  675:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a Unprivileged STRT instruction for 16 bit values.
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 14
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 14
 
 
  676:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  730:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             Saturated value
  731:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  732:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __USAT(int32_t val, uint32_t sat)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 15
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 15
 
 
  733:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  787:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire (32 bit)
  788:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a LDA instruction for 32 bit values.
  789:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 16
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 16
 
 
  790:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint32_t at (*ptr)
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  844:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  845:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
  846:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 17
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 17
 
 
  847:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldaexb %0, %1" : "=r" (result) : "Q" (*ptr) : "memory" );
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  901:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a STLH exclusive instruction for 16 bit values.
  902:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
  903:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 18
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 18
 
 
  904:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          0  Function succeeded
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  958:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  959:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  960:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 19
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 19
 
 
  961:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
 1015:Drivers/CMSIS/Include/cmsis_gcc.h **** {
 1016:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
 1017:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ISB();
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 20
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 20
 
 
 1018:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
 1072:Drivers/CMSIS/Include/cmsis_gcc.h **** 
 1073:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
 1074:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 21
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 21
 
 
 1075:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
 1129:Drivers/CMSIS/Include/cmsis_gcc.h **** }
 1130:Drivers/CMSIS/Include/cmsis_gcc.h **** 
 1131:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 22
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 22
 
 
 1132:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
 1186:Drivers/CMSIS/Include/cmsis_gcc.h **** 
 1187:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
 1188:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 23
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 23
 
 
 1189:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
   32:APP/encoder.c ****     snap->referenced = encoder_z_found;
   68              		.loc 1 32 5 view .LVU10
   69              		.loc 1 32 22 is_stmt 0 view .LVU11
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 24
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 24
 
 
   70 0006 0C4B     		ldr	r3, .L4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
 1222:Drivers/CMSIS/Include/cmsis_gcc.h **** 
 1223:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) );
 1224:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 25
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 25
 
 
 1225:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
   42:APP/encoder.c **** void Encoder_Calc(const EncoderSnapshot_t *snap, EncoderResult_t *res)
   43:APP/encoder.c **** {
  146              		.loc 1 43 1 is_stmt 1 view -0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 26
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 26
 
 
  147              		.cfi_startproc
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  191              		.loc 1 53 25 is_stmt 0 view .LVU50
  192 0022 07EE903A 		vmov	s15, r3	@ int
  193 0026 F8EEE77A 		vcvt.f32.s32	s15, s15
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 27
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 27
 
 
  194              		.loc 1 53 36 view .LVU51
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
   59:APP/encoder.c ****                    const EncoderResult_t *res)
   60:APP/encoder.c **** {
  240              		.loc 1 60 1 is_stmt 1 view -0
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 28
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 28
 
 
  241              		.cfi_startproc
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  277 0024 1F85EB51 		.word	1374389535
  278 0028 00000000 		.word	.LC0
  279              		.cfi_endproc
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 29
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 29
 
 
  280              	.LFE244:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  324 001e FFF7FEFF 		bl	Encoder_Format
  325              	.LVL19:
   89:APP/encoder.c ****     if (len > 0 && (size_t)len < sizeof(tx_buf))
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 30
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 30
 
 
  326              		.loc 1 89 5 is_stmt 1 view .LVU74
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  372      00000000 
  372      00000000 
  372      00000000 
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 31
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 31
 
 
  373              		.global	encoder_angle_deg
@@ -1832,32 +1832,32 @@ ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 1
  407              		.file 14 "Core/Inc/usart.h"
  408              		.file 15 "C:\\Users\\sunhao\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\
  409              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s 			page 32
+ARM GAS  C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 encoder.c
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:21     .text.Encoder_Snapshot:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:27     .text.Encoder_Snapshot:00000000 Encoder_Snapshot
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:128    .text.Encoder_Snapshot:00000038 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:137    .text.Encoder_Calc:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:143    .text.Encoder_Calc:00000000 Encoder_Calc
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:218    .text.Encoder_Calc:00000048 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:392    .bss.encoder_raw_count:00000000 encoder_raw_count
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:385    .bss.encoder_position:00000000 encoder_position
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:378    .bss.encoder_angle_deg:00000000 encoder_angle_deg
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:227    .rodata.Encoder_Format.str1.4:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:231    .text.Encoder_Format:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:237    .text.Encoder_Format:00000000 Encoder_Format
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:277    .text.Encoder_Format:00000024 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:283    .text.App_EncoderReport:00000000 $t
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:289    .text.App_EncoderReport:00000000 App_EncoderReport
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:362    .text.App_EncoderReport:00000040 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:371    .bss.tx_buf.0:00000000 tx_buf.0
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:368    .bss.tx_buf.0:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:375    .bss.encoder_angle_deg:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:382    .bss.encoder_position:00000000 $d
-C:\Users\sunhao\AppData\Local\Temp\cc69j9B8.s:389    .bss.encoder_raw_count:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:21     .text.Encoder_Snapshot:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:27     .text.Encoder_Snapshot:00000000 Encoder_Snapshot
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:128    .text.Encoder_Snapshot:00000038 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:137    .text.Encoder_Calc:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:143    .text.Encoder_Calc:00000000 Encoder_Calc
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:218    .text.Encoder_Calc:00000048 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:392    .bss.encoder_raw_count:00000000 encoder_raw_count
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:385    .bss.encoder_position:00000000 encoder_position
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:378    .bss.encoder_angle_deg:00000000 encoder_angle_deg
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:227    .rodata.Encoder_Format.str1.4:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:231    .text.Encoder_Format:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:237    .text.Encoder_Format:00000000 Encoder_Format
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:277    .text.Encoder_Format:00000024 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:283    .text.App_EncoderReport:00000000 $t
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:289    .text.App_EncoderReport:00000000 App_EncoderReport
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:362    .text.App_EncoderReport:00000040 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:371    .bss.tx_buf.0:00000000 tx_buf.0
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:368    .bss.tx_buf.0:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:375    .bss.encoder_angle_deg:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:382    .bss.encoder_position:00000000 $d
+C:\Users\sunhao\AppData\Local\Temp\ccGgzCJj.s:389    .bss.encoder_raw_count:00000000 $d
 
 UNDEFINED SYMBOLS
 encoder_z_found

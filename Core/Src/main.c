@@ -128,8 +128,11 @@ if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
     //              AdcFilPara.CurU,
     //              AdcFilPara.CurV,
     //              AdcFilPara.CurW);
-    shell_send("%d, %d, %d, %d\r\n", Inj_Current[0], Inj_Current[1], Slow_ADC[0], Inj_Current[1]);
-    HAL_Delay(200);
+ shell_send("%.3f %.3f %.3f %d\r\n",
+           (double)AdcFilPara.CurU,
+           (double)AdcFilPara.CurV,
+           (double)AdcFilPara.CurW,
+           (int)AdcFilPara.Temp);
   }
   /* USER CODE END 3 */
 }
