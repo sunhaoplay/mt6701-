@@ -28,19 +28,7 @@ typedef struct
 	float Qs;	 
 } IPARK, *M_IPARK;
 
-typedef struct
-{
-    float M_theta;             
-    float E_theta;             
-    float speed_M_rpm;         
-    float speed_E_rpm;         
-    volatile uint8_t CtrlMode; 
-    float Rs;                  
-    float Ls;                  
-    float Ib;                  
-    float Vb;                  
-    uint8_t P;                 
-} motor_p;
+
 
 #define CLARKE_DEFAULTS {0, 0, 0, 0, 0} 
 #define PARK_DEFAULTS {0, 0, 0, 0, 0}	

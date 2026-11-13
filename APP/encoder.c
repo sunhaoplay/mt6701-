@@ -4,6 +4,8 @@
 #include "tim.h"
 #include "usart.h"
 #include "adc_drv.h"      /* AdcFilPara.OffsetCurU */
+#include "motor_ctrl.h"  /* Motor.E_theta, Motor.P */
+#include "motor_para.h"  /* ENCODE_PULSE, PIX2 */
 /* 外部共享变量(由 Z 相捕获中断更新) */
 extern volatile uint8_t  encoder_z_found;
 extern volatile uint16_t encoder_z_offset;
@@ -58,16 +60,6 @@ int Encoder_Format(char *buf, size_t size,
                    const EncoderSnapshot_t *snap,
                    const EncoderResult_t *res)
 {
-    // return snprintf(
-    //     buf, size,
-    //     "REF=%u CNT=%u POS=%u ANG=%lu.%02lu Z=%lu ZCAP=%u\r\n",
-    //     (unsigned)snap->referenced,
-    //     (unsigned)snap->raw,
-    //     (unsigned)res->position,
-    //     (unsigned long)(res->angle_x100 / 100U),
-    //     (unsigned long)(res->angle_x100 % 100U),
-    //     (unsigned long)snap->z_events,
-    //     (unsigned)snap->z_capture);
         return snprintf(
         buf, size,
         "%lu.%02lu\r\n",
@@ -93,4 +85,19 @@ void App_EncoderReport(void)
     }
 
     HAL_Delay(50);
+}
+/**
+ * @brief 把编码器机械位置换算为一个周期内的转子电角度。
+ *
+ * theta_e=CNT/ENCODE_PULSE*2PI*P。乘极对数 P 后可能跨越多个电周期，
+ * while 循环将结果回绕到 (0,2PI]，供 Park 变换使用。
+ */
+void MotorAngleGet(void)
+{
+	Motor.E_theta = (float)TIM3->CNT / ENCODE_PULSE * PIX2 * Motor.P; // CNT/16384(编码器转一圈计数值)*2PI*极对数
+
+	while (Motor.E_theta >= PIX2)
+		Motor.E_theta -= PIX2;
+	while (Motor.E_theta <= 0.0f)
+		Motor.E_theta += PIX2;
 }

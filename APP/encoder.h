@@ -23,4 +23,5 @@ void Encoder_Snapshot(EncoderSnapshot_t *snap);
 void Encoder_Calc(const EncoderSnapshot_t *snap, EncoderResult_t *res);
 int  Encoder_Format(char *buf, size_t size,const EncoderSnapshot_t *snap,const EncoderResult_t *res);
 void App_EncoderReport(void);   /* 主循环调用入口 */
+void MotorAngleGet(void);
 #endif // ENCODER_H

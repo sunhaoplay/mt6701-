@@ -23,7 +23,7 @@ if (HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL) != HAL_OK)
     Error_Handler();
 }
     // 1. 启动规则组 DMA (慢速信号，传 3 个)
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)Slow_ADC, 3);
+    HAL_ADC_Start_DMA(&hadc2, (uint32_t *)Slow_ADC, 3);
 
     // 2. 开启注入组的转换和中断 (注意：这里只是挂起等待触发)
     HAL_ADCEx_InjectedStart_IT(&hadc1);
@@ -32,10 +32,13 @@ if (HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL) != HAL_OK)
 
     HAL_Delay(10); // 等待 ADC 稳定  
     AdcSampleOffset(); // 采集 ADC 偏置
+    MotorStop();
+    PositionToZeroDouble();// /* 启动 Z 相输入捕获中断 */
+    MotorRun(); // 启动电机
     g_motor_state = 1;
-/* 启动 Z 相输入捕获中断 */
-if (HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3) != HAL_OK)
-{
-    Error_Handler();
-}
+    // MotorStop(); // 停止电机
+// if (HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3) != HAL_OK)
+// {
+//     Error_Handler();
+// }
 }

@@ -64,9 +64,10 @@ static void AdcSample(void)
 	AdcPara.CurV = -AdcPara.CurU - AdcPara.CurW;
 
     // 2. 读取慢速信号 (用 Slow_ADC 替换原来的 ADC_Value)
-	AdcPara.Vbus = (float)Slow_ADC[0] * VBUS_GAIN;
-	AdcPara.Temp = (float)Slow_ADC[1];
+	AdcPara.Temp = (float)Slow_ADC[0];
+	AdcPara.Vbus = (float)Slow_ADC[1] * VBUS_GAIN;
 	AdcPara.Vr   = (float)Slow_ADC[2];
+	// AdcPara.Vr   = Slow_ADC[2];
 }
 
 static void AdcSampleDeal(void)
@@ -100,5 +101,9 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc)
         // 3. 执行电机控制逻辑
         QtMotor();
         FocSvpwm();
+	    // AxisDq();
+		// Vrsetcurrent();
+		// CurCloseloop(Para.CurRef, Motor.E_theta);
+		// FocSvpwm(); // SVPWM计算
     }
 }

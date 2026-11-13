@@ -57,7 +57,8 @@ build/motor_ctrl.o: APP/Motor/motor_ctrl.c APP/Motor/motor_ctrl.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h APP/Motor/pid.h \
+ APP/Motor/adc_drv.h Core/Inc/main.h APP/encoder.h
 APP/Motor/motor_ctrl.h:
 APP/Motor/motor_para.h:
 Drivers/CMSIS/DSP/Include/arm_math.h:
@@ -124,3 +125,7 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+APP/Motor/pid.h:
+APP/Motor/adc_drv.h:
+Core/Inc/main.h:
+APP/encoder.h:

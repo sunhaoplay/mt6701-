@@ -106,6 +106,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM1_Init();
   MX_ADC1_Init();
+  MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
   ALL_Init();
   __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
@@ -124,15 +125,9 @@ if (HAL_TIM_Base_Start_IT(&htim1) != HAL_OK)
     /* USER CODE BEGIN 3 */
     LED_B_Toggle();
     // App_EncoderReport();
-    // shell_send("U:%fV:%fW:%f\r\n",
-    //              AdcFilPara.CurU,
-    //              AdcFilPara.CurV,
-    //              AdcFilPara.CurW);
- shell_send("%.3f %.3f %.3f %d\r\n",
-           (double)AdcFilPara.CurU,
-           (double)AdcFilPara.CurV,
-           (double)AdcFilPara.CurW,
-           (int)AdcFilPara.Temp);
+    //  shell_send("%d %d %d %d\r\n",AdcFilPara.OffsetCurU,AdcFilPara.OffsetCurW,Inj_Current[0],Inj_Current[1]);
+    shell_send("%.3f,%.3f,%.3f,%.3f\r\n",AdcFilPara.CurU,AdcFilPara.CurV,AdcFilPara.CurW,AdcPara.Vr);
+  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

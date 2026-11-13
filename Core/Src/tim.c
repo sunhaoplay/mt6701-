@@ -71,7 +71,7 @@ void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_PWM2;
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
   sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
@@ -93,7 +93,7 @@ void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 100;
+  sBreakDeadTimeConfig.DeadTime =0;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
@@ -310,22 +310,22 @@ void HAL_TIM_IC_MspDeInit(TIM_HandleTypeDef* tim_icHandle)
 /* USER CODE BEGIN 1 */
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-    if ((htim->Instance == TIM3) &&
-        (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3))
-    {
-        /* CCR3 保存的是 Z 边沿到来时的编码器计数 */
-        uint16_t captured = (uint16_t) HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3);
+    // if ((htim->Instance == TIM3) &&
+    //     (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3))
+    // {
+    //     /* CCR3 保存的是 Z 边沿到来时的编码器计数 */
+    //     uint16_t captured = (uint16_t) HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3);
         
-        encoder_z_last_capture = captured;
-        /* 第一次经过 Z 时记录零点，之后保持该零点 */
-        if (encoder_z_found == 0U)
-        {
-            encoder_z_offset = captured;
-            encoder_z_found = 1U;
-        }
+    //     encoder_z_last_capture = captured;
+    //     /* 第一次经过 Z 时记录零点，之后保持该零点 */
+    //     if (encoder_z_found == 0U)
+    //     {
+    //         encoder_z_offset = captured;
+    //         encoder_z_found = 1U;
+    //     }
 
-        encoder_z_events++;
-    }
+    //     encoder_z_events++;
+    // }
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) // ¶¨Ê±Æ÷¸üÐÂÖÐ¶Ï»Øµ÷º¯Êý(htim:¶¨Ê±Æ÷¾ä±ú)
